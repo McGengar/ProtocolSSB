@@ -7,3 +7,5 @@ func _physics_process(delta):
 	if turn!=0:
 		rotate(turn)
 	apply_central_force(Vector2(0,Input.get_axis("forward","back")*delta).rotated(rotation+deg_to_rad(90))*speed*1000*delta)
+
+	
