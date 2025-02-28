@@ -18,6 +18,10 @@ config/icon="res://sprites/icon.svg"
 
 window/size/mode=2
 
+[global_group]
+
+slow=""
+
 [input]
 
 left={
@@ -46,3 +50,4 @@ back={
 textures/canvas_textures/default_texture_filter=3
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
+environment/defaults/default_clear_color=Color(0.23743, 0.528019, 0.276844, 1)

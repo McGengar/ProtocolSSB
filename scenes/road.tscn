@@ -1,9 +1,24 @@
-[gd_scene load_steps=2 format=3 uid="uid://bwfxtvsh4xcbq"]
+[gd_scene load_steps=4 format=3 uid="uid://bwfxtvsh4xcbq"]
 
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_5hhkf"]
-size = Vector2(128, 480)
+[ext_resource type="Script" path="res://scripts/road.gd" id="1_h0m24"]
+[ext_resource type="Texture2D" uid="uid://bft7mav4acolh" path="res://sprites/roadstraight.png" id="1_ir3n1"]
 
-[node name="Road" type="Area2D"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4x6tu"]
+size = Vector2(271, 480)
+
+[node name="Road" type="Node2D"]
+script = ExtResource("1_h0m24")
+
+[node name="Area2D" type="Area2D" parent="." groups=["slow"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(204.5, 0)
+shape = SubResource("RectangleShape2D_4x6tu")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-206, 0)
+rotation = 3.14159
+shape = SubResource("RectangleShape2D_4x6tu")
 
 [node name="road_sprite" type="Sprite2D" parent="."]
-texture = SubResource("PlaceholderTexture2D_5hhkf")
+texture = ExtResource("1_ir3n1")

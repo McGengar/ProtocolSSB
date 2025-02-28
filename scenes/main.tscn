@@ -1,18 +1,31 @@
-[gd_scene load_steps=3 format=3 uid="uid://bv4gjsig82gvf"]
+[gd_scene load_steps=5 format=3 uid="uid://bv4gjsig82gvf"]
 
 [ext_resource type="PackedScene" uid="uid://bwfxtvsh4xcbq" path="res://scenes/road.tscn" id="1_hy0hs"]
 [ext_resource type="PackedScene" uid="uid://dcq4ivigrdvd2" path="res://scenes/car.tscn" id="1_seax4"]
+[ext_resource type="Texture2D" uid="uid://c04mb7pgnvfpf" path="res://sprites/icon.svg" id="3_8dpkb"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_n0ukj"]
 
 [node name="Main" type="Node2D"]
 
 [node name="Road" parent="." instance=ExtResource("1_hy0hs")]
 position = Vector2(69, 230)
 
-[node name="Car" parent="." instance=ExtResource("1_seax4")]
-rotation = -1.5708
-steering_angle = 30
-engine_power = 250
-slip_speed = 200
+[node name="Road2" parent="." instance=ExtResource("1_hy0hs")]
+position = Vector2(69, -250)
 
-[node name="Camera2D" type="Camera2D" parent="Car"]
-zoom = Vector2(4, 4)
+[node name="Car" parent="." instance=ExtResource("1_seax4")]
+position = Vector2(71, 82)
+rotation = -1.5708
+linear_damp = 2.0
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(68, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("CircleShape2D_n0ukj")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(-9.53674e-07, -9.53674e-07)
+scale = Vector2(0.15625, 0.171875)
+texture = ExtResource("3_8dpkb")
