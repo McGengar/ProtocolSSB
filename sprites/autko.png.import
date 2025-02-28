@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bylwlmgi87pag"
-path="res://.godot/imported/desk.png-4856b3b259d3acc93aab1fa8f3e5700a.ctex"
+uid="uid://d2gqvtbfaf7a5"
+path="res://.godot/imported/autko.png-16c7f54c6ac501b5b5d1e6cbf796fd6f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/desk.png"
-dest_files=["res://.godot/imported/desk.png-4856b3b259d3acc93aab1fa8f3e5700a.ctex"]
+source_file="res://sprites/autko.png"
+dest_files=["res://.godot/imported/autko.png-16c7f54c6ac501b5b5d1e6cbf796fd6f.ctex"]
 
 [params]
 

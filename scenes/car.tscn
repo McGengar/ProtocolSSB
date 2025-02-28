@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=3 uid="uid://dcq4ivigrdvd2"]
+
+[ext_resource type="Script" path="res://scripts/car_control.gd" id="1_vljah"]
+[ext_resource type="Texture2D" uid="uid://d2gqvtbfaf7a5" path="res://sprites/autko.png" id="2_sgwix"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4po4l"]
+radius = 12.0
+height = 46.0
+
+[node name="Car" type="RigidBody2D"]
+gravity_scale = 0.0
+script = ExtResource("1_vljah")
+
+[node name="car_sprite" type="Sprite2D" parent="."]
+modulate = Color(0.815748, 0.676318, 0.228612, 1)
+rotation = 1.5708
+texture = ExtResource("2_sgwix")
+flip_h = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 1)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_4po4l")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+rotation = 1.5708
+ignore_rotation = false
+zoom = Vector2(4, 4)
+rotation_smoothing_enabled = true
+rotation_smoothing_speed = 0.25
