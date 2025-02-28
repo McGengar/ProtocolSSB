@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://bwfxtvsh4xcbq"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_5hhkf"]
+size = Vector2(128, 480)
+
+[node name="Road" type="Area2D"]
+
+[node name="road_sprite" type="Sprite2D" parent="."]
+texture = SubResource("PlaceholderTexture2D_5hhkf")
