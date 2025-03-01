@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://d2q0tjorpbfn5"]
+
+[ext_resource type="PackedScene" uid="uid://bwfxtvsh4xcbq" path="res://scenes/road.tscn" id="1_45ga1"]
+[ext_resource type="PackedScene" uid="uid://dcq4ivigrdvd2" path="res://scenes/car.tscn" id="2_b62ra"]
+[ext_resource type="PackedScene" path="res://scenes/finish_line.tscn" id="3_avdxn"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_8hodk"]
+size = Vector2(1024, 1024)
+
+[node name="wintermain" type="Node2D"]
+
+[node name="Road" parent="." instance=ExtResource("1_45ga1")]
+modulate = Color(0.180392, 0.839216, 1, 1)
+layer_0/tile_data = PackedInt32Array(-1, 2, 268435457, -65537, 65536, 0, -65538, 0, 1, -131074, 0, 0, -131073, 65536, 1, -196609, 65536, 0, -196610, 2, 1342177281, -196611, 2, 1342177281, -196612, 0, 0, -131076, 0, 1, -131075, 65536, 0, -65539, 65536, 1, -65540, 0, 0, -4, 65536, 1, -5, 0, 1, -65541, 65536, 0, -65542, 2, 1342177281, -65543, 2, 1342177281, -65544, 0, 1, -131080, 65536, 0, -131081, 2, 1342177281, -131082, 2, 1342177281, -131083, 0, 1, -196619, 2, 1, -262155, 2, 1, -327691, 0, 0, -327690, 65536, 1, -393226, 0, 0, -393225, 65536, 1, -458761, 0, 0, -458760, 65536, 0, -393224, 0, 1, -393223, 2, 1610612737, -393222, 2, 1610612737, -393221, 2, 1610612737, -393220, 65536, 1, -458756, 0, 0, -458755, 65536, 1, -524291, 2, 805306369, -589827, 2, 805306369, -655363, 65536, 0, -655364, 0, 0, -589828, 65536, 1, -589829, 0, 1, -655365, 65536, 0, -655366, 0, 1, -720902, 0, 0, -720901, 65536, 1, -786437, 0, 0, -786436, 65536, 0, -720900, 0, 1, -720899, 65536, 1, -786435, 2, 805306369, -851971, 2, 805306369, -917507, 2, 805306369, -983043, 2, 805306369)
+
+[node name="Car" parent="." instance=ExtResource("2_b62ra")]
+position = Vector2(-64, -22)
+
+[node name="Sprite2D" type="Sprite2D" parent="Car"]
+modulate = Color(0.243137, 1, 1, 1)
+z_index = -20
+position = Vector2(64, 22)
+texture = SubResource("PlaceholderTexture2D_8hodk")
+
+[node name="Finish_line" parent="." instance=ExtResource("3_avdxn")]
+position = Vector2(-318, -1954)
