@@ -11,11 +11,18 @@ var alpha = 0
 var can_rotate = 0
 var angle = -78
 var effect_transition = 0.0
+var time = 10.0
+var time_txt = ""
 
 func _ready():
 	$CanvasLayer/Sprite2D.visible=true
 
 func _physics_process(delta):
+	if time>0: time-=delta
+	else: time=0.0
+	time_txt = "%.02f" %time 
+	$CanvasLayer/RichTextLabel.text = "[center]"+time_txt+"[/center]"
+	
 	$CanvasLayer/indicator.modulate = Color(1,1,1,effect_transition*0.35)
 	$CanvasLayer/indicator.scale = Vector2(effect_transition*16,effect_transition*16)
 	if effect_transition>0:
