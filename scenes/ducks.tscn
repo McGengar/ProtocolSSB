@@ -1,0 +1,47 @@
+[gd_scene load_steps=8 format=3 uid="uid://dhc2kem12wiw4"]
+
+[ext_resource type="Script" path="res://scripts/ducks.gd" id="1_07d26"]
+[ext_resource type="Texture2D" uid="uid://c4pr5jxajc5xn" path="res://sprites/kaczuchy.png" id="1_w5i7b"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jwiad"]
+atlas = ExtResource("1_w5i7b")
+region = Rect2(0, 0, 128, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pbrwc"]
+atlas = ExtResource("1_w5i7b")
+region = Rect2(128, 0, 128, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xdgnq"]
+atlas = ExtResource("1_w5i7b")
+region = Rect2(256, 0, 128, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_w758i"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jwiad")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pbrwc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xdgnq")
+}],
+"loop": true,
+"name": &"default",
+"speed": 8.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_txe6c"]
+size = Vector2(128, 44)
+
+[node name="Ducks" type="Node2D"]
+script = ExtResource("1_07d26")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_w758i")
+autoplay = "default"
+frame_progress = 0.443084
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_txe6c")
