@@ -8,6 +8,8 @@ var forced_turn =0
 var turn = 0
 var gas = 0
 var alpha = 0
+var can_rotate = 0
+var angle = -78
 func _physics_process(delta):
 	$CanvasLayer/Sprite2D.modulate = Color(255,255,255,alpha)
 	alpha-=0.5*delta
@@ -40,6 +42,18 @@ func _physics_process(delta):
 	else:
 		$CPUParticles2D.emitting = false
 		$CPUParticles2D2.emitting = false
+
+	$CanvasLayer/piwot1.rotation = deg_to_rad(angle	-90)
+	$CanvasLayer/piwot2.rotation = deg_to_rad(angle	-90)
+	if can_rotate != 0 :
+		angle += 360*delta*can_rotate
+		$CanvasLayer/CPUParticles2D.emitting = true
+	if angle >= 220:
+		can_rotate = -1
+	if angle < -78 :
+		can_rotate = 0
+		$CanvasLayer/CPUParticles2D.emitting = false
+	
 func knocked_back(kbvect):
 	sleeping = true
 	apply_central_force(kbvect)
@@ -64,7 +78,9 @@ func use_skill(skill):
 			await get_tree().create_timer(2).timeout
 			can_turn = true
 		5:
-			pass
+			can_rotate = 1
+			await get_tree().create_timer(2).timeout
+			can_rotate = 1
 		6:
 			alpha=1.5
 		7:
