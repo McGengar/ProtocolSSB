@@ -1,10 +1,14 @@
 [gd_scene load_steps=9 format=3 uid="uid://dnm710o0d2n0b"]
 
 [ext_resource type="PackedScene" uid="uid://bwfxtvsh4xcbq" path="res://scenes/road.tscn" id="1_ukvxr"]
-[ext_resource type="PackedScene" uid="uid://dcq4ivigrdvd2" path="res://scenes/car.tscn" id="2_ycmxb"]
+[ext_resource type="PackedScene" uid="uid://bkx8nvjl7b2gj" path="res://scenes/car.tscn" id="2_ycmxb"]
 [ext_resource type="PackedScene" uid="uid://4xnw2bff6l2q" path="res://scenes/finish_line.tscn" id="3_gybqh"]
 [ext_resource type="PackedScene" uid="uid://cmfwpqhuu300d" path="res://scenes/pachol.tscn" id="4_b4ops"]
+<<<<<<< Updated upstream
 [ext_resource type="PackedScene" uid="uid://c0kqv1f12ksnw" path="res://scenes/rigid_bison.tscn" id="5_qiodq"]
+=======
+[ext_resource type="PackedScene" uid="uid://c0miu81v4dlja" path="res://scenes/rigid_bison.tscn" id="5_qiodq"]
+>>>>>>> Stashed changes
 
 [sub_resource type="Gradient" id="Gradient_8xr5t"]
 colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1)
@@ -112,5 +116,27 @@ position = Vector2(-632.5, -895)
 scale = Vector2(57.5, 0.500001)
 texture = SubResource("PlaceholderTexture2D_yqwmb")
 
+[node name="RigidBison1" parent="." instance=ExtResource("5_qiodq")]
+position = Vector2(-1108, -972)
+rotation = -1.5708
+lock_rotation = true
+
+[node name="RigidBison2" parent="." instance=ExtResource("5_qiodq")]
+position = Vector2(-386, -807)
+rotation = 1.5708
+lock_rotation = true
+
+[node name="RigidBison3" parent="." instance=ExtResource("5_qiodq")]
+position = Vector2(-989, -809)
+
 [node name="RigidBison" parent="." instance=ExtResource("5_qiodq")]
-position = Vector2(-1119, -959)
+position = Vector2(-809, -328)
+rotation = -1.52367
+
+[node name="RigidBison4" parent="." instance=ExtResource("5_qiodq")]
+position = Vector2(-301, 105)
+rotation = 1.5708
+
+[node name="RigidBison5" parent="." instance=ExtResource("5_qiodq")]
+position = Vector2(-299, 21)
+rotation = 1.5708
