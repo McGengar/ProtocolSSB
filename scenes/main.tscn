@@ -1,17 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://bv4gjsig82gvf"]
+[gd_scene load_steps=7 format=3 uid="uid://bv4gjsig82gvf"]
 
 [ext_resource type="PackedScene" uid="uid://bwfxtvsh4xcbq" path="res://scenes/road.tscn" id="1_hy0hs"]
 [ext_resource type="PackedScene" uid="uid://dcq4ivigrdvd2" path="res://scenes/car.tscn" id="1_seax4"]
 [ext_resource type="PackedScene" uid="uid://dhc2kem12wiw4" path="res://scenes/ducks.tscn" id="4_3d5vc"]
 [ext_resource type="PackedScene" uid="uid://bjw44oc5gw6v5" path="res://scenes/falling_object.tscn" id="4_xdrte"]
-<<<<<<< Updated upstream
 [ext_resource type="PackedScene" uid="uid://4xnw2bff6l2q" path="res://scenes/finish_line.tscn" id="5_e2nwy"]
 [ext_resource type="PackedScene" uid="uid://cmfwpqhuu300d" path="res://scenes/pachol.tscn" id="6_qrobp"]
-=======
-[ext_resource type="PackedScene" uid="uid://chugy7hmj2l4x" path="res://scenes/finish_line.tscn" id="5_e2nwy"]
-[ext_resource type="PackedScene" uid="uid://cauxuvxew16gw" path="res://scenes/hole.tscn" id="6_nv6wk"]
-[ext_resource type="PackedScene" path="res://scenes/pachol.tscn" id="6_qrobp"]
->>>>>>> Stashed changes
 
 [node name="Main" type="Node2D"]
 
@@ -23,6 +17,9 @@ layer_0/tile_data = PackedInt32Array(-2, 65536, 0, 65534, 2, 268435457, -3, 0, 1
 [node name="Car" parent="." instance=ExtResource("1_seax4")]
 position = Vector2(-124, 321)
 rotation = -1.5708
+
+[node name="falling object" parent="." instance=ExtResource("4_xdrte")]
+position = Vector2(-233, -63)
 
 [node name="Ducks" parent="." instance=ExtResource("4_3d5vc")]
 position = Vector2(-253, -408)
@@ -86,28 +83,3 @@ position = Vector2(-98, 425)
 
 [node name="pachol4" parent="pacholy" instance=ExtResource("6_qrobp")]
 position = Vector2(-74, 424)
-
-[node name="dziury" type="Node" parent="."]
-
-[node name="hole" parent="dziury" instance=ExtResource("6_nv6wk")]
-position = Vector2(24, -567)
-
-[node name="hole2" parent="dziury" instance=ExtResource("6_nv6wk")]
-position = Vector2(687, -651)
-
-[node name="hole3" parent="dziury" instance=ExtResource("6_nv6wk")]
-position = Vector2(480, -109)
-
-[node name="hole4" parent="dziury" instance=ExtResource("6_nv6wk")]
-position = Vector2(714, 155)
-
-[node name="hole5" parent="dziury" instance=ExtResource("6_nv6wk")]
-position = Vector2(1011, -268)
-
-[node name="latarnie" type="Node" parent="."]
-
-[node name="falling object" parent="latarnie" instance=ExtResource("4_xdrte")]
-position = Vector2(-233, -63)
-
-[node name="falling object2" parent="latarnie" instance=ExtResource("4_xdrte")]
-position = Vector2(1300, -701)

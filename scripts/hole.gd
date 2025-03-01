@@ -1,7 +1,7 @@
 extends StaticBody2D
 var in_hole = false
 var was_slept = false
-@onready var car: RigidBody2D = $"../../Car"
+@onready var car: RigidBody2D = $"../Car"
 
 func _physics_process(delta: float) -> void:
 	if in_hole:
