@@ -73,6 +73,7 @@ func knocked_back(kbvect):
 	sleeping = false
 	
 func use_skill(skill):
+	await get_tree().create_timer(0.5).timeout
 	match skill:
 		1:
 			speed_multiplier = 0.5
