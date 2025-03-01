@@ -10,11 +10,16 @@ var gas = 0
 var alpha = 0
 var can_rotate = 0
 var angle = -78
+var effect_transition = 0.0
 
 func _ready():
 	$CanvasLayer/Sprite2D.visible=true
 
 func _physics_process(delta):
+	$CanvasLayer/indicator.modulate = Color(1,1,1,effect_transition*0.35)
+	$CanvasLayer/indicator.scale = Vector2(effect_transition*16,effect_transition*16)
+	if effect_transition>0:
+		effect_transition-=1*delta
 	$CanvasLayer/Sprite2D.modulate = Color(255,255,255,alpha)
 	alpha-=0.5*delta
 	turn = Input.get_axis("left","right")*delta*3*reverse
@@ -76,6 +81,8 @@ func knocked_back(kbvect):
 	
 func use_skill(skill):
 	await get_tree().create_timer(0.5).timeout
+	effect_transition = 1
+	$CanvasLayer/indicator.frame = skill
 	match skill:
 		1:
 			speed_multiplier = 0.5
