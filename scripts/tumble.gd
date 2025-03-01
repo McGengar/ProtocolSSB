@@ -9,7 +9,7 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta: float) -> void:
-	apply_central_force(Vector2(-1,0)*4000*delta)
+	apply_central_force(Vector2(-1,0)*10000*delta)
 	$Area2D/Node2D.rotate(-3*delta)
 
 

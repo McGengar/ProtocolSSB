@@ -53,8 +53,8 @@ func _physics_process(delta):
 		use_skill($CanvasLayer/Skill1.value)
 		$CanvasLayer/Skill1.value=0	
 		await get_tree().create_timer(0.8).timeout
-		$CanvasLayer/melon/elonani.play("jerkin")
-		await get_tree().create_timer(2.2).timeout
+		if time>0 and win==false:$CanvasLayer/melon/elonani.play("jerkin")
+		await get_tree().create_timer(5.2).timeout
 		$CanvasLayer/Skill1/use.emitting = true
 		$CanvasLayer/Skill1.value=randi_range(1,9)
 	if Input.is_action_just_pressed("skill2") and $CanvasLayer/Skill2.value!=0 and time>0 and win==false:
@@ -64,8 +64,8 @@ func _physics_process(delta):
 		$CanvasLayer/Skill2/use.emitting = true
 		$CanvasLayer/Skill2.value=0
 		await get_tree().create_timer(0.8).timeout
-		$CanvasLayer/melon/elonani.play("jerkin")
-		await get_tree().create_timer(2.2).timeout
+		if time>0 and win==false:$CanvasLayer/melon/elonani.play("jerkin")
+		await get_tree().create_timer(5.2).timeout
 		$CanvasLayer/Skill2/use.emitting = true
 		$CanvasLayer/Skill2.value=randi_range(1,9)
 	
@@ -99,29 +99,32 @@ func use_skill(skill):
 	$CanvasLayer/indicator.frame = skill
 	match skill:
 		1:
-			speed_multiplier = 0.5
-			apply_central_force(-Vector2(0,gas).rotated(rotation+deg_to_rad(90))*speed*speed_multiplier*500)
-			await get_tree().create_timer(2).timeout
+			speed_multiplier = 0.3
+			sleeping=true
+			sleeping=false
+			await get_tree().create_timer(4).timeout
 			speed_multiplier = 1
 		2:
 			linear_damp = -0.25
 			await get_tree().create_timer(2).timeout
 			linear_damp = 1
 		3:
-			apply_central_force(Vector2(0,gas).rotated(rotation+deg_to_rad(90))*speed*speed_multiplier*500)
+			sleeping=true
+			sleeping=false
+			apply_central_force(Vector2(0,abs(gas+0.01)).rotated(rotation+deg_to_rad(90))*speed*speed_multiplier*2000)
 		4:
 			can_turn = false
-			await get_tree().create_timer(2).timeout
+			await get_tree().create_timer(4).timeout
 			can_turn = true
 		5:
 			can_rotate = 1
-			await get_tree().create_timer(2).timeout
+			await get_tree().create_timer(3).timeout
 			can_rotate = 1
 		6:
 			alpha=1.5
 		7:
 			reverse = -1
-			await get_tree().create_timer(3).timeout
+			await get_tree().create_timer(5).timeout
 			reverse = 1
 		8:
 			forced_turn = -1

@@ -1,0 +1,132 @@
+[gd_scene load_steps=14 format=3 uid="uid://cvi1wjf4kfnjv"]
+
+[ext_resource type="Script" path="res://scripts/pingwiny.gd" id="1_lomr4"]
+[ext_resource type="Texture2D" uid="uid://bvb24uwtnlrob" path="res://sprites/pingwiny.png" id="2_iegyo"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_od25p"]
+atlas = ExtResource("2_iegyo")
+region = Rect2(0, 0, 64, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ip8qw"]
+atlas = ExtResource("2_iegyo")
+region = Rect2(128, 0, 64, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d17c6"]
+atlas = ExtResource("2_iegyo")
+region = Rect2(256, 0, 64, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_crfpx"]
+atlas = ExtResource("2_iegyo")
+region = Rect2(384, 0, 64, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gu832"]
+atlas = ExtResource("2_iegyo")
+region = Rect2(512, 0, 64, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ga83n"]
+atlas = ExtResource("2_iegyo")
+region = Rect2(640, 0, 64, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1883b"]
+atlas = ExtResource("2_iegyo")
+region = Rect2(768, 0, 64, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7hvsq"]
+atlas = ExtResource("2_iegyo")
+region = Rect2(896, 0, 64, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_yacpv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_od25p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ip8qw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d17c6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_crfpx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gu832")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ga83n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1883b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7hvsq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1883b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7hvsq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1883b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7hvsq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1883b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7hvsq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1883b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7hvsq")
+}],
+"loop": false,
+"name": &"default",
+"speed": 9.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_txe6c"]
+size = Vector2(128, 11)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tru7u"]
+size = Vector2(128, 114)
+
+[node name="Pingwiny" type="Area2D"]
+script = ExtResource("1_lomr4")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(9, 2)
+sprite_frames = SubResource("SpriteFrames_yacpv")
+autoplay = "default"
+frame_progress = 0.422502
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="."]
+position = Vector2(52, 3)
+sprite_frames = SubResource("SpriteFrames_yacpv")
+autoplay = "default"
+frame_progress = 0.422502
+
+[node name="AnimatedSprite2D3" type="AnimatedSprite2D" parent="."]
+position = Vector2(-35, 2)
+sprite_frames = SubResource("SpriteFrames_yacpv")
+autoplay = "default"
+frame_progress = 0.422502
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 16.5)
+shape = SubResource("RectangleShape2D_txe6c")
+
+[node name="VisionBox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="VisionBox"]
+position = Vector2(0, 79)
+shape = SubResource("RectangleShape2D_tru7u")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_entered" from="VisionBox" to="." method="_on_vision_box_body_entered"]

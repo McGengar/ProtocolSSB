@@ -1,31 +1,31 @@
 [gd_scene load_steps=9 format=3 uid="uid://dhc2kem12wiw4"]
 
 [ext_resource type="Script" path="res://scripts/ducks.gd" id="1_07d26"]
-[ext_resource type="Texture2D" uid="uid://sgsjwdm2h6k" path="res://sprites/kaczuchy.png" id="1_w5i7b"]
+[ext_resource type="Texture2D" uid="uid://sgsjwdm2h6k" path="res://sprites/kaczuchy.png" id="2_kc22i"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_jwiad"]
-atlas = ExtResource("1_w5i7b")
+[sub_resource type="AtlasTexture" id="AtlasTexture_piea0"]
+atlas = ExtResource("2_kc22i")
 region = Rect2(0, 0, 128, 48)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_pbrwc"]
-atlas = ExtResource("1_w5i7b")
+[sub_resource type="AtlasTexture" id="AtlasTexture_28ptt"]
+atlas = ExtResource("2_kc22i")
 region = Rect2(128, 0, 128, 48)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_xdgnq"]
-atlas = ExtResource("1_w5i7b")
+[sub_resource type="AtlasTexture" id="AtlasTexture_mlt83"]
+atlas = ExtResource("2_kc22i")
 region = Rect2(256, 0, 128, 48)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_w758i"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_h0g17"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_jwiad")
+"texture": SubResource("AtlasTexture_piea0")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_pbrwc")
+"texture": SubResource("AtlasTexture_28ptt")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_xdgnq")
+"texture": SubResource("AtlasTexture_mlt83")
 }],
 "loop": true,
 "name": &"default",
@@ -42,9 +42,8 @@ size = Vector2(128, 114)
 script = ExtResource("1_07d26")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-sprite_frames = SubResource("SpriteFrames_w758i")
+sprite_frames = SubResource("SpriteFrames_h0g17")
 autoplay = "default"
-frame_progress = 0.443084
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 16.5)
