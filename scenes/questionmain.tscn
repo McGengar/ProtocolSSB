@@ -1,0 +1,112 @@
+[gd_scene load_steps=8 format=3 uid="uid://tqctsq1kk2ur"]
+
+[ext_resource type="PackedScene" uid="uid://bwfxtvsh4xcbq" path="res://scenes/road.tscn" id="1_ukvxr"]
+[ext_resource type="PackedScene" uid="uid://dcq4ivigrdvd2" path="res://scenes/car.tscn" id="2_ycmxb"]
+[ext_resource type="PackedScene" uid="uid://4xnw2bff6l2q" path="res://scenes/finish_line.tscn" id="3_gybqh"]
+[ext_resource type="PackedScene" path="res://scenes/pachol.tscn" id="4_b4ops"]
+
+[sub_resource type="Gradient" id="Gradient_8xr5t"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_iukqg"]
+gradient = SubResource("Gradient_8xr5t")
+width = 1024
+height = 1024
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_yqwmb"]
+size = Vector2(10, 10)
+
+[node name="questionmain" type="Node"]
+
+[node name="Road" parent="." instance=ExtResource("1_ukvxr")]
+modulate = Color(0.996011, 0.571917, 0, 1)
+z_index = -5
+layer_0/tile_data = PackedInt32Array(-65536, 2, 1, -131072, 2, 1, -196608, 65536, 0, -131073, 0, 1, -196609, 2, 1, -262145, 2, 1, -327681, 65536, 0, -327682, 0, 1, -393218, 2, 1, -458754, 65536, 1610612737, -458755, 2, 1342177281, -458756, 2, 1342177281, -458757, 2, 1342177281, -458758, 2, 1342177281, -458759, 2, 1342177281, -458760, 2, 1342177281, -458761, 2, 1342177281, -458762, 0, 0, -393222, 2, 1342177281, -393221, 2, 1342177281, -393220, 2, 1342177281, -393223, 2, 1342177281, -393226, 2, 805306369, -327690, 2, 805306369, -262154, 2, 805306369, -196618, 2, 805306369, -131082, 0, 1, -131081, 2, 1342177281, -131080, 65536, 1, -196616, 2, 805306369, -262152, 2, 805306369, -327688, 2, 805306369, -393224, 0, 0, -393219, 65536, 0, -327683, 2, 805306369, -262147, 2, 805306369, -196611, 2, 805306369, -131075, 65536, 1, -131076, 2, 1342177281, -131077, 2, 1342177281, -131078, 2, 1342177281, -131079, 0, 0, -65543, 65536, 1, -65544, 0, 0, -8, 2, 1, 65528, 0, 1, 65529, 2, 1342177281, 65530, 2, 1342177281, 65531, 2, 1342177281, 65532, 2, 1342177281, 65533, 2, 1342177281, 65534, 2, 1342177281, 65535, 2, 1342177281, 0, 2, 1342177281)
+
+[node name="Car" parent="." instance=ExtResource("2_ycmxb")]
+position = Vector2(73, -37)
+
+[node name="Sprite2D2" type="Sprite2D" parent="Car"]
+modulate = Color(0.883309, 0.843127, 0.283564, 1)
+z_index = -20
+position = Vector2(-73, 37)
+texture = SubResource("GradientTexture2D_iukqg")
+
+[node name="Finish_line" parent="." instance=ExtResource("3_gybqh")]
+z_index = -2
+position = Vector2(-38, 64)
+rotation = 1.5708
+
+[node name="pacholy" type="Node" parent="."]
+
+[node name="pachol" parent="pacholy" instance=ExtResource("4_b4ops")]
+position = Vector2(8, -4)
+
+[node name="pachol2" parent="pacholy" instance=ExtResource("4_b4ops")]
+position = Vector2(33, -4)
+
+[node name="pachol3" parent="pacholy" instance=ExtResource("4_b4ops")]
+position = Vector2(55, -4)
+
+[node name="pachol4" parent="pacholy" instance=ExtResource("4_b4ops")]
+position = Vector2(75, -4)
+
+[node name="pachol5" parent="pacholy" instance=ExtResource("4_b4ops")]
+position = Vector2(96, -4)
+
+[node name="pachol6" parent="pacholy" instance=ExtResource("4_b4ops")]
+position = Vector2(118, -4)
+
+[node name="pachol7" parent="pacholy" instance=ExtResource("4_b4ops")]
+position = Vector2(1, -259)
+
+[node name="pachol8" parent="pacholy" instance=ExtResource("4_b4ops")]
+position = Vector2(1, -390)
+
+[node name="pachol9" parent="pacholy" instance=ExtResource("4_b4ops")]
+position = Vector2(-130, -643)
+
+[node name="pachol10" parent="pacholy" instance=ExtResource("4_b4ops")]
+position = Vector2(-129, -774)
+
+[node name="pachol11" parent="pacholy" instance=ExtResource("4_b4ops")]
+position = Vector2(-256, -760)
+
+[node name="pachol12" parent="pacholy" instance=ExtResource("4_b4ops")]
+position = Vector2(-255, -780)
+
+[node name="pachol13" parent="pacholy" instance=ExtResource("4_b4ops")]
+position = Vector2(-257, -801)
+
+[node name="pachol14" parent="pacholy" instance=ExtResource("4_b4ops")]
+position = Vector2(-255, -895)
+
+[node name="pachol43" parent="pacholy" instance=ExtResource("4_b4ops")]
+position = Vector2(-774, -250)
+
+[node name="pachol44" parent="pacholy" instance=ExtResource("4_b4ops")]
+position = Vector2(-897, -257)
+
+[node name="pachol45" parent="pacholy" instance=ExtResource("4_b4ops")]
+position = Vector2(-897, -129)
+
+[node name="pachol46" parent="pacholy" instance=ExtResource("4_b4ops")]
+position = Vector2(-877, -255)
+
+[node name="pachol47" parent="pacholy" instance=ExtResource("4_b4ops")]
+position = Vector2(-859, -255)
+
+[node name="pachol48" parent="pacholy" instance=ExtResource("4_b4ops")]
+position = Vector2(-922, -130)
+
+[node name="pachol49" parent="pacholy" instance=ExtResource("4_b4ops")]
+position = Vector2(-947, -127)
+
+[node name="pachol50" parent="pacholy" instance=ExtResource("4_b4ops")]
+position = Vector2(-1205, -387)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(-632.5, -895)
+scale = Vector2(57.5, 0.500001)
+texture = SubResource("PlaceholderTexture2D_yqwmb")

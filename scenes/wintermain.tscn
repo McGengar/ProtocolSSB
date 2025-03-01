@@ -5,8 +5,8 @@
 [ext_resource type="PackedScene" uid="uid://4xnw2bff6l2q" path="res://scenes/finish_line.tscn" id="3_avdxn"]
 [ext_resource type="PackedScene" uid="uid://bjw44oc5gw6v5" path="res://scenes/falling_object.tscn" id="4_7qkmp"]
 [ext_resource type="PackedScene" uid="uid://dhc2kem12wiw4" path="res://scenes/ducks.tscn" id="5_57bg1"]
-[ext_resource type="PackedScene" uid="uid://cmfwpqhuu300d" path="res://scenes/pachol.tscn" id="6_vcm87"]
-[ext_resource type="PackedScene" path="res://scenes/hole.tscn" id="7_m1qgt"]
+[ext_resource type="PackedScene" path="res://scenes/pachol.tscn" id="6_vcm87"]
+[ext_resource type="PackedScene" uid="uid://cauxuvxew16gw" path="res://scenes/hole.tscn" id="7_m1qgt"]
 
 [sub_resource type="Gradient" id="Gradient_vb1ff"]
 colors = PackedColorArray(0.832341, 0.888803, 1, 1, 1, 1, 1, 1)
