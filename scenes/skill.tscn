@@ -1,0 +1,100 @@
+[gd_scene load_steps=17 format=3 uid="uid://cm4p7dkhsg2ji"]
+
+[ext_resource type="Texture2D" uid="uid://ciby5qpdv6he6" path="res://sprites/karty.png" id="1_ki113"]
+[ext_resource type="Shader" path="res://shaders/wobbly_outline.gdshader" id="1_xu3un"]
+[ext_resource type="Texture2D" uid="uid://dd58ywwe4bm62" path="res://sprites/karty dobra wersja.png" id="2_gitxe"]
+[ext_resource type="Script" path="res://scripts/skill.gd" id="4_5vodl"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_85w2s"]
+shader = ExtResource("1_xu3un")
+shader_parameter/normal_offset = 1.5
+shader_parameter/time_influence = 1.374
+shader_parameter/y_div = 2.87
+shader_parameter/color = Color(1, 1, 1, 1)
+shader_parameter/width = 1.0
+shader_parameter/pattern = 0
+shader_parameter/inside = false
+shader_parameter/add_margins = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k3asp"]
+atlas = ExtResource("2_gitxe")
+region = Rect2(432, 0, 48, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o3ewc"]
+atlas = ExtResource("1_ki113")
+region = Rect2(0, 0, 48, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lwpe2"]
+atlas = ExtResource("1_ki113")
+region = Rect2(48, 0, 48, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vvhcn"]
+atlas = ExtResource("1_ki113")
+region = Rect2(96, 0, 48, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o01cs"]
+atlas = ExtResource("1_ki113")
+region = Rect2(144, 0, 48, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v6ltv"]
+atlas = ExtResource("1_ki113")
+region = Rect2(192, 0, 48, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bqiro"]
+atlas = ExtResource("1_ki113")
+region = Rect2(240, 0, 48, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qxd8e"]
+atlas = ExtResource("1_ki113")
+region = Rect2(288, 0, 48, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a7iur"]
+atlas = ExtResource("1_ki113")
+region = Rect2(336, 0, 48, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3pcyo"]
+atlas = ExtResource("1_ki113")
+region = Rect2(384, 0, 48, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_q17sv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k3asp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o3ewc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lwpe2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vvhcn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o01cs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v6ltv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bqiro")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qxd8e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a7iur")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3pcyo")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="card" type="AnimatedSprite2D"]
+material = SubResource("ShaderMaterial_85w2s")
+sprite_frames = SubResource("SpriteFrames_q17sv")
+script = ExtResource("4_5vodl")
