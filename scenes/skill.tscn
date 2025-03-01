@@ -1,8 +1,8 @@
 [gd_scene load_steps=19 format=3 uid="uid://cm4p7dkhsg2ji"]
 
-[ext_resource type="Texture2D" uid="uid://ciby5qpdv6he6" path="res://sprites/karty.png" id="1_ki113"]
+[ext_resource type="Texture2D" uid="uid://ucdc1xc8gav6" path="res://sprites/karty.png" id="1_ki113"]
 [ext_resource type="Shader" path="res://shaders/wobbly_outline.gdshader" id="1_xu3un"]
-[ext_resource type="Texture2D" uid="uid://dd58ywwe4bm62" path="res://sprites/karty dobra wersja.png" id="2_gitxe"]
+[ext_resource type="Texture2D" uid="uid://dd66481gfk818" path="res://sprites/karty dobra wersja.png" id="2_gitxe"]
 [ext_resource type="Script" path="res://scripts/skill.gd" id="4_5vodl"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_85w2s"]
