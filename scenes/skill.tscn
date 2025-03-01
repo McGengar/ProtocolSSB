@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://cm4p7dkhsg2ji"]
+[gd_scene load_steps=19 format=3 uid="uid://cm4p7dkhsg2ji"]
 
 [ext_resource type="Texture2D" uid="uid://ciby5qpdv6he6" path="res://sprites/karty.png" id="1_ki113"]
 [ext_resource type="Shader" path="res://shaders/wobbly_outline.gdshader" id="1_xu3un"]
@@ -94,7 +94,29 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="Curve" id="Curve_8xet0"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Gradient" id="Gradient_h5yjl"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
 [node name="card" type="AnimatedSprite2D"]
 material = SubResource("ShaderMaterial_85w2s")
 sprite_frames = SubResource("SpriteFrames_q17sv")
+frame = 2
+frame_progress = 0.671468
 script = ExtResource("4_5vodl")
+
+[node name="use" type="CPUParticles2D" parent="."]
+emitting = false
+amount = 300
+one_shot = true
+explosiveness = 1.0
+emission_shape = 3
+emission_rect_extents = Vector2(24, 32)
+gravity = Vector2(0, 0)
+scale_amount_min = 2.0
+scale_amount_max = 60.0
+scale_amount_curve = SubResource("Curve_8xet0")
+color_ramp = SubResource("Gradient_h5yjl")
