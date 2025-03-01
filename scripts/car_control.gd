@@ -8,4 +8,8 @@ func _physics_process(delta):
 		rotate(turn)
 	apply_central_force(Vector2(0,Input.get_axis("forward","back")*delta).rotated(rotation+deg_to_rad(90))*speed*1000*delta)
 
-	
+func knocked_back(kbvect):
+	sleeping = true
+	apply_central_force(kbvect)
+	await get_tree().create_timer(0.25).timeout
+	sleeping = false

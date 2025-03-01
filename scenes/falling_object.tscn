@@ -1,0 +1,83 @@
+[gd_scene load_steps=11 format=3 uid="uid://bjw44oc5gw6v5"]
+
+[ext_resource type="Script" path="res://scripts/falling_object.gd" id="1_w5ygp"]
+[ext_resource type="Script" path="res://scripts/collision_shape_2d.gd" id="2_dow7x"]
+[ext_resource type="Script" path="res://scripts/pivotpoint.gd" id="3_r1lyb"]
+[ext_resource type="Texture2D" uid="uid://bx3pdo28rdkc" path="res://sprites/lantern.png" id="4_i2lr0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_viop4"]
+size = Vector2(84, 24)
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_t50b0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jrb7f"]
+size = Vector2(88, 24)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2ls6i"]
+size = Vector2(85, 10)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a27bg"]
+size = Vector2(85, 11)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2ipqh"]
+size = Vector2(84, 77)
+
+[node name="falling object" type="StaticBody2D"]
+script = ExtResource("1_w5ygp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(2, -1)
+shape = SubResource("RectangleShape2D_viop4")
+disabled = true
+debug_color = Color(0.852103, 0.350344, 0.329472, 0.42)
+script = ExtResource("2_dow7x")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(60, -9.53674e-07)
+texture = SubResource("PlaceholderTexture2D_t50b0")
+script = ExtResource("3_r1lyb")
+
+[node name="Sprite2D" type="Sprite2D" parent="Sprite2D2"]
+position = Vector2(-32.7343, -46.4916)
+texture = ExtResource("4_i2lr0")
+
+[node name="areatip" type="Area2D" parent="."]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="areatip"]
+position = Vector2(0, -1)
+shape = SubResource("RectangleShape2D_jrb7f")
+debug_color = Color(0.892887, 0.28426, 0.39749, 0.42)
+
+[node name="areafront" type="Area2D" parent="."]
+position = Vector2(14, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="areafront"]
+position = Vector2(-12.5, 11)
+shape = SubResource("RectangleShape2D_2ls6i")
+debug_color = Color(0.33494, 0.487373, 1, 0.42)
+
+[node name="areaback" type="Area2D" parent="."]
+position = Vector2(-3, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="areaback"]
+position = Vector2(4.5, -12.5)
+shape = SubResource("RectangleShape2D_a27bg")
+debug_color = Color(0.70702, 0.267389, 1, 0.42)
+
+[node name="player detection" type="Area2D" parent="."]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="player detection"]
+position = Vector2(2, 25.5)
+shape = SubResource("RectangleShape2D_2ipqh")
+
+[connection signal="has_fallen" from="Sprite2D2" to="." method="_on_sprite_2d_2_has_fallen"]
+[connection signal="has_fallen" from="Sprite2D2" to="CollisionShape2D" method="_on_sprite_2d_2_has_fallen"]
+[connection signal="body_entered" from="areatip" to="." method="_on_areatip_body_entered"]
+[connection signal="body_exited" from="areatip" to="." method="_on_areatip_body_exited"]
+[connection signal="body_entered" from="areafront" to="." method="_on_areafront_body_entered"]
+[connection signal="body_exited" from="areafront" to="." method="_on_areafront_body_exited"]
+[connection signal="body_entered" from="areaback" to="." method="_on_areaback_body_entered"]
+[connection signal="body_exited" from="areaback" to="." method="_on_areaback_body_exited"]
+[connection signal="body_entered" from="player detection" to="Sprite2D2" method="_on_player_detection_body_entered"]

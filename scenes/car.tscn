@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://dcq4ivigrdvd2"]
+[gd_scene load_steps=4 format=3 uid="uid://djgvu15mfp0n1"]
 
 [ext_resource type="Script" path="res://scripts/car_control.gd" id="1_vljah"]
 [ext_resource type="Texture2D" uid="uid://d2gqvtbfaf7a5" path="res://sprites/autko.png" id="2_sgwix"]
@@ -24,7 +24,6 @@ shape = SubResource("CapsuleShape2D_4po4l")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 rotation = 1.5708
-ignore_rotation = false
 zoom = Vector2(4, 4)
 rotation_smoothing_enabled = true
 rotation_smoothing_speed = 0.25
