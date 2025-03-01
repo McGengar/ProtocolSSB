@@ -10,8 +10,10 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta: float) -> void:
 	apply_central_force(Vector2(-1,0)*4000*delta)
+	$Area2D/Node2D.rotate(-3*delta)
 
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
-	car.knocked_back(Vector2(-1,0)*100)
-	apply_central_force(Vector2(1,0)*100)
+	if body==car:
+		car.knocked_back(Vector2(-1,0)*5000)
+		apply_central_force(Vector2(1,0)*5000)

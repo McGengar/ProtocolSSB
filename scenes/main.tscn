@@ -1,13 +1,56 @@
-[gd_scene load_steps=9 format=3 uid="uid://bv4gjsig82gvf"]
+[gd_scene load_steps=11 format=3 uid="uid://bv4gjsig82gvf"]
 
 [ext_resource type="PackedScene" uid="uid://bwfxtvsh4xcbq" path="res://scenes/road.tscn" id="1_hy0hs"]
-[ext_resource type="PackedScene" uid="uid://bkx8nvjl7b2gj" path="res://scenes/car.tscn" id="1_seax4"]
+[ext_resource type="PackedScene" uid="uid://dcq4ivigrdvd2" path="res://scenes/car.tscn" id="1_seax4"]
 [ext_resource type="PackedScene" uid="uid://dhc2kem12wiw4" path="res://scenes/ducks.tscn" id="4_3d5vc"]
 [ext_resource type="PackedScene" uid="uid://bjw44oc5gw6v5" path="res://scenes/falling_object.tscn" id="4_xdrte"]
 [ext_resource type="PackedScene" uid="uid://4xnw2bff6l2q" path="res://scenes/finish_line.tscn" id="5_e2nwy"]
 [ext_resource type="PackedScene" uid="uid://cmfwpqhuu300d" path="res://scenes/pachol.tscn" id="6_qrobp"]
-[ext_resource type="PackedScene" uid="uid://cauxuvxew16gw" path="res://scenes/hole.tscn" id="7_dc3qx"]
-[ext_resource type="PackedScene" uid="uid://raenjqgyvh30" path="res://scenes/drzewo.tscn" id="7_p55xf"]
+[ext_resource type="Texture2D" uid="uid://c7a2nc1seitv5" path="res://sprites/drzewa i inne.png" id="7_d1ska"]
+[ext_resource type="PackedScene" path="res://scenes/hole.tscn" id="7_dc3qx"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_esq8t"]
+texture = ExtResource("7_d1ska")
+texture_region_size = Vector2i(8, 8)
+0:0/size_in_atlas = Vector2i(12, 15)
+0:0/0 = 0
+12:0/size_in_atlas = Vector2i(12, 15)
+12:0/0 = 0
+24:0/size_in_atlas = Vector2i(12, 15)
+24:0/0 = 0
+36:0/size_in_atlas = Vector2i(13, 15)
+36:0/0 = 0
+49:0/size_in_atlas = Vector2i(10, 15)
+49:0/0 = 0
+59:0/size_in_atlas = Vector2i(13, 15)
+59:0/0 = 0
+72:0/size_in_atlas = Vector2i(12, 15)
+72:0/0 = 0
+84:0/size_in_atlas = Vector2i(12, 15)
+84:0/0 = 0
+96:0/size_in_atlas = Vector2i(12, 15)
+96:0/0 = 0
+108:0/size_in_atlas = Vector2i(13, 15)
+108:0/0 = 0
+121:0/size_in_atlas = Vector2i(11, 15)
+121:0/0 = 0
+132:0/size_in_atlas = Vector2i(12, 15)
+132:0/0 = 0
+144:0/size_in_atlas = Vector2i(12, 15)
+144:0/0 = 0
+156:0/size_in_atlas = Vector2i(14, 15)
+156:0/0 = 0
+170:0/size_in_atlas = Vector2i(10, 15)
+170:0/0 = 0
+180:0/size_in_atlas = Vector2i(12, 15)
+180:0/0 = 0
+192:0/size_in_atlas = Vector2i(11, 15)
+192:0/0 = 0
+203:0/size_in_atlas = Vector2i(13, 15)
+203:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_bwrgp"]
+sources/4 = SubResource("TileSetAtlasSource_esq8t")
 
 [node name="Main" type="Node2D"]
 
@@ -88,23 +131,10 @@ position = Vector2(-74, 424)
 
 [node name="dekoracje" type="Node" parent="."]
 
-[node name="Node2D" parent="dekoracje" instance=ExtResource("7_p55xf")]
-position = Vector2(-350, -93)
-
-[node name="Node2D2" parent="dekoracje" instance=ExtResource("7_p55xf")]
-position = Vector2(-350, -93)
-
-[node name="Node2D3" parent="dekoracje" instance=ExtResource("7_p55xf")]
-position = Vector2(-350, -93)
-
-[node name="Node2D4" parent="dekoracje" instance=ExtResource("7_p55xf")]
-position = Vector2(-349, -276)
-
-[node name="Node2D5" parent="dekoracje" instance=ExtResource("7_p55xf")]
-position = Vector2(-359, 72)
-
-[node name="Node2D6" parent="dekoracje" instance=ExtResource("7_p55xf")]
-position = Vector2(-150, -302)
+[node name="TileMap" type="TileMap" parent="dekoracje"]
+tile_set = SubResource("TileSet_bwrgp")
+format = 2
+layer_0/tile_data = PackedInt32Array(1114096, 4, 0, -1048599, 4, 0, -1900552, 4, 0, -2949122, 4, 0, -1769451, 4, 0, -3276778, 4, 0, -4653025, 4, 0, -2621395, 4, 0, -983014, 4, 0, -393179, 4, 0, -196540, 4, 0, -2031549, 4, 0, -3538859, 4, 0, -4587435, 3211268, 0, -4587445, 3211268, 0, 1441790, 3211268, 0, 196598, 3211268, 0, -22, 3211268, 0, -983050, 3211268, 0, -2097149, 3211268, 0, -2949137, 3211268, 0, -2686954, 3211268, 0, -3932150, 3211268, 0, -3801054, 3211268, 0, -1441758, 3211268, 0, 393251, 3211268, 0, 786480, 3211268, 0, 589892, 3211268, 0, 131126, 3211268, 0, -982982, 3211268, 0, 524268, 1572868, 0, 327678, 1572868, 0, 131046, 1572868, 0, -458756, 1572868, 0, -524314, 1572868, 0, -1310724, 1572868, 0, -1966108, 1572868, 0, -2686999, 1572868, 0, -3014667, 1572868, 0, -1769473, 1572868, 0, -1703930, 1572868, 0, -3145721, 1572868, 0, -2228198, 1572868, 0, -2752480, 1572868, 0, -3342304, 1572868, 0, -3604455, 1572868, 0, -4653038, 1572868, 0, -4587492, 1572868, 0, -4194259, 1572868, 0, -3276750, 1572868, 0, -1966032, 1572868, 0, -458705, 1572868, 0, -393192, 1572868, 0, 524317, 1572868, 0, 983101, 1572868, 0, -1507250, 1572868, 0, -2949047, 1572868, 0, 1310705, 6291460, 0, 589822, 6291460, 0, 196600, 6291460, 0, 196582, 6291460, 0, -327690, 6291460, 0, -917527, 6291460, 0, -1638410, 6291460, 0, -2555927, 6291460, 0, -3014653, 6291460, 0, -3014654, 6291460, 0, -2621418, 6291460, 0, -3866617, 6291460, 0, -4587486, 6291460, 0, -3866578, 6291460, 0, -2097120, 6291460, 0, -458708, 6291460, 0, 131121, 6291460, 0, 786473, 6291460, 0, -65510, 6291460, 0, -982970, 6291460, 0, -2490295, 6291460, 0, 851955, 7929860, 0, 196597, 7929860, 0, -655381, 7929860, 0, -2228245, 7929860, 0, -2949126, 7929860, 0, -2031612, 7929860, 0, -2097133, 7929860, 0, -3145707, 7929860, 0, -3932138, 7929860, 0, -3473363, 7929860, 0, -2359261, 7929860, 0, -1638355, 7929860, 0, -786378, 7929860, 0, 131117, 7929860, 0, 655398, 7929860, 0, 69, 7929860, 0, -1310647, 7929860, 0, -3014571, 7929860, 0, -1376225, 11796484, 0, 65514, 11796484, 0, -2293772, 11796484, 0, -2949110, 11796484, 0, -3932130, 11796484, 0, -3538909, 12582916, 0, -2097163, 12582916, 0, -1703959, 12582916, 0, -655370, 12582916, 0, 720877, 12582916, 0, 917501, 12582916, 0, 1572851, 12582916, 0, 589858, 12582916, 0, -65491, 12582916, 0, -393191, 12582916, 0, -1441734, 12582916, 0, -1114039, 12582916, 0, -393145, 12582916, 0, -458703, 12582916, 0, -131002, 12582916, 0, -1441747, 13303812, 0, -2359251, 13303812, 0, -3080169, 13303812, 0, -2293762, 13303812, 0, -3080206, 13303812, 0, -2818068, 13303812, 0, -2293784, 13303812, 0, -3407847, 13303812, 0, -3604469, 13303812, 0, -3670005, 13303812, 0, -4653033, 13303812, 0, -4194256, 13303812, 0, -2686927, 13303812, 0)
 
 [node name="dziury" type="Node" parent="."]
 
