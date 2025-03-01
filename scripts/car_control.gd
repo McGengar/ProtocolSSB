@@ -11,24 +11,21 @@ var alpha = 0
 var can_rotate = 0
 var angle = -78
 var effect_transition = 0.0
-<<<<<<< Updated upstream
 var time = 10.0
 var time_txt = ""
-=======
->>>>>>> Stashed changes
 
 func _ready():
 	$CanvasLayer/Sprite2D.visible=true
 
 func _physics_process(delta):
-<<<<<<< Updated upstream
 	if time>0: time-=delta
 	else: time=0.0
-	time_txt = "%.02f" %time 
+	time_txt = "%.02f" %time 	
 	$CanvasLayer/RichTextLabel.text = "[center]"+time_txt+"[/center]"
 	
-=======
->>>>>>> Stashed changes
+	if time==0:
+		$CanvasLayer/melon/elonani.play("heart going out")
+	
 	$CanvasLayer/indicator.modulate = Color(1,1,1,effect_transition*0.35)
 	$CanvasLayer/indicator.scale = Vector2(effect_transition*16,effect_transition*16)
 	if effect_transition>0:
@@ -43,9 +40,9 @@ func _physics_process(delta):
 	gas = Input.get_axis("forward","back")*delta
 	if gas>0:
 		gas*=0.5
-	apply_central_force(Vector2(0,gas).rotated(rotation+deg_to_rad(90))*speed*speed_multiplier*1000*delta)
+	if time>0: apply_central_force(Vector2(0,gas).rotated(rotation+deg_to_rad(90))*speed*speed_multiplier*1000*delta)
 	
-	if Input.is_action_just_pressed("skill1") and $CanvasLayer/Skill1.value!=0:
+	if Input.is_action_just_pressed("skill1") and $CanvasLayer/Skill1.value!=0 and time>0:
 		$CanvasLayer/melon/elonani.play("sigmaboy")
 		$CanvasLayer/melon/right.play("right")
 		$CanvasLayer/Skill1/use.emitting = true
@@ -56,7 +53,7 @@ func _physics_process(delta):
 		await get_tree().create_timer(2.2).timeout
 		$CanvasLayer/Skill1/use.emitting = true
 		$CanvasLayer/Skill1.value=randi_range(1,9)
-	if Input.is_action_just_pressed("skill2") and $CanvasLayer/Skill2.value!=0:
+	if Input.is_action_just_pressed("skill2") and $CanvasLayer/Skill2.value!=0 and time>0:
 		$CanvasLayer/melon/elonani.play("sigmaboy")
 		$CanvasLayer/melon/left.play("left")
 		use_skill($CanvasLayer/Skill2.value)
