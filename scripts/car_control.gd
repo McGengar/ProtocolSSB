@@ -10,6 +10,10 @@ var gas = 0
 var alpha = 0
 var can_rotate = 0
 var angle = -78
+
+func _ready():
+	$CanvasLayer/Sprite2D.visible=true
+
 func _physics_process(delta):
 	$CanvasLayer/Sprite2D.modulate = Color(255,255,255,alpha)
 	alpha-=0.5*delta
@@ -19,6 +23,8 @@ func _physics_process(delta):
 	if forced_turn!=0:
 		rotate(forced_turn*delta*3.5)
 	gas = Input.get_axis("forward","back")*delta
+	if gas>0:
+		gas*=0.5
 	apply_central_force(Vector2(0,gas).rotated(rotation+deg_to_rad(90))*speed*speed_multiplier*1000*delta)
 	
 	if Input.is_action_just_pressed("skill1") and $CanvasLayer/Skill1.value!=0:
