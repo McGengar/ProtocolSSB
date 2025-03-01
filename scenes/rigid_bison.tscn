@@ -1,7 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://c0miu81v4dlja"]
+[gd_scene load_steps=6 format=3 uid="uid://c0kqv1f12ksnw"]
 
 [ext_resource type="Script" path="res://scripts/rigid_bison.gd" id="1_5ofqt"]
-[ext_resource type="Texture2D" uid="uid://d2a80q32s8nfw" path="res://sprites/bison.png" id="2_imqbh"]
+[ext_resource type="Texture2D" uid="uid://45pl5aoyyos6" path="res://sprites/bison.png" id="2_imqbh"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_coeul"]
 bounce = 5.0
