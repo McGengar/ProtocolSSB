@@ -1,13 +1,13 @@
-[gd_scene load_steps=27 format=3 uid="uid://dcq4ivigrdvd2"]
+[gd_scene load_steps=27 format=3 uid="uid://bkx8nvjl7b2gj"]
 
 [ext_resource type="Script" path="res://scripts/car_control.gd" id="1_vljah"]
 [ext_resource type="Texture2D" uid="uid://d2gqvtbfaf7a5" path="res://sprites/autko.png" id="2_sgwix"]
 [ext_resource type="PackedScene" uid="uid://cm4p7dkhsg2ji" path="res://scenes/skill.tscn" id="3_ecsdd"]
-[ext_resource type="Texture2D" uid="uid://mewrrhmsmq8q" path="res://sprites/walona wycieeraczka.png" id="4_6sbb8"]
-[ext_resource type="Texture2D" uid="uid://bxtn6j2o4hbsb" path="res://sprites/babel.png" id="5_l5enp"]
+[ext_resource type="Texture2D" uid="uid://dlai7iylnsog7" path="res://sprites/walona wycieeraczka.png" id="4_6sbb8"]
+[ext_resource type="Texture2D" uid="uid://cdrfqihnnd505" path="res://sprites/babel.png" id="5_l5enp"]
 [ext_resource type="PackedScene" uid="uid://cq2iywhlcsohq" path="res://scenes/melon.tscn" id="6_nkygn"]
-[ext_resource type="Texture2D" uid="uid://dyc7gp3ynd4id" path="res://sprites/indyki.png" id="7_364d0"]
-[ext_resource type="FontFile" uid="uid://dvydu4xd0m7od" path="res://ssb/8-BIT WONDER.TTF" id="8_eklrs"]
+[ext_resource type="Texture2D" uid="uid://b355kqi3j76et" path="res://sprites/indyki.png" id="7_364d0"]
+[ext_resource type="FontFile" uid="uid://d20i0fb3bjvfc" path="res://ssb/8-BIT WONDER.TTF" id="8_eklrs"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4po4l"]
 radius = 12.0
