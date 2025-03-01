@@ -11,38 +11,30 @@ var alpha = 0
 var can_rotate = 0
 var angle = -78
 var effect_transition = 0.0
-<<<<<<< Updated upstream
 var time = 100.0
 var time_txt = ""
-=======
 
-var time = 10.0
-var time_txt = ""
-
->>>>>>> Stashed changes
 
 func _ready():
 	$CanvasLayer/Sprite2D.visible=true
 
 func _physics_process(delta):
-<<<<<<< Updated upstream
+
 	if time>0: time-=delta
-=======
+
 
 	if time>0: 
 		time-=delta
->>>>>>> Stashed changes
+
 	else: time=0.0
 	time_txt = "%.02f" %time 	
 	$CanvasLayer/RichTextLabel.text = "[center]"+time_txt+"[/center]"
-<<<<<<< Updated upstream
+
 	
 	if time==0:
 		$CanvasLayer/melon/elonani.play("heart going out")
 	
-=======
 
->>>>>>> Stashed changes
 	$CanvasLayer/indicator.modulate = Color(1,1,1,effect_transition*0.35)
 	$CanvasLayer/indicator.scale = Vector2(effect_transition*16,effect_transition*16)
 	if effect_transition>0:
