@@ -10,6 +10,7 @@ var in_back = false
 
 
 func _on_sprite_2d_2_has_fallen() -> void:
+	$CPUParticles2D.emitting = true
 	if in_tip == true:
 		car.knocked_back(Vector2(-1,0)*10000)
 	if in_back == true:
