@@ -1,22 +1,12 @@
-<<<<<<< Updated upstream
 [gd_scene load_steps=8 format=3 uid="uid://bv4gjsig82gvf"]
-=======
-[gd_scene load_steps=8 format=3 uid="uid://dmwcowcb36e6x"]
->>>>>>> Stashed changes
 
 [ext_resource type="PackedScene" uid="uid://bwfxtvsh4xcbq" path="res://scenes/road.tscn" id="1_hy0hs"]
 [ext_resource type="PackedScene" uid="uid://dcq4ivigrdvd2" path="res://scenes/car.tscn" id="1_seax4"]
 [ext_resource type="PackedScene" uid="uid://dhc2kem12wiw4" path="res://scenes/ducks.tscn" id="4_3d5vc"]
 [ext_resource type="PackedScene" uid="uid://bjw44oc5gw6v5" path="res://scenes/falling_object.tscn" id="4_xdrte"]
-<<<<<<< Updated upstream
 [ext_resource type="PackedScene" path="res://scenes/finish_line.tscn" id="5_e2nwy"]
 [ext_resource type="PackedScene" path="res://scenes/pachol.tscn" id="6_qrobp"]
 [ext_resource type="PackedScene" uid="uid://raenjqgyvh30" path="res://scenes/drzewo.tscn" id="7_p55xf"]
-=======
-[ext_resource type="PackedScene" uid="uid://4xnw2bff6l2q" path="res://scenes/finish_line.tscn" id="5_e2nwy"]
-[ext_resource type="PackedScene" path="res://scenes/pachol.tscn" id="6_qrobp"]
-[ext_resource type="PackedScene" uid="uid://cauxuvxew16gw" path="res://scenes/hole.tscn" id="7_dc3qx"]
->>>>>>> Stashed changes
 
 [node name="Main" type="Node2D"]
 
@@ -95,7 +85,6 @@ position = Vector2(-98, 425)
 [node name="pachol4" parent="pacholy" instance=ExtResource("6_qrobp")]
 position = Vector2(-74, 424)
 
-<<<<<<< Updated upstream
 [node name="dekoracje" type="Node" parent="."]
 
 [node name="Node2D" parent="dekoracje" instance=ExtResource("7_p55xf")]
@@ -115,39 +104,3 @@ position = Vector2(-359, 72)
 
 [node name="Node2D6" parent="dekoracje" instance=ExtResource("7_p55xf")]
 position = Vector2(-150, -302)
-=======
-[node name="dziury" type="Node" parent="."]
-
-[node name="hole" parent="dziury" instance=ExtResource("7_dc3qx")]
-position = Vector2(-41, -558)
-
-[node name="hole2" parent="dziury" instance=ExtResource("7_dc3qx")]
-position = Vector2(215, -772)
-
-[node name="hole3" parent="dziury" instance=ExtResource("7_dc3qx")]
-position = Vector2(402, -981)
-
-[node name="hole4" parent="dziury" instance=ExtResource("7_dc3qx")]
-position = Vector2(613, -494)
-
-[node name="hole5" parent="dziury" instance=ExtResource("7_dc3qx")]
-position = Vector2(554, -166)
-
-[node name="hole6" parent="dziury" instance=ExtResource("7_dc3qx")]
-position = Vector2(639, 23)
-
-[node name="hole7" parent="dziury" instance=ExtResource("7_dc3qx")]
-position = Vector2(870, 192)
-
-[node name="hole8" parent="dziury" instance=ExtResource("7_dc3qx")]
-position = Vector2(999, -149)
-
-[node name="hole9" parent="dziury" instance=ExtResource("7_dc3qx")]
-position = Vector2(1211, -460)
-
-[node name="hole10" parent="dziury" instance=ExtResource("7_dc3qx")]
-position = Vector2(1323, -723)
-
-[node name="hole11" parent="dziury" instance=ExtResource("7_dc3qx")]
-position = Vector2(1243, -931)
->>>>>>> Stashed changes
