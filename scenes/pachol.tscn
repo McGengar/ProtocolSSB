@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://cmfwpqhuu300d"]
+
+[ext_resource type="Texture2D" uid="uid://cp8qngmrjy7n1" path="res://sprites/pachol.png" id="1_8t43w"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_6ilkf"]
+bounce = 0.5
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_e8dnr"]
+height = 32.0
+
+[node name="pachol" type="StaticBody2D"]
+scale = Vector2(0.5, 0.5)
+physics_material_override = SubResource("PhysicsMaterial_6ilkf")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_8t43w")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 10)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_e8dnr")

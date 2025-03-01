@@ -28,6 +28,7 @@ func _physics_process(delta):
 	apply_central_force(Vector2(0,gas).rotated(rotation+deg_to_rad(90))*speed*speed_multiplier*1000*delta)
 	
 	if Input.is_action_just_pressed("skill1") and $CanvasLayer/Skill1.value!=0:
+		$CanvasLayer/melon/elonani.play("sigmaboy")
 		$CanvasLayer/melon/right.play("right")
 		$CanvasLayer/Skill1/use.emitting = true
 		use_skill($CanvasLayer/Skill1.value)

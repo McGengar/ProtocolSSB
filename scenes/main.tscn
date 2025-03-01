@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://bv4gjsig82gvf"]
+[gd_scene load_steps=7 format=3 uid="uid://bv4gjsig82gvf"]
 
 [ext_resource type="PackedScene" uid="uid://bwfxtvsh4xcbq" path="res://scenes/road.tscn" id="1_hy0hs"]
 [ext_resource type="PackedScene" uid="uid://dcq4ivigrdvd2" path="res://scenes/car.tscn" id="1_seax4"]
 [ext_resource type="PackedScene" uid="uid://dhc2kem12wiw4" path="res://scenes/ducks.tscn" id="4_3d5vc"]
 [ext_resource type="PackedScene" uid="uid://bjw44oc5gw6v5" path="res://scenes/falling_object.tscn" id="4_xdrte"]
 [ext_resource type="PackedScene" uid="uid://4xnw2bff6l2q" path="res://scenes/finish_line.tscn" id="5_e2nwy"]
+[ext_resource type="PackedScene" uid="uid://cmfwpqhuu300d" path="res://scenes/pachol.tscn" id="6_qrobp"]
 
 [node name="Main" type="Node2D"]
 
@@ -24,3 +25,59 @@ position = Vector2(-253, -408)
 
 [node name="Finish_line" parent="." instance=ExtResource("5_e2nwy")]
 position = Vector2(1285, -1063)
+
+[node name="pacholy" type="Node" parent="."]
+
+[node name="pachol" parent="pacholy" instance=ExtResource("6_qrobp")]
+position = Vector2(197, -560)
+
+[node name="pachol7" parent="pacholy" instance=ExtResource("6_qrobp")]
+position = Vector2(197, -546)
+
+[node name="pachol8" parent="pacholy" instance=ExtResource("6_qrobp")]
+position = Vector2(197, -531)
+
+[node name="pachol9" parent="pacholy" instance=ExtResource("6_qrobp")]
+position = Vector2(949, 95)
+
+[node name="pachol10" parent="pacholy" instance=ExtResource("6_qrobp")]
+position = Vector2(974, 95)
+
+[node name="pachol11" parent="pacholy" instance=ExtResource("6_qrobp")]
+position = Vector2(998, 95)
+
+[node name="pachol12" parent="pacholy" instance=ExtResource("6_qrobp")]
+position = Vector2(973, -31)
+
+[node name="pachol13" parent="pacholy" instance=ExtResource("6_qrobp")]
+position = Vector2(948, -31)
+
+[node name="pachol14" parent="pacholy" instance=ExtResource("6_qrobp")]
+position = Vector2(924, -31)
+
+[node name="pachol15" parent="pacholy" instance=ExtResource("6_qrobp")]
+position = Vector2(317, -933)
+
+[node name="pachol16" parent="pacholy" instance=ExtResource("6_qrobp")]
+position = Vector2(239, -1008)
+
+[node name="pachol17" parent="pacholy" instance=ExtResource("6_qrobp")]
+position = Vector2(258, -996)
+
+[node name="pachol18" parent="pacholy" instance=ExtResource("6_qrobp")]
+position = Vector2(300, -949)
+
+[node name="pachol2" parent="pacholy" instance=ExtResource("6_qrobp")]
+position = Vector2(-172, 424)
+
+[node name="pachol3" parent="pacholy" instance=ExtResource("6_qrobp")]
+position = Vector2(-147, 424)
+
+[node name="pachol5" parent="pacholy" instance=ExtResource("6_qrobp")]
+position = Vector2(-121, 424)
+
+[node name="pachol6" parent="pacholy" instance=ExtResource("6_qrobp")]
+position = Vector2(-98, 425)
+
+[node name="pachol4" parent="pacholy" instance=ExtResource("6_qrobp")]
+position = Vector2(-74, 424)
