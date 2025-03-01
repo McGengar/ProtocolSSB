@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://ctp5218naxa4t"]
+[gd_scene load_steps=9 format=3 uid="uid://ctp5218naxa4t"]
 
 [ext_resource type="PackedScene" uid="uid://bwfxtvsh4xcbq" path="res://scenes/road.tscn" id="1_ukvxr"]
 [ext_resource type="PackedScene" uid="uid://bkx8nvjl7b2gj" path="res://scenes/car.tscn" id="2_ycmxb"]
 [ext_resource type="PackedScene" uid="uid://4xnw2bff6l2q" path="res://scenes/finish_line.tscn" id="3_gybqh"]
 [ext_resource type="PackedScene" uid="uid://cmfwpqhuu300d" path="res://scenes/pachol.tscn" id="4_b4ops"]
 [ext_resource type="PackedScene" uid="uid://c0miu81v4dlja" path="res://scenes/rigid_bison.tscn" id="5_qiodq"]
+[ext_resource type="PackedScene" uid="uid://bjel0llnunwdw" path="res://scenes/tumbleweed.tscn" id="6_kjk7k"]
 
 [sub_resource type="Gradient" id="Gradient_8xr5t"]
 colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1)
@@ -116,3 +117,6 @@ rotation = 1.5708
 [node name="RigidBison5" parent="." instance=ExtResource("5_qiodq")]
 position = Vector2(-299, 21)
 rotation = 1.5708
+
+[node name="Humbleweed" parent="." instance=ExtResource("6_kjk7k")]
+position = Vector2(261, -138)
