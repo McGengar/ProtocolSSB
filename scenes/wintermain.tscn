@@ -44,99 +44,143 @@ position = Vector2(-1340, -699)
 [node name="Pacholy" type="Node" parent="."]
 
 [node name="pachol" parent="Pacholy" instance=ExtResource("6_vcm87")]
+modulate = Color(0.435294, 0.580392, 1, 1)
 position = Vector2(-116, 63)
 
 [node name="pachol2" parent="Pacholy" instance=ExtResource("6_vcm87")]
+modulate = Color(0.435294, 0.580392, 1, 1)
 position = Vector2(-89, 63)
 
 [node name="pachol3" parent="Pacholy" instance=ExtResource("6_vcm87")]
+modulate = Color(0.435294, 0.580392, 1, 1)
 position = Vector2(-64, 63)
 
 [node name="pachol4" parent="Pacholy" instance=ExtResource("6_vcm87")]
+modulate = Color(0.435294, 0.580392, 1, 1)
 position = Vector2(-40, 63)
 
 [node name="pachol5" parent="Pacholy" instance=ExtResource("6_vcm87")]
+modulate = Color(0.435294, 0.580392, 1, 1)
 position = Vector2(-14, 63)
 
 [node name="pachol6" parent="Pacholy" instance=ExtResource("6_vcm87")]
+modulate = Color(0.435294, 0.580392, 1, 1)
 position = Vector2(-121, -260)
 
 [node name="pachol7" parent="Pacholy" instance=ExtResource("6_vcm87")]
+modulate = Color(0.435294, 0.580392, 1, 1)
 position = Vector2(-133, -388)
 
 [node name="pachol8" parent="Pacholy" instance=ExtResource("6_vcm87")]
+modulate = Color(0.435294, 0.580392, 1, 1)
 position = Vector2(-376, -389)
 
 [node name="pachol9" parent="Pacholy" instance=ExtResource("6_vcm87")]
+modulate = Color(0.435294, 0.580392, 1, 1)
 position = Vector2(-387, -260)
 
 [node name="pachol10" parent="Pacholy" instance=ExtResource("6_vcm87")]
+modulate = Color(0.435294, 0.580392, 1, 1)
 position = Vector2(-510, -141)
 
 [node name="pachol11" parent="Pacholy" instance=ExtResource("6_vcm87")]
+modulate = Color(0.435294, 0.580392, 1, 1)
 position = Vector2(-1025, -889)
 
 [node name="pachol25" parent="Pacholy" instance=ExtResource("6_vcm87")]
+modulate = Color(0.435294, 0.580392, 1, 1)
 position = Vector2(-784, -873)
 
 [node name="pachol26" parent="Pacholy" instance=ExtResource("6_vcm87")]
+modulate = Color(0.435294, 0.580392, 1, 1)
 position = Vector2(-632, -790)
 
 [node name="pachol12" parent="Pacholy" instance=ExtResource("6_vcm87")]
+modulate = Color(0.435294, 0.580392, 1, 1)
 position = Vector2(-510, -1296)
 
 [node name="pachol13" parent="Pacholy" instance=ExtResource("6_vcm87")]
+modulate = Color(0.435294, 0.580392, 1, 1)
 position = Vector2(-509, -1273)
 
 [node name="pachol14" parent="Pacholy" instance=ExtResource("6_vcm87")]
+modulate = Color(0.435294, 0.580392, 1, 1)
 position = Vector2(-509, -1251)
 
 [node name="pachol15" parent="Pacholy" instance=ExtResource("6_vcm87")]
+modulate = Color(0.435294, 0.580392, 1, 1)
 position = Vector2(-633, -1412)
 
 [node name="pachol16" parent="Pacholy" instance=ExtResource("6_vcm87")]
+modulate = Color(0.435294, 0.580392, 1, 1)
 position = Vector2(-657, -1412)
 
 [node name="pachol17" parent="Pacholy" instance=ExtResource("6_vcm87")]
+modulate = Color(0.435294, 0.580392, 1, 1)
 position = Vector2(-684, -1412)
 
 [node name="pachol20" parent="Pacholy" instance=ExtResource("6_vcm87")]
+modulate = Color(0.435294, 0.580392, 1, 1)
 position = Vector2(-384, -1556)
 
 [node name="pachol21" parent="Pacholy" instance=ExtResource("6_vcm87")]
+modulate = Color(0.435294, 0.580392, 1, 1)
 position = Vector2(-511, -1532)
 
 [node name="pachol22" parent="Pacholy" instance=ExtResource("6_vcm87")]
+modulate = Color(0.435294, 0.580392, 1, 1)
 position = Vector2(-512, -1559)
 
 [node name="pachol23" parent="Pacholy" instance=ExtResource("6_vcm87")]
+modulate = Color(0.435294, 0.580392, 1, 1)
 position = Vector2(-384, -1531)
 
 [node name="pachol24" parent="Pacholy" instance=ExtResource("6_vcm87")]
+modulate = Color(0.435294, 0.580392, 1, 1)
 position = Vector2(-383, -1506)
 
 [node name="pachol18" parent="Pacholy" instance=ExtResource("6_vcm87")]
+modulate = Color(0.435294, 0.580392, 1, 1)
 position = Vector2(-630, -1294)
 
 [node name="pachol19" parent="Pacholy" instance=ExtResource("6_vcm87")]
+modulate = Color(0.435294, 0.580392, 1, 1)
 position = Vector2(-616, -1309)
 
 [node name="pachol27" parent="Pacholy" instance=ExtResource("6_vcm87")]
+modulate = Color(0.435294, 0.580392, 1, 1)
 position = Vector2(-385, -1264)
+
+[node name="pachol28" parent="Pacholy" instance=ExtResource("6_vcm87")]
+modulate = Color(0.435294, 0.580392, 1, 1)
+position = Vector2(-254, -284)
+
+[node name="pachol29" parent="Pacholy" instance=ExtResource("6_vcm87")]
+modulate = Color(0.435294, 0.580392, 1, 1)
+position = Vector2(-255, -240)
+
+[node name="pachol30" parent="Pacholy" instance=ExtResource("6_vcm87")]
+modulate = Color(0.435294, 0.580392, 1, 1)
+position = Vector2(-254, -262)
 
 [node name="holes" type="Node" parent="."]
 
 [node name="hole" parent="holes" instance=ExtResource("7_m1qgt")]
+modulate = Color(0.0637459, 2.64719e-07, 0.393559, 0.262745)
 position = Vector2(-1007, -279)
 
 [node name="hole2" parent="holes" instance=ExtResource("7_m1qgt")]
+modulate = Color(0.0637459, 2.64719e-07, 0.393559, 0.262745)
 position = Vector2(-1091, -367)
 
 [node name="hole3" parent="holes" instance=ExtResource("7_m1qgt")]
+modulate = Color(0.0637459, 2.64719e-07, 0.393559, 0.262745)
 position = Vector2(-1343, -457)
 
 [node name="hole5" parent="holes" instance=ExtResource("7_m1qgt")]
+modulate = Color(0.0637459, 2.64719e-07, 0.393559, 0.262745)
 position = Vector2(-1308, -485)
 
 [node name="hole4" parent="holes" instance=ExtResource("7_m1qgt")]
+modulate = Color(0.0637459, 2.64719e-07, 0.393559, 0.262745)
 position = Vector2(-707, -834)
