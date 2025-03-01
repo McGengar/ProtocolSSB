@@ -33,7 +33,9 @@ func _physics_process(delta):
 		$CanvasLayer/Skill1/use.emitting = true
 		use_skill($CanvasLayer/Skill1.value)
 		$CanvasLayer/Skill1.value=0	
-		await get_tree().create_timer(3.0).timeout
+		await get_tree().create_timer(0.8).timeout
+		$CanvasLayer/melon/elonani.play("jerkin")
+		await get_tree().create_timer(2.2).timeout
 		$CanvasLayer/Skill1/use.emitting = true
 		$CanvasLayer/Skill1.value=randi_range(1,9)
 	if Input.is_action_just_pressed("skill2") and $CanvasLayer/Skill2.value!=0:

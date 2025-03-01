@@ -4,8 +4,8 @@
 [ext_resource type="PackedScene" uid="uid://dcq4ivigrdvd2" path="res://scenes/car.tscn" id="1_seax4"]
 [ext_resource type="PackedScene" uid="uid://dhc2kem12wiw4" path="res://scenes/ducks.tscn" id="4_3d5vc"]
 [ext_resource type="PackedScene" uid="uid://bjw44oc5gw6v5" path="res://scenes/falling_object.tscn" id="4_xdrte"]
-[ext_resource type="PackedScene" path="res://scenes/finish_line.tscn" id="5_e2nwy"]
-[ext_resource type="PackedScene" path="res://scenes/pachol.tscn" id="6_qrobp"]
+[ext_resource type="PackedScene" uid="uid://4xnw2bff6l2q" path="res://scenes/finish_line.tscn" id="5_e2nwy"]
+[ext_resource type="PackedScene" uid="uid://cmfwpqhuu300d" path="res://scenes/pachol.tscn" id="6_qrobp"]
 
 [node name="Main" type="Node2D"]
 

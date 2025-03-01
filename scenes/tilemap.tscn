@@ -1,11 +1,11 @@
-[gd_scene load_steps=11 format=3 uid="uid://b1yy38ggj183t"]
+[gd_scene load_steps=11 format=3 uid="uid://c0kipv61p70u3"]
 
-[ext_resource type="Texture2D" uid="uid://ct3rjmsy2b0gp" path="res://sprites/roadball.png" id="1_07khy"]
+[ext_resource type="Texture2D" uid="uid://dstforpkoylgv" path="res://sprites/roadball.png" id="1_07khy"]
 [ext_resource type="Texture2D" uid="uid://bft7mav4acolh" path="res://sprites/roadstraight.png" id="2_7g5am"]
-[ext_resource type="Texture2D" uid="uid://b2nrprecqaddb" path="res://sprites/roadtile.png" id="3_s42xk"]
-[ext_resource type="Texture2D" uid="uid://coqpde6cacji4" path="res://sprites/hole.png" id="4_g5r2d"]
+[ext_resource type="Texture2D" uid="uid://dkfop77vytgdl" path="res://sprites/roadtile.png" id="3_s42xk"]
+[ext_resource type="Texture2D" uid="uid://cdxfbuw2yo7eg" path="res://sprites/hole.png" id="4_g5r2d"]
 [ext_resource type="PackedScene" uid="uid://dcq4ivigrdvd2" path="res://scenes/car.tscn" id="5_ga5m5"]
-[ext_resource type="PackedScene" uid="uid://cauxuvxew16gw" path="res://scenes/hole.tscn" id="6_vvyw2"]
+[ext_resource type="PackedScene" path="res://scenes/hole.tscn" id="6_vvyw2"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nqa5a"]
 texture = ExtResource("1_07khy")
