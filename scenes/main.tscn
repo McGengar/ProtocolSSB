@@ -4,10 +4,10 @@
 [ext_resource type="PackedScene" uid="uid://dcq4ivigrdvd2" path="res://scenes/car.tscn" id="1_seax4"]
 [ext_resource type="PackedScene" uid="uid://dhc2kem12wiw4" path="res://scenes/ducks.tscn" id="4_3d5vc"]
 [ext_resource type="PackedScene" uid="uid://bjw44oc5gw6v5" path="res://scenes/falling_object.tscn" id="4_xdrte"]
-[ext_resource type="PackedScene" path="res://scenes/finish_line.tscn" id="5_e2nwy"]
-[ext_resource type="PackedScene" path="res://scenes/pachol.tscn" id="6_qrobp"]
+[ext_resource type="PackedScene" uid="uid://4xnw2bff6l2q" path="res://scenes/finish_line.tscn" id="5_e2nwy"]
+[ext_resource type="PackedScene" uid="uid://cmfwpqhuu300d" path="res://scenes/pachol.tscn" id="6_qrobp"]
 [ext_resource type="PackedScene" path="res://scenes/hole.tscn" id="7_dc3qx"]
-[ext_resource type="PackedScene" uid="uid://raenjqgyvh30" path="res://scenes/drzewo.tscn" id="7_p55xf"]
+[ext_resource type="PackedScene" uid="uid://3u3r8u72e1dp" path="res://scenes/drzewo.tscn" id="7_p55xf"]
 
 [node name="Main" type="Node2D"]
 
@@ -86,25 +86,345 @@ position = Vector2(-98, 425)
 [node name="pachol4" parent="pacholy" instance=ExtResource("6_qrobp")]
 position = Vector2(-74, 424)
 
-[node name="dekoracje" type="Node" parent="."]
+[node name="dekoracje" type="Node2D" parent="."]
+y_sort_enabled = true
 
-[node name="Node2D" parent="dekoracje" instance=ExtResource("7_p55xf")]
-position = Vector2(-350, -93)
+[node name="Drzewo" parent="dekoracje" instance=ExtResource("7_p55xf")]
+position = Vector2(-402, -83)
 
-[node name="Node2D2" parent="dekoracje" instance=ExtResource("7_p55xf")]
-position = Vector2(-350, -93)
+[node name="Drzewo33" parent="dekoracje" instance=ExtResource("7_p55xf")]
+position = Vector2(125, -786)
 
-[node name="Node2D3" parent="dekoracje" instance=ExtResource("7_p55xf")]
-position = Vector2(-350, -93)
+[node name="Drzewo17" parent="dekoracje" instance=ExtResource("7_p55xf")]
+position = Vector2(28, -514)
 
-[node name="Node2D4" parent="dekoracje" instance=ExtResource("7_p55xf")]
-position = Vector2(-349, -276)
+[node name="Drzewo42" parent="dekoracje" instance=ExtResource("7_p55xf")]
+position = Vector2(28, -514)
 
-[node name="Node2D5" parent="dekoracje" instance=ExtResource("7_p55xf")]
-position = Vector2(-359, 72)
+[node name="Drzewo43" parent="dekoracje" instance=ExtResource("7_p55xf")]
+position = Vector2(728, -530)
 
-[node name="Node2D6" parent="dekoracje" instance=ExtResource("7_p55xf")]
-position = Vector2(-150, -302)
+[node name="Drzewo44" parent="dekoracje" instance=ExtResource("7_p55xf")]
+position = Vector2(766, -606)
+
+[node name="Drzewo60" parent="dekoracje" instance=ExtResource("7_p55xf")]
+position = Vector2(1063, -482)
+
+[node name="Drzewo8" parent="dekoracje" instance=ExtResource("7_p55xf")]
+position = Vector2(-148, -32)
+
+[node name="Drzewo2" parent="dekoracje" instance=ExtResource("7_p55xf")]
+position = Vector2(-363, -17)
+frame = 2
+
+[node name="Drzewo10" parent="dekoracje" instance=ExtResource("7_p55xf")]
+position = Vector2(-363, -17)
+frame = 2
+
+[node name="Drzewo11" parent="dekoracje" instance=ExtResource("7_p55xf")]
+position = Vector2(-407, -331)
+frame = 2
+
+[node name="Drzewo32" parent="dekoracje" instance=ExtResource("7_p55xf")]
+position = Vector2(543, -358)
+frame = 2
+
+[node name="Drzewo61" parent="dekoracje" instance=ExtResource("7_p55xf")]
+position = Vector2(543, -358)
+frame = 2
+
+[node name="Drzewo16" parent="dekoracje" instance=ExtResource("7_p55xf")]
+position = Vector2(172, -699)
+frame = 2
+
+[node name="Drzewo45" parent="dekoracje" instance=ExtResource("7_p55xf")]
+position = Vector2(-170, -524)
+frame = 14
+
+[node name="Drzewo46" parent="dekoracje" instance=ExtResource("7_p55xf")]
+position = Vector2(191, -663)
+frame = 15
+
+[node name="Drzewo47" parent="dekoracje" instance=ExtResource("7_p55xf")]
+position = Vector2(61, -581)
+frame = 16
+
+[node name="Drzewo48" parent="dekoracje" instance=ExtResource("7_p55xf")]
+position = Vector2(-181, -509)
+frame = 17
+
+[node name="Drzewo49" parent="dekoracje" instance=ExtResource("7_p55xf")]
+position = Vector2(-334, -407)
+frame = 17
+
+[node name="Drzewo50" parent="dekoracje" instance=ExtResource("7_p55xf")]
+position = Vector2(-177, -268)
+frame = 17
+
+[node name="Drzewo82" parent="dekoracje" instance=ExtResource("7_p55xf")]
+position = Vector2(717, -287)
+frame = 17
+
+[node name="Drzewo83" parent="dekoracje" instance=ExtResource("7_p55xf")]
+position = Vector2(736, 34)
+frame = 17
+
+[node name="Drzewo84" parent="dekoracje" instance=ExtResource("7_p55xf")]
+position = Vector2(937, 181)
+frame = 17
+
+[node name="Drzewo85" parent="dekoracje" instance=ExtResource("7_p55xf")]
+position = Vector2(1087, -15)
+frame = 17
+
+[node name="Drzewo51" parent="dekoracje" instance=ExtResource("7_p55xf")]
+position = Vector2(-327, -108)
+frame = 17
+
+[node name="Drzewo52" parent="dekoracje" instance=ExtResource("7_p55xf")]
+position = Vector2(-170, 14)
+frame = 17
+
+[node name="Drzewo53" parent="dekoracje" instance=ExtResource("7_p55xf")]
+position = Vector2(-170, 14)
+frame = 17
+
+[node name="Drzewo4" parent="dekoracje" instance=ExtResource("7_p55xf")]
+position = Vector2(-125, -58)
+frame = 8
+
+[node name="Drzewo25" parent="dekoracje" instance=ExtResource("7_p55xf")]
+position = Vector2(-46, -736)
+frame = 8
+
+[node name="Drzewo37" parent="dekoracje" instance=ExtResource("7_p55xf")]
+position = Vector2(375, -761)
+frame = 8
+
+[node name="Drzewo18" parent="dekoracje" instance=ExtResource("7_p55xf")]
+position = Vector2(-19, -557)
+frame = 8
+
+[node name="Drzewo41" parent="dekoracje" instance=ExtResource("7_p55xf")]
+position = Vector2(762, -433)
+frame = 8
+
+[node name="Drzewo5" parent="dekoracje" instance=ExtResource("7_p55xf")]
+position = Vector2(-411, -10)
+frame = 9
+
+[node name="Drzewo26" parent="dekoracje" instance=ExtResource("7_p55xf")]
+position = Vector2(-8, 297)
+frame = 9
+
+[node name="Drzewo24" parent="dekoracje" instance=ExtResource("7_p55xf")]
+position = Vector2(-330, -681)
+frame = 9
+
+[node name="Drzewo19" parent="dekoracje" instance=ExtResource("7_p55xf")]
+position = Vector2(363, -604)
+
+[node name="Drzewo40" parent="dekoracje" instance=ExtResource("7_p55xf")]
+position = Vector2(703, -1056)
+
+[node name="Drzewo20" parent="dekoracje" instance=ExtResource("7_p55xf")]
+position = Vector2(402, -538)
+frame = 2
+
+[node name="Drzewo21" parent="dekoracje" instance=ExtResource("7_p55xf")]
+position = Vector2(402, -538)
+frame = 2
+
+[node name="Drzewo22" parent="dekoracje" instance=ExtResource("7_p55xf")]
+position = Vector2(354, -531)
+frame = 9
+
+[node name="Drzewo39" parent="dekoracje" instance=ExtResource("7_p55xf")]
+position = Vector2(1139, -330)
+frame = 9
+
+[node name="Drzewo28" parent="dekoracje" instance=ExtResource("7_p55xf")]
+position = Vector2(605, -129)
+
+[node name="Drzewo65" parent="dekoracje" instance=ExtResource("7_p55xf")]
+position = Vector2(605, -129)
+
+[node name="Drzewo66" parent="dekoracje" instance=ExtResource("7_p55xf")]
+position = Vector2(557, 145)
+
+[node name="Drzewo29" parent="dekoracje" instance=ExtResource("7_p55xf")]
+position = Vector2(669, -107)
+frame = 2
+
+[node name="Drzewo30" parent="dekoracje" instance=ExtResource("7_p55xf")]
+position = Vector2(669, -107)
+frame = 2
+
+[node name="Drzewo62" parent="dekoracje" instance=ExtResource("7_p55xf")]
+position = Vector2(918, -235)
+frame = 2
+
+[node name="Drzewo31" parent="dekoracje" instance=ExtResource("7_p55xf")]
+position = Vector2(621, -100)
+frame = 9
+
+[node name="Drzewo64" parent="dekoracje" instance=ExtResource("7_p55xf")]
+position = Vector2(687, 207)
+frame = 9
+
+[node name="Drzewo6" parent="dekoracje" instance=ExtResource("7_p55xf")]
+position = Vector2(-176, 45)
+frame = 10
+
+[node name="Drzewo86" parent="dekoracje" instance=ExtResource("7_p55xf")]
+position = Vector2(1040, -71)
+frame = 10
+
+[node name="Drzewo87" parent="dekoracje" instance=ExtResource("7_p55xf")]
+position = Vector2(1101, 162)
+frame = 3
+
+[node name="Drzewo88" parent="dekoracje" instance=ExtResource("7_p55xf")]
+position = Vector2(882, 204)
+frame = 10
+
+[node name="Drzewo54" parent="dekoracje" instance=ExtResource("7_p55xf")]
+position = Vector2(-334, 61)
+frame = 15
+
+[node name="Drzewo27" parent="dekoracje" instance=ExtResource("7_p55xf")]
+position = Vector2(-334, -129)
+frame = 10
+
+[node name="Drzewo13" parent="dekoracje" instance=ExtResource("7_p55xf")]
+position = Vector2(-148, -553)
+frame = 10
+
+[node name="Drzewo14" parent="dekoracje" instance=ExtResource("7_p55xf")]
+position = Vector2(-148, -553)
+frame = 10
+
+[node name="Drzewo15" parent="dekoracje" instance=ExtResource("7_p55xf")]
+position = Vector2(-167, -556)
+frame = 10
+
+[node name="Drzewo38" parent="dekoracje" instance=ExtResource("7_p55xf")]
+position = Vector2(342, -950)
+frame = 10
+
+[node name="Drzewo3" parent="dekoracje" instance=ExtResource("7_p55xf")]
+position = Vector2(-262, 234)
+frame = 4
+
+[node name="Drzewo7" parent="dekoracje" instance=ExtResource("7_p55xf")]
+position = Vector2(-334, -183)
+frame = 4
+
+[node name="Drzewo67" parent="dekoracje" instance=ExtResource("7_p55xf")]
+position = Vector2(356, -111)
+
+[node name="Drzewo68" parent="dekoracje" instance=ExtResource("7_p55xf")]
+position = Vector2(395, -45)
+frame = 2
+
+[node name="Drzewo69" parent="dekoracje" instance=ExtResource("7_p55xf")]
+position = Vector2(395, -45)
+frame = 2
+
+[node name="Drzewo70" parent="dekoracje" instance=ExtResource("7_p55xf")]
+position = Vector2(431, -136)
+frame = 17
+
+[node name="Drzewo71" parent="dekoracje" instance=ExtResource("7_p55xf")]
+position = Vector2(347, -38)
+frame = 9
+
+[node name="Drzewo72" parent="dekoracje" instance=ExtResource("7_p55xf")]
+position = Vector2(424, -157)
+frame = 10
+
+[node name="Drzewo73" parent="dekoracje" instance=ExtResource("7_p55xf")]
+position = Vector2(424, -211)
+frame = 4
+
+[node name="Drzewo74" parent="dekoracje" instance=ExtResource("7_p55xf")]
+position = Vector2(1246, -422)
+
+[node name="Drzewo75" parent="dekoracje" instance=ExtResource("7_p55xf")]
+position = Vector2(1320, -382)
+frame = 2
+
+[node name="Drzewo76" parent="dekoracje" instance=ExtResource("7_p55xf")]
+position = Vector2(1320, -382)
+frame = 2
+
+[node name="Drzewo81" parent="dekoracje" instance=ExtResource("7_p55xf")]
+position = Vector2(1181, -722)
+frame = 2
+
+[node name="Drzewo77" parent="dekoracje" instance=ExtResource("7_p55xf")]
+position = Vector2(1356, -473)
+frame = 17
+
+[node name="Drzewo78" parent="dekoracje" instance=ExtResource("7_p55xf")]
+position = Vector2(1272, -375)
+frame = 9
+
+[node name="Drzewo79" parent="dekoracje" instance=ExtResource("7_p55xf")]
+position = Vector2(1349, -494)
+frame = 10
+
+[node name="Drzewo80" parent="dekoracje" instance=ExtResource("7_p55xf")]
+position = Vector2(1362, -543)
+frame = 4
+
+[node name="Drzewo9" parent="dekoracje" instance=ExtResource("7_p55xf")]
+position = Vector2(-87, -154)
+frame = 4
+
+[node name="Drzewo23" parent="dekoracje" instance=ExtResource("7_p55xf")]
+position = Vector2(-301, -711)
+frame = 4
+
+[node name="Drzewo12" parent="dekoracje" instance=ExtResource("7_p55xf")]
+position = Vector2(-164, -569)
+frame = 4
+
+[node name="Drzewo34" parent="dekoracje" instance=ExtResource("7_p55xf")]
+position = Vector2(379, -771)
+frame = 4
+
+[node name="Drzewo63" parent="dekoracje" instance=ExtResource("7_p55xf")]
+position = Vector2(1088, -59)
+frame = 4
+
+[node name="Drzewo35" parent="dekoracje" instance=ExtResource("7_p55xf")]
+position = Vector2(295, -1114)
+frame = 4
+
+[node name="Drzewo36" parent="dekoracje" instance=ExtResource("7_p55xf")]
+position = Vector2(551, -882)
+frame = 4
+
+[node name="Drzewo55" parent="dekoracje" instance=ExtResource("7_p55xf")]
+position = Vector2(1187, -1104)
+frame = 4
+
+[node name="Drzewo56" parent="dekoracje" instance=ExtResource("7_p55xf")]
+position = Vector2(1387, -1111)
+frame = 4
+
+[node name="Drzewo57" parent="dekoracje" instance=ExtResource("7_p55xf")]
+position = Vector2(1209, -1041)
+frame = 16
+
+[node name="Drzewo58" parent="dekoracje" instance=ExtResource("7_p55xf")]
+position = Vector2(1370, -1002)
+frame = 14
+
+[node name="Drzewo59" parent="dekoracje" instance=ExtResource("7_p55xf")]
+position = Vector2(1183, -891)
+frame = 9
 
 [node name="dziury" type="Node" parent="."]
 

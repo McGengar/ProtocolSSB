@@ -11,7 +11,7 @@ var alpha = 0
 var can_rotate = 0
 var angle = -78
 var effect_transition = 0.0
-var time = 10.0
+var time = 100.0
 var time_txt = ""
 
 func _ready():
