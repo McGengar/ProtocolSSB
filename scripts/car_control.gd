@@ -31,7 +31,7 @@ func _physics_process(delta):
 		$CanvasLayer/melon/left.play("left")
 		$CanvasLayer/Skill1/use.emitting = true
 		use_skill($CanvasLayer/Skill1.value)
-		$CanvasLayer/Skill1.value=0
+		$CanvasLayer/Skill1.value=0	
 		await get_tree().create_timer(3.0).timeout
 		$CanvasLayer/Skill1/use.emitting = true
 		$CanvasLayer/Skill1.value=randi_range(1,9)
