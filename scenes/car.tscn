@@ -1,11 +1,13 @@
-[gd_scene load_steps=14 format=3 uid="uid://dcq4ivigrdvd2"]
+[gd_scene load_steps=27 format=3 uid="uid://bkx8nvjl7b2gj"]
 
 [ext_resource type="Script" path="res://scripts/car_control.gd" id="1_vljah"]
 [ext_resource type="Texture2D" uid="uid://d2gqvtbfaf7a5" path="res://sprites/autko.png" id="2_sgwix"]
 [ext_resource type="PackedScene" uid="uid://cm4p7dkhsg2ji" path="res://scenes/skill.tscn" id="3_ecsdd"]
-[ext_resource type="Texture2D" uid="uid://dsb6cb7p5u1kt" path="res://sprites/walona wycieeraczka.png" id="4_6sbb8"]
-[ext_resource type="Texture2D" uid="uid://bvh542laixk4f" path="res://sprites/babel.png" id="5_l5enp"]
-[ext_resource type="PackedScene" path="res://scenes/melon.tscn" id="6_nkygn"]
+[ext_resource type="Texture2D" uid="uid://dlai7iylnsog7" path="res://sprites/walona wycieeraczka.png" id="4_6sbb8"]
+[ext_resource type="Texture2D" uid="uid://cdrfqihnnd505" path="res://sprites/babel.png" id="5_l5enp"]
+[ext_resource type="PackedScene" uid="uid://cq2iywhlcsohq" path="res://scenes/melon.tscn" id="6_nkygn"]
+[ext_resource type="Texture2D" uid="uid://b355kqi3j76et" path="res://sprites/indyki.png" id="7_364d0"]
+[ext_resource type="FontFile" uid="uid://d20i0fb3bjvfc" path="res://ssb/8-BIT WONDER.TTF" id="8_eklrs"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4po4l"]
 radius = 12.0
@@ -26,6 +28,84 @@ point_count = 2
 [sub_resource type="Gradient" id="Gradient_fd6po"]
 offsets = PackedFloat32Array(0, 0.763158, 1)
 colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_suoyx"]
+atlas = ExtResource("7_364d0")
+region = Rect2(432, 0, 48, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_utue3"]
+atlas = ExtResource("7_364d0")
+region = Rect2(0, 0, 48, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_08n21"]
+atlas = ExtResource("7_364d0")
+region = Rect2(48, 0, 48, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_563v5"]
+atlas = ExtResource("7_364d0")
+region = Rect2(96, 0, 48, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_liler"]
+atlas = ExtResource("7_364d0")
+region = Rect2(144, 0, 48, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0e38s"]
+atlas = ExtResource("7_364d0")
+region = Rect2(192, 0, 48, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q4nde"]
+atlas = ExtResource("7_364d0")
+region = Rect2(240, 0, 48, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hjyr4"]
+atlas = ExtResource("7_364d0")
+region = Rect2(288, 0, 48, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_haph2"]
+atlas = ExtResource("7_364d0")
+region = Rect2(336, 0, 48, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gmsjw"]
+atlas = ExtResource("7_364d0")
+region = Rect2(384, 0, 48, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7ir4s"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_suoyx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_utue3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_08n21")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_563v5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_liler")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0e38s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q4nde")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hjyr4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_haph2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gmsjw")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="Gradient" id="Gradient_le405"]
 colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1)
@@ -117,7 +197,7 @@ scale = Vector2(4, 4)
 z_index = -1
 position = Vector2(939, 550)
 emitting = false
-amount = 700
+amount = 800
 lifetime = 3.0
 texture = ExtResource("5_l5enp")
 emission_shape = 3
@@ -130,8 +210,24 @@ scale_amount_max = 15.0
 scale_amount_curve = SubResource("Curve_q8e6p")
 color_ramp = SubResource("Gradient_fd6po")
 
+[node name="indicator" type="AnimatedSprite2D" parent="CanvasLayer"]
+position = Vector2(960, 480)
+scale = Vector2(10, 10)
+sprite_frames = SubResource("SpriteFrames_7ir4s")
+frame = 1
+
 [node name="Sprite2D" type="Sprite2D" parent="CanvasLayer"]
 visible = false
 position = Vector2(965, 552.5)
 scale = Vector2(7.72656, 1121)
 texture = SubResource("GradientTexture1D_nselp")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer"]
+offset_top = 19.0
+offset_right = 1922.0
+offset_bottom = 166.0
+theme_override_fonts/normal_font = ExtResource("8_eklrs")
+theme_override_font_sizes/normal_font_size = 100
+bbcode_enabled = true
+text = "[center]100[/center]
+"

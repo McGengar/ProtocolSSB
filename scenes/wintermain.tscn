@@ -1,12 +1,13 @@
-[gd_scene load_steps=10 format=3 uid="uid://dloet2ghheyeh"]
+[gd_scene load_steps=11 format=3 uid="uid://dloet2ghheyeh"]
 
 [ext_resource type="PackedScene" uid="uid://bwfxtvsh4xcbq" path="res://scenes/road.tscn" id="1_45ga1"]
 [ext_resource type="PackedScene" uid="uid://dcq4ivigrdvd2" path="res://scenes/car.tscn" id="2_b62ra"]
 [ext_resource type="PackedScene" uid="uid://4xnw2bff6l2q" path="res://scenes/finish_line.tscn" id="3_avdxn"]
 [ext_resource type="PackedScene" uid="uid://bjw44oc5gw6v5" path="res://scenes/falling_object.tscn" id="4_7qkmp"]
 [ext_resource type="PackedScene" uid="uid://dhc2kem12wiw4" path="res://scenes/ducks.tscn" id="5_57bg1"]
-[ext_resource type="PackedScene" uid="uid://djtmaytixm53q" path="res://scenes/pachol.tscn" id="6_vcm87"]
-[ext_resource type="PackedScene" uid="uid://cauxuvxew16gw" path="res://scenes/hole.tscn" id="7_m1qgt"]
+[ext_resource type="PackedScene" uid="uid://cmfwpqhuu300d" path="res://scenes/pachol.tscn" id="6_vcm87"]
+[ext_resource type="PackedScene" path="res://scenes/hole.tscn" id="7_m1qgt"]
+[ext_resource type="PackedScene" uid="uid://3u3r8u72e1dp" path="res://scenes/drzewo.tscn" id="8_hc2kk"]
 
 [sub_resource type="Gradient" id="Gradient_vb1ff"]
 colors = PackedColorArray(0.832341, 0.888803, 1, 1, 1, 1, 1, 1)
@@ -19,7 +20,7 @@ gradient = SubResource("Gradient_vb1ff")
 [node name="Road" parent="." instance=ExtResource("1_45ga1")]
 modulate = Color(0.180392, 0.839216, 1, 1)
 z_index = -10
-layer_0/tile_data = PackedInt32Array(-1, 2, 268435457, -65537, 65536, 0, -65538, 0, 1, -131074, 0, 0, -131073, 65536, 1, -196609, 65536, 0, -196610, 2, 1342177281, -196611, 2, 1342177281, -196612, 0, 0, -131076, 0, 1, -131075, 65536, 0, -65539, 65536, 1, -65540, 0, 0, -4, 65536, 1, -5, 0, 1, -65541, 65536, 0, -65542, 2, 1342177281, -65543, 2, 1342177281, -65544, 0, 1, -131080, 65536, 0, -131081, 2, 1342177281, -131082, 2, 1342177281, -131083, 0, 1, -196619, 2, 1, -262155, 2, 1, -327691, 0, 0, -327690, 65536, 1, -393226, 0, 0, -393225, 65536, 1, -458761, 0, 0, -458760, 65536, 0, -393224, 0, 1, -393223, 2, 1610612737, -393222, 2, 1610612737, -393221, 2, 1610612737, -393220, 65536, 1, -458756, 0, 0, -458755, 65536, 1, -524291, 2, 805306369, -589827, 2, 805306369, -655363, 65536, 0, -655364, 0, 0, -589828, 65536, 1, -589829, 0, 1, -655365, 65536, 0, -655366, 0, 1, -720902, 0, 0, -720901, 65536, 1, -786437, 0, 0, -786436, 65536, 0, -720900, 0, 1, -720899, 65536, 1, -786435, 2, 805306369, -851971, 2, 805306369, -917507, 2, 805306369, -983043, 2, 805306369, 65535, 2, 268435457, 131071, 2, 268435457, 196607, 2, 268435457)
+layer_0/tile_data = PackedInt32Array(-1, 2, 268435457, -65537, 65536, 0, -65538, 0, 1, -131074, 0, 0, -131073, 65536, 1, -196609, 65536, 0, -196610, 2, 1342177281, -196611, 2, 1342177281, -196612, 0, 0, -131076, 0, 1, -131075, 65536, 0, -65539, 65536, 1, -65540, 0, 0, -4, 65536, 1, -5, 0, 1, -65541, 65536, 0, -65542, 2, 1342177281, -65543, 2, 1342177281, -65544, 0, 1, -131080, 65536, 0, -131081, 2, 1342177281, -131082, 2, 1342177281, -131083, 0, 1, -196619, 2, 1, -262155, 2, 1, -327691, 0, 0, -327690, 65536, 1, -393226, 0, 0, -393225, 65536, 1, -458761, 0, 0, -458760, 65536, 0, -393224, 0, 1, -393223, 2, 1610612737, -393222, 2, 1610612737, -393221, 2, 1610612737, -393220, 65536, 1, -458756, 0, 0, -458755, 65536, 1, -524291, 2, 805306369, -589827, 2, 805306369, -655363, 65536, 0, -655364, 0, 0, -589828, 65536, 1, -589829, 0, 1, -655365, 65536, 0, -655366, 0, 1, -720902, 0, 0, -720901, 65536, 1, -786437, 0, 0, -786436, 65536, 0, -720900, 0, 1, -720899, 65536, 1, -786435, 2, 805306369, -851971, 2, 805306369, -917507, 2, 805306369, -983043, 2, 805306369, 65535, 2, 268435457, 131071, 2, 268435457, 196607, 2, 268435457, -1048579, 2, 268435457, -1114115, 2, 268435457, -1179651, 2, 268435457)
 
 [node name="Car" parent="." instance=ExtResource("2_b62ra")]
 position = Vector2(-64, -22)
@@ -139,6 +140,10 @@ position = Vector2(-384, -1531)
 modulate = Color(0.435294, 0.580392, 1, 1)
 position = Vector2(-383, -1506)
 
+[node name="pachol31" parent="Pacholy" instance=ExtResource("6_vcm87")]
+modulate = Color(0.435294, 0.580392, 1, 1)
+position = Vector2(-382, -1411)
+
 [node name="pachol18" parent="Pacholy" instance=ExtResource("6_vcm87")]
 modulate = Color(0.435294, 0.580392, 1, 1)
 position = Vector2(-630, -1294)
@@ -184,3 +189,117 @@ position = Vector2(-1308, -485)
 [node name="hole4" parent="holes" instance=ExtResource("7_m1qgt")]
 modulate = Color(0.0637459, 2.64719e-07, 0.393559, 0.262745)
 position = Vector2(-707, -834)
+
+[node name="dekroacje" type="Node2D" parent="."]
+
+[node name="Drzewo" parent="dekroacje" instance=ExtResource("8_hc2kk")]
+position = Vector2(-150, -83)
+frame = 5
+
+[node name="Drzewo2" parent="dekroacje" instance=ExtResource("8_hc2kk")]
+position = Vector2(-509, -290)
+frame = 6
+
+[node name="Drzewo25" parent="dekroacje" instance=ExtResource("8_hc2kk")]
+position = Vector2(-161, -582)
+frame = 6
+
+[node name="Drzewo27" parent="dekroacje" instance=ExtResource("8_hc2kk")]
+position = Vector2(-804, -1537)
+frame = 6
+
+[node name="Drzewo9" parent="dekroacje" instance=ExtResource("8_hc2kk")]
+position = Vector2(-865, -334)
+frame = 6
+
+[node name="Drzewo10" parent="dekroacje" instance=ExtResource("8_hc2kk")]
+position = Vector2(-1193, -975)
+frame = 6
+
+[node name="Drzewo11" parent="dekroacje" instance=ExtResource("8_hc2kk")]
+position = Vector2(-199, -1446)
+frame = 6
+
+[node name="Drzewo12" parent="dekroacje" instance=ExtResource("8_hc2kk")]
+position = Vector2(-347, -833)
+frame = 6
+
+[node name="Drzewo13" parent="dekroacje" instance=ExtResource("8_hc2kk")]
+position = Vector2(-146, -57)
+frame = 11
+
+[node name="Drzewo14" parent="dekroacje" instance=ExtResource("8_hc2kk")]
+position = Vector2(-636, -316)
+frame = 11
+
+[node name="Drzewo19" parent="dekroacje" instance=ExtResource("8_hc2kk")]
+position = Vector2(-730, -159)
+frame = 12
+
+[node name="Drzewo21" parent="dekroacje" instance=ExtResource("8_hc2kk")]
+position = Vector2(-1222, -449)
+frame = 12
+
+[node name="Drzewo22" parent="dekroacje" instance=ExtResource("8_hc2kk")]
+position = Vector2(-873, -806)
+frame = 12
+
+[node name="Drzewo23" parent="dekroacje" instance=ExtResource("8_hc2kk")]
+position = Vector2(-203, -1237)
+frame = 12
+
+[node name="Drzewo24" parent="dekroacje" instance=ExtResource("8_hc2kk")]
+position = Vector2(-517, -1452)
+frame = 15
+
+[node name="Drzewo20" parent="dekroacje" instance=ExtResource("8_hc2kk")]
+position = Vector2(-42, -310)
+frame = 12
+
+[node name="Drzewo26" parent="dekroacje" instance=ExtResource("8_hc2kk")]
+position = Vector2(-295, -570)
+frame = 12
+
+[node name="Drzewo15" parent="dekroacje" instance=ExtResource("8_hc2kk")]
+position = Vector2(-1424, -477)
+frame = 11
+
+[node name="Drzewo16" parent="dekroacje" instance=ExtResource("8_hc2kk")]
+position = Vector2(-1135, -797)
+frame = 11
+
+[node name="Drzewo17" parent="dekroacje" instance=ExtResource("8_hc2kk")]
+position = Vector2(-591, -958)
+frame = 11
+
+[node name="Drzewo18" parent="dekroacje" instance=ExtResource("8_hc2kk")]
+position = Vector2(-414, -1698)
+frame = 11
+
+[node name="Drzewo3" parent="dekroacje" instance=ExtResource("8_hc2kk")]
+position = Vector2(-254, -376)
+frame = 7
+
+[node name="Drzewo4" parent="dekroacje" instance=ExtResource("8_hc2kk")]
+position = Vector2(-1067, -210)
+frame = 7
+
+[node name="Drzewo5" parent="dekroacje" instance=ExtResource("8_hc2kk")]
+position = Vector2(-1215, -588)
+frame = 7
+
+[node name="Drzewo6" parent="dekroacje" instance=ExtResource("8_hc2kk")]
+position = Vector2(-647, -1194)
+frame = 7
+
+[node name="Drzewo28" parent="dekroacje" instance=ExtResource("8_hc2kk")]
+position = Vector2(-858, -965)
+frame = 7
+
+[node name="Drzewo7" parent="dekroacje" instance=ExtResource("8_hc2kk")]
+position = Vector2(-218, -2007)
+frame = 7
+
+[node name="Drzewo8" parent="dekroacje" instance=ExtResource("8_hc2kk")]
+position = Vector2(-436, -1997)
+frame = 7

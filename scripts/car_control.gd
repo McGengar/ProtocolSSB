@@ -1,6 +1,7 @@
 extends RigidBody2D
 
 @export var speed =1000.0
+
 var speed_multiplier = 1.0
 var can_turn = true
 var reverse = 1
@@ -10,11 +11,29 @@ var gas = 0
 var alpha = 0
 var can_rotate = 0
 var angle = -78
+var effect_transition = 0.0
+var time = 100.0
+var time_txt = ""
+var win = false
 
 func _ready():
 	$CanvasLayer/Sprite2D.visible=true
 
 func _physics_process(delta):
+	if win==false:
+		if time>0: time-=delta
+		else: time=0.0
+	time_txt = "%.02f" %time 	
+	$CanvasLayer/RichTextLabel.text = "[center]"+time_txt+"[/center]"
+	
+	if time==0:
+		$CanvasLayer/melon/elonani.play("heart going out")
+	
+
+	$CanvasLayer/indicator.modulate = Color(1,1,1,effect_transition*0.35)
+	$CanvasLayer/indicator.scale = Vector2(effect_transition*16,effect_transition*16)
+	if effect_transition>0:
+		effect_transition-=1*delta
 	$CanvasLayer/Sprite2D.modulate = Color(255,255,255,alpha)
 	alpha-=0.5*delta
 	turn = Input.get_axis("left","right")*delta*3*reverse
@@ -25,18 +44,20 @@ func _physics_process(delta):
 	gas = Input.get_axis("forward","back")*delta
 	if gas>0:
 		gas*=0.5
-	apply_central_force(Vector2(0,gas).rotated(rotation+deg_to_rad(90))*speed*speed_multiplier*1000*delta)
+	if time>0 and win==false: apply_central_force(Vector2(0,gas).rotated(rotation+deg_to_rad(90))*speed*speed_multiplier*1000*delta)
 	
-	if Input.is_action_just_pressed("skill1") and $CanvasLayer/Skill1.value!=0:
+	if Input.is_action_just_pressed("skill1") and $CanvasLayer/Skill1.value!=0 and time>0 and win==false:
 		$CanvasLayer/melon/elonani.play("sigmaboy")
 		$CanvasLayer/melon/right.play("right")
 		$CanvasLayer/Skill1/use.emitting = true
 		use_skill($CanvasLayer/Skill1.value)
 		$CanvasLayer/Skill1.value=0	
-		await get_tree().create_timer(3.0).timeout
+		await get_tree().create_timer(0.8).timeout
+		$CanvasLayer/melon/elonani.play("jerkin")
+		await get_tree().create_timer(2.2).timeout
 		$CanvasLayer/Skill1/use.emitting = true
 		$CanvasLayer/Skill1.value=randi_range(1,9)
-	if Input.is_action_just_pressed("skill2") and $CanvasLayer/Skill2.value!=0:
+	if Input.is_action_just_pressed("skill2") and $CanvasLayer/Skill2.value!=0 and time>0 and win==false:
 		$CanvasLayer/melon/elonani.play("sigmaboy")
 		$CanvasLayer/melon/left.play("left")
 		use_skill($CanvasLayer/Skill2.value)
@@ -74,6 +95,8 @@ func knocked_back(kbvect):
 	
 func use_skill(skill):
 	await get_tree().create_timer(0.5).timeout
+	effect_transition = 1
+	$CanvasLayer/indicator.frame = skill
 	match skill:
 		1:
 			speed_multiplier = 0.5
@@ -108,3 +131,9 @@ func use_skill(skill):
 			forced_turn = 1
 			await get_tree().create_timer(1).timeout
 			forced_turn = 0
+
+func wins():
+	win = true
+	$CanvasLayer/melon/elonani.play("anger")
+	
+	

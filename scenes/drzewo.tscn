@@ -1,6 +1,140 @@
-[gd_scene load_steps=2 format=3 uid="uid://raenjqgyvh30"]
+[gd_scene load_steps=21 format=3 uid="uid://3u3r8u72e1dp"]
 
-[ext_resource type="Texture2D" uid="uid://bhelrckk6vtow" path="res://sprites/drzewo.png" id="1_qlev4"]
+[ext_resource type="Texture2D" uid="uid://c7a2nc1seitv5" path="res://sprites/drzewa i inne.png" id="1_ohow1"]
 
-[node name="Drzewo" type="Sprite2D"]
-texture = ExtResource("1_qlev4")
+[sub_resource type="AtlasTexture" id="AtlasTexture_pxoqq"]
+atlas = ExtResource("1_ohow1")
+region = Rect2(0, 0, 96, 120)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wc6w0"]
+atlas = ExtResource("1_ohow1")
+region = Rect2(96, 0, 96, 120)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s6ebj"]
+atlas = ExtResource("1_ohow1")
+region = Rect2(192, 0, 96, 120)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6y2w3"]
+atlas = ExtResource("1_ohow1")
+region = Rect2(288, 0, 96, 120)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4by2a"]
+atlas = ExtResource("1_ohow1")
+region = Rect2(384, 0, 96, 120)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w4un8"]
+atlas = ExtResource("1_ohow1")
+region = Rect2(480, 0, 96, 120)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cuudl"]
+atlas = ExtResource("1_ohow1")
+region = Rect2(576, 0, 96, 120)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6q6cn"]
+atlas = ExtResource("1_ohow1")
+region = Rect2(672, 0, 96, 120)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3w4vo"]
+atlas = ExtResource("1_ohow1")
+region = Rect2(768, 0, 96, 120)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fylah"]
+atlas = ExtResource("1_ohow1")
+region = Rect2(864, 0, 96, 120)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j6x08"]
+atlas = ExtResource("1_ohow1")
+region = Rect2(960, 0, 96, 120)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cebi0"]
+atlas = ExtResource("1_ohow1")
+region = Rect2(1056, 0, 96, 120)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u0uyc"]
+atlas = ExtResource("1_ohow1")
+region = Rect2(1152, 0, 96, 120)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_07p8p"]
+atlas = ExtResource("1_ohow1")
+region = Rect2(1248, 0, 96, 120)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nn0jy"]
+atlas = ExtResource("1_ohow1")
+region = Rect2(1344, 0, 96, 120)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_he5lh"]
+atlas = ExtResource("1_ohow1")
+region = Rect2(1440, 0, 96, 120)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jmojm"]
+atlas = ExtResource("1_ohow1")
+region = Rect2(1536, 0, 96, 120)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_klfkk"]
+atlas = ExtResource("1_ohow1")
+region = Rect2(1632, 0, 96, 120)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ooi6u"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pxoqq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wc6w0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s6ebj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6y2w3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4by2a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w4un8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cuudl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6q6cn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3w4vo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fylah")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j6x08")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cebi0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u0uyc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_07p8p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nn0jy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_he5lh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jmojm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_klfkk")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Drzewo" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_ooi6u")
