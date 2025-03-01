@@ -26,6 +26,7 @@ func _physics_process(delta):
 	if time==0:
 		$CanvasLayer/melon/elonani.play("heart going out")
 	
+
 	$CanvasLayer/indicator.modulate = Color(1,1,1,effect_transition*0.35)
 	$CanvasLayer/indicator.scale = Vector2(effect_transition*16,effect_transition*16)
 	if effect_transition>0:
