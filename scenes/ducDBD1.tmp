@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://dhc2kem12wiw4"]
+[gd_scene load_steps=8 format=3 uid="uid://dhc2kem12wiw4"]
 
 [ext_resource type="Script" path="res://scripts/ducks.gd" id="1_07d26"]
 [ext_resource type="Texture2D" uid="uid://bv81rye516tc5" path="res://sprites/kaczuchy.png" id="1_w5i7b"]
@@ -35,9 +35,6 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_txe6c"]
 size = Vector2(128, 11)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_tru7u"]
-size = Vector2(128, 114)
-
 [node name="Ducks" type="Area2D"]
 script = ExtResource("1_07d26")
 
@@ -50,11 +47,4 @@ frame_progress = 0.443084
 position = Vector2(0, 16.5)
 shape = SubResource("RectangleShape2D_txe6c")
 
-[node name="VisionBox" type="Area2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="VisionBox"]
-position = Vector2(0, 79)
-shape = SubResource("RectangleShape2D_tru7u")
-
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
-[connection signal="body_entered" from="VisionBox" to="." method="_on_vision_box_body_entered"]
