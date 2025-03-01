@@ -1,0 +1,42 @@
+[gd_scene load_steps=8 format=3 uid="uid://b1yy38ggj183t"]
+
+[ext_resource type="Texture2D" uid="uid://ct3rjmsy2b0gp" path="res://sprites/roadball.png" id="1_07khy"]
+[ext_resource type="Texture2D" uid="uid://bft7mav4acolh" path="res://sprites/roadstraight.png" id="2_7g5am"]
+[ext_resource type="Texture2D" uid="uid://b2nrprecqaddb" path="res://sprites/roadtile.png" id="3_s42xk"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nqa5a"]
+texture = ExtResource("1_07khy")
+texture_region_size = Vector2i(128, 128)
+1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(64, -64, 5.65686, -64, -64, -64, -14, -57, 3, -47, 16.5, -38, 29, -28.5, 36, -20.5, 55, 6.5, 64, 64)
+0:1/0 = 0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-64, -64, -64, -64, -72, -34, -64, 64, -64, 64)
+0:1/0/physics_layer_0/polygon_1/points = PackedVector2Array(-64, -64, -64, 64, -64, 64, 64, 64, 29.5, 60, 11.5, 58, 1, 51, -13, 41.5, -29, 27, -41.5, 8.5, -51.5, -3.5, -56, -13.5, -60.6584, -29.5817)
+1:1/0 = 0
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-71, 62, -64, 64, -64, 64)
+1:1/0/physics_layer_0/polygon_1/points = PackedVector2Array(64, -64, 64, -26, 46, 9, 27, 34, 12, 45, -4, 54, -20, 60, -64, 64, 64, 64)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(55, -64, -64, -64, -64, 64, -64, 39, -59.397, 27.5772, -57.2757, 17.6777, -50, 1.5, -36.2216, -16.7809, -27, -28.5, -16, -37.5, -3, -46.5, 9, -54.5, 19, -57.5, 56, -64)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_womg6"]
+texture = ExtResource("2_7g5am")
+texture_region_size = Vector2i(128, 128)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_f18uw"]
+texture = ExtResource("3_s42xk")
+texture_region_size = Vector2i(128, 128)
+0:1/0 = 0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-64, -64, -64, -64, -64, 64, -64, 64)
+0:1/0/physics_layer_0/polygon_1/points = PackedVector2Array(64, -2, 64, -64, 64, 64)
+
+[sub_resource type="TileSet" id="TileSet_dmdae"]
+tile_size = Vector2i(128, 128)
+physics_layer_0/collision_layer = 3
+sources/0 = SubResource("TileSetAtlasSource_nqa5a")
+sources/1 = SubResource("TileSetAtlasSource_womg6")
+sources/2 = SubResource("TileSetAtlasSource_f18uw")
+
+[node name="TileMap" type="TileMap"]
+tile_set = SubResource("TileSet_dmdae")
+format = 2
+layer_0/tile_data = PackedInt32Array(-65538, 2, 268435457, -131074, 2, 268435457, -196610, 2, 268435457, -262146, 2, 268435457, -65535, 0, 0, -65534, 2, 1342177281, -65533, 2, 1342177281, -65532, 2, 1342177281, -65531, 2, 1342177281, -65530, 2, 1342177281, -65529, 2, 1342177281, -65528, 2, 1342177281, -65527, 2, 1342177281, -65526, 2, 1342177281, -65525, 2, 1342177281, -2, 65536, 1, -3, 0, 0, 65533, 0, 1, 65534, 2, 1879048193, 65535, 2, 1879048193, 0, 2, 1879048193, 1, 65536, 1)
