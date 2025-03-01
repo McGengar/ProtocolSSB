@@ -4,12 +4,18 @@ extends RigidBody2D
 var speed_multiplier = 1.0
 var can_turn = true
 var reverse = 1
+var forced_turn =0
 var turn = 0
 var gas = 0
+var alpha = 0
 func _physics_process(delta):
+	$CanvasLayer/Sprite2D.modulate = Color(255,255,255,alpha)
+	alpha-=0.5*delta
 	turn = Input.get_axis("left","right")*delta*3*reverse
 	if turn!=0 and can_turn:
 		rotate(turn)
+	if forced_turn!=0:
+		rotate(forced_turn*delta*3.5)
 	gas = Input.get_axis("forward","back")*delta
 	apply_central_force(Vector2(0,gas).rotated(rotation+deg_to_rad(90))*speed*speed_multiplier*1000*delta)
 	
@@ -48,7 +54,7 @@ func use_skill(skill):
 			await get_tree().create_timer(2).timeout
 			speed_multiplier = 1
 		2:
-			linear_damp = -0.5
+			linear_damp = -0.25
 			await get_tree().create_timer(2).timeout
 			linear_damp = 1
 		3:
@@ -60,12 +66,16 @@ func use_skill(skill):
 		5:
 			pass
 		6:
-			pass
+			alpha=1.5
 		7:
 			reverse = -1
-			await get_tree().create_timer(2).timeout
+			await get_tree().create_timer(3).timeout
 			reverse = 1
 		8:
-			pass
+			forced_turn = -1
+			await get_tree().create_timer(1).timeout
+			forced_turn = 0
 		9:
-			pass
+			forced_turn = 1
+			await get_tree().create_timer(1).timeout
+			forced_turn = 0

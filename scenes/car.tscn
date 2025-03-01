@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://dcq4ivigrdvd2"]
+[gd_scene load_steps=9 format=3 uid="uid://dcq4ivigrdvd2"]
 
 [ext_resource type="Script" path="res://scripts/car_control.gd" id="1_vljah"]
 [ext_resource type="Texture2D" uid="uid://d2gqvtbfaf7a5" path="res://sprites/autko.png" id="2_sgwix"]
@@ -15,6 +15,12 @@ point_count = 2
 [sub_resource type="Gradient" id="Gradient_bhjxn"]
 offsets = PackedFloat32Array(0, 0.762557, 1)
 colors = PackedColorArray(0.212305, 0.212305, 0.212305, 1, 0.0504102, 0.0504103, 0.0504103, 0.237443, 0, 0, 0, 0)
+
+[sub_resource type="Gradient" id="Gradient_le405"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_nselp"]
+gradient = SubResource("Gradient_le405")
 
 [node name="Car" type="RigidBody2D"]
 gravity_scale = 0.0
@@ -73,3 +79,8 @@ rotation = -0.10472
 scale = Vector2(6, 6)
 frame = 3
 frame_progress = 0.0
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(965, 552.5)
+scale = Vector2(7.72656, 1121)
+texture = SubResource("GradientTexture1D_nselp")
