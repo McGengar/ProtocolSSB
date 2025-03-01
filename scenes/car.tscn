@@ -65,9 +65,11 @@ position = Vector2(1705.28, 891)
 rotation = 0.10472
 scale = Vector2(6, 6)
 frame = 1
+frame_progress = 0.0
 
 [node name="Skill1" parent="CanvasLayer" instance=ExtResource("3_ecsdd")]
 position = Vector2(1497.28, 894)
 rotation = -0.10472
 scale = Vector2(6, 6)
 frame = 3
+frame_progress = 0.0
