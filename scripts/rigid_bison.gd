@@ -7,7 +7,7 @@ var sigmay = 1
 @onready var car: RigidBody2D = $"../Car"
 
 func _ready() -> void:
-	if rotation > 90:
+	if rotation > deg_to_rad(100):
 		sigmax = 0
 		sigmay = -1
 	elif rotation > 0:
@@ -26,6 +26,5 @@ func _ready() -> void:
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body == car:
-		if not entered:
-			for i in range(0,300):
-				apply_central_force(Vector2(sigmax,sigmay)*100)
+		for i in range(0,300):
+			apply_central_force(Vector2(sigmax,sigmay)*100)
