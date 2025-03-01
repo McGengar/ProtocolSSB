@@ -28,20 +28,22 @@ func _physics_process(delta):
 	apply_central_force(Vector2(0,gas).rotated(rotation+deg_to_rad(90))*speed*speed_multiplier*1000*delta)
 	
 	if Input.is_action_just_pressed("skill1") and $CanvasLayer/Skill1.value!=0:
-		$CanvasLayer/melon/left.play("left")
+		$CanvasLayer/melon/right.play("right")
 		$CanvasLayer/Skill1/use.emitting = true
-		$CanvasLayer/Skill1.value=0
 		use_skill($CanvasLayer/Skill1.value)
+		$CanvasLayer/Skill1.value=0	
 		await get_tree().create_timer(3.0).timeout
 		$CanvasLayer/Skill1/use.emitting = true
 		$CanvasLayer/Skill1.value=randi_range(1,9)
 	if Input.is_action_just_pressed("skill2") and $CanvasLayer/Skill2.value!=0:
 		$CanvasLayer/melon/elonani.play("sigmaboy")
-		$CanvasLayer/melon/right.play("right")
+		$CanvasLayer/melon/left.play("left")
 		use_skill($CanvasLayer/Skill2.value)
 		$CanvasLayer/Skill2/use.emitting = true
 		$CanvasLayer/Skill2.value=0
-		await get_tree().create_timer(3.0).timeout
+		await get_tree().create_timer(0.8).timeout
+		$CanvasLayer/melon/elonani.play("jerkin")
+		await get_tree().create_timer(2.2).timeout
 		$CanvasLayer/Skill2/use.emitting = true
 		$CanvasLayer/Skill2.value=randi_range(1,9)
 	

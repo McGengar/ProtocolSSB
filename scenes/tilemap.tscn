@@ -1,8 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://b1yy38ggj183t"]
+[gd_scene load_steps=10 format=3 uid="uid://c0kipv61p70u3"]
 
-[ext_resource type="Texture2D" uid="uid://ct3rjmsy2b0gp" path="res://sprites/roadball.png" id="1_07khy"]
+[ext_resource type="Texture2D" uid="uid://dstforpkoylgv" path="res://sprites/roadball.png" id="1_07khy"]
 [ext_resource type="Texture2D" uid="uid://bft7mav4acolh" path="res://sprites/roadstraight.png" id="2_7g5am"]
-[ext_resource type="Texture2D" uid="uid://b2nrprecqaddb" path="res://sprites/roadtile.png" id="3_s42xk"]
+[ext_resource type="Texture2D" uid="uid://dkfop77vytgdl" path="res://sprites/roadtile.png" id="3_s42xk"]
+[ext_resource type="Texture2D" uid="uid://cdxfbuw2yo7eg" path="res://sprites/hole.png" id="4_g5r2d"]
+[ext_resource type="PackedScene" uid="uid://dcq4ivigrdvd2" path="res://scenes/car.tscn" id="5_ga5m5"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nqa5a"]
 texture = ExtResource("1_07khy")
@@ -40,3 +42,10 @@ sources/2 = SubResource("TileSetAtlasSource_f18uw")
 tile_set = SubResource("TileSet_dmdae")
 format = 2
 layer_0/tile_data = PackedInt32Array(-65538, 2, 268435457, -131074, 2, 268435457, -196610, 2, 268435457, -262146, 2, 268435457, -65535, 0, 0, -65534, 2, 1342177281, -65533, 2, 1342177281, -65532, 2, 1342177281, -65531, 2, 1342177281, -65530, 2, 1342177281, -65529, 2, 1342177281, -65528, 2, 1342177281, -65527, 2, 1342177281, -65526, 2, 1342177281, -65525, 2, 1342177281, -2, 65536, 1, -3, 0, 0, 65533, 0, 1, 65534, 2, 1879048193, 65535, 2, 1879048193, 0, 2, 1879048193, 1, 65536, 1)
+
+[node name="Hole" type="Sprite2D" parent="."]
+position = Vector2(317, -100)
+texture = ExtResource("4_g5r2d")
+
+[node name="Car" parent="." instance=ExtResource("5_ga5m5")]
+position = Vector2(196, -60)
