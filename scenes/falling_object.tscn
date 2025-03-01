@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://scripts/falling_object.gd" id="1_w5ygp"]
 [ext_resource type="Script" path="res://scripts/collision_shape_2d.gd" id="2_dow7x"]
 [ext_resource type="Script" path="res://scripts/pivotpoint.gd" id="3_r1lyb"]
-[ext_resource type="Texture2D" uid="uid://1a71l1yfkg6d" path="res://sprites/lantern.png" id="4_i2lr0"]
+[ext_resource type="Texture2D" uid="uid://bx3pdo28rdkc" path="res://sprites/lantern.png" id="4_i2lr0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_viop4"]
 size = Vector2(84, 24)
