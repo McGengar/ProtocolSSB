@@ -216,7 +216,7 @@ animations = [{
 sprite_frames = SubResource("SpriteFrames_ouquy")
 animation = &"jerkin"
 autoplay = "jerkin"
-frame_progress = 0.0593572
+frame_progress = 0.836387
 
 [node name="right" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_wh4ud")
