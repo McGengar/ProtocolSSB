@@ -3,8 +3,8 @@
 [ext_resource type="Script" path="res://scripts/car_control.gd" id="1_vljah"]
 [ext_resource type="Texture2D" uid="uid://d2gqvtbfaf7a5" path="res://sprites/autko.png" id="2_sgwix"]
 [ext_resource type="PackedScene" uid="uid://cm4p7dkhsg2ji" path="res://scenes/skill.tscn" id="3_ecsdd"]
-[ext_resource type="Texture2D" uid="uid://dug38k8ewiag4" path="res://sprites/walona wycieeraczka.png" id="4_6sbb8"]
-[ext_resource type="Texture2D" uid="uid://dtqbk3b1vorma" path="res://sprites/babel.png" id="5_l5enp"]
+[ext_resource type="Texture2D" uid="uid://mewrrhmsmq8q" path="res://sprites/walona wycieeraczka.png" id="4_6sbb8"]
+[ext_resource type="Texture2D" uid="uid://bxtn6j2o4hbsb" path="res://sprites/babel.png" id="5_l5enp"]
 [ext_resource type="PackedScene" uid="uid://cq2iywhlcsohq" path="res://scenes/melon.tscn" id="6_nkygn"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4po4l"]
@@ -19,12 +19,6 @@ point_count = 2
 offsets = PackedFloat32Array(0, 0.762557, 1)
 colors = PackedColorArray(0.212305, 0.212305, 0.212305, 1, 0.0504102, 0.0504103, 0.0504103, 0.237443, 0, 0, 0, 0)
 
-[sub_resource type="Gradient" id="Gradient_le405"]
-colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1)
-
-[sub_resource type="GradientTexture1D" id="GradientTexture1D_nselp"]
-gradient = SubResource("Gradient_le405")
-
 [sub_resource type="Curve" id="Curve_q8e6p"]
 _data = [Vector2(0.00555556, 0.10989), 0.0, 0.0, 0, 0, Vector2(0.994444, 1), 0.0, 0.0, 0, 0]
 point_count = 2
@@ -32,6 +26,12 @@ point_count = 2
 [sub_resource type="Gradient" id="Gradient_fd6po"]
 offsets = PackedFloat32Array(0, 0.763158, 1)
 colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="Gradient" id="Gradient_le405"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_nselp"]
+gradient = SubResource("Gradient_le405")
 
 [node name="Car" type="RigidBody2D"]
 gravity_scale = 0.0
@@ -109,11 +109,9 @@ rotation = -1.36136
 scale = Vector2(4, 4)
 texture = ExtResource("4_6sbb8")
 
-[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer"]
-visible = false
-position = Vector2(965, 552.5)
-scale = Vector2(7.72656, 1121)
-texture = SubResource("GradientTexture1D_nselp")
+[node name="melon" parent="CanvasLayer" instance=ExtResource("6_nkygn")]
+position = Vector2(1576, 421)
+scale = Vector2(4, 4)
 
 [node name="CPUParticles2D" type="CPUParticles2D" parent="CanvasLayer"]
 z_index = -1
@@ -132,6 +130,8 @@ scale_amount_max = 15.0
 scale_amount_curve = SubResource("Curve_q8e6p")
 color_ramp = SubResource("Gradient_fd6po")
 
-[node name="melon" parent="CanvasLayer" instance=ExtResource("6_nkygn")]
-position = Vector2(1576, 421)
-scale = Vector2(4, 4)
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer"]
+visible = false
+position = Vector2(965, 552.5)
+scale = Vector2(7.72656, 1121)
+texture = SubResource("GradientTexture1D_nselp")

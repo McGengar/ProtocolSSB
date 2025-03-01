@@ -1,8 +1,8 @@
 [gd_scene load_steps=8 format=3 uid="uid://bxkipraiw8mxw"]
 
-[ext_resource type="Texture2D" uid="uid://lb05gmh34wbc" path="res://sprites/roadball.png" id="1_b5a83"]
+[ext_resource type="Texture2D" uid="uid://dstforpkoylgv" path="res://sprites/roadball.png" id="1_b5a83"]
 [ext_resource type="Texture2D" uid="uid://bft7mav4acolh" path="res://sprites/roadstraight.png" id="2_pq418"]
-[ext_resource type="Texture2D" uid="uid://w3y28cp80mln" path="res://sprites/roadtile.png" id="3_tl0xn"]
+[ext_resource type="Texture2D" uid="uid://dkfop77vytgdl" path="res://sprites/roadtile.png" id="3_tl0xn"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_spq83"]
 texture = ExtResource("1_b5a83")
