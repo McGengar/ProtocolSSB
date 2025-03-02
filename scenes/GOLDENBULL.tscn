@@ -15,6 +15,7 @@ size = Vector2(32, 48)
 size = Vector2(172, 381)
 
 [node name="GOLDEN BULL" type="RigidBody2D"]
+visible = false
 physics_material_override = SubResource("PhysicsMaterial_coeul")
 gravity_scale = 0.0
 script = ExtResource("1_cp0ws")
