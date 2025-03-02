@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://bv4gjsig82gvf"]
+[gd_scene load_steps=12 format=3 uid="uid://bv4gjsig82gvf"]
 
 [ext_resource type="PackedScene" uid="uid://bwfxtvsh4xcbq" path="res://scenes/road.tscn" id="1_hy0hs"]
 [ext_resource type="PackedScene" uid="uid://dcq4ivigrdvd2" path="res://scenes/car.tscn" id="1_seax4"]
@@ -6,8 +6,9 @@
 [ext_resource type="PackedScene" uid="uid://bjw44oc5gw6v5" path="res://scenes/falling_object.tscn" id="4_xdrte"]
 [ext_resource type="PackedScene" uid="uid://4xnw2bff6l2q" path="res://scenes/finish_line.tscn" id="5_e2nwy"]
 [ext_resource type="PackedScene" uid="uid://cmfwpqhuu300d" path="res://scenes/pachol.tscn" id="6_qrobp"]
-[ext_resource type="Texture2D" uid="uid://c7a2nc1seitv5" path="res://sprites/drzewa i inne.png" id="7_d1ska"]
-[ext_resource type="PackedScene" path="res://scenes/hole.tscn" id="7_dc3qx"]
+[ext_resource type="Texture2D" uid="uid://ck453gwq0tgcc" path="res://sprites/drzewa i inne.png" id="7_d1ska"]
+[ext_resource type="PackedScene" uid="uid://cauxuvxew16gw" path="res://scenes/hole.tscn" id="7_dc3qx"]
+[ext_resource type="PackedScene" uid="uid://dhobakckgqejd" path="res://scenes/GOLDENBULL.tscn" id="9_goy3i"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_esq8t"]
 texture = ExtResource("7_d1ska")
@@ -170,3 +171,7 @@ position = Vector2(1323, -629)
 
 [node name="hole11" parent="dziury" instance=ExtResource("7_dc3qx")]
 position = Vector2(1245, -794)
+
+[node name="GOLDEN BULL" parent="." instance=ExtResource("9_goy3i")]
+position = Vector2(602, -381)
+rotation = 3.14159

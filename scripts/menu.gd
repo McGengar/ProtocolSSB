@@ -12,4 +12,4 @@ func _process(delta):
 
 
 func _on_play_pressed():
-	pass
+	get_tree().change_scene_to_file("res://scenes/selection_screen.tscn")
