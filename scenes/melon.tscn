@@ -228,3 +228,7 @@ sprite_frames = SubResource("SpriteFrames_2bjfa")
 animation = &"left"
 frame = 4
 frame_progress = 1.0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(2, 12)
