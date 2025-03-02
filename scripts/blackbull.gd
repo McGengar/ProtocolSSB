@@ -4,6 +4,8 @@ var bison_speed = 0.01
 # Called when the node enters the scene tree for the first time.
 var sigmax = 1
 var sigmay = 1
+@onready var moo: AudioStreamPlayer = $Moo
+
 @onready var car: RigidBody2D = $"../Car"
 var rng = RandomNumberGenerator.new()
 func _ready() -> void:
@@ -31,5 +33,6 @@ func _ready() -> void:
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body == car:
+		moo.play()
 		for i in range(0,300):
 			apply_central_force(Vector2(sigmax,sigmay)*120)

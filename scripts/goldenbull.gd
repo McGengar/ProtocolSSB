@@ -6,6 +6,10 @@ var sigmax = 1
 var sigmay = 1
 @onready var car: RigidBody2D = $"../Car"
 var rng = RandomNumberGenerator.new()
+@onready var moo: AudioStreamPlayer = $Moo
+@onready var glimmer: AudioStreamPlayer = $Glimmer
+
+
 func _ready() -> void:
 	var my_random_number = rng.randi_range(0, 11)
 	if my_random_number == 0:
@@ -22,5 +26,7 @@ func _ready() -> void:
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body == car:
+		glimmer.play()
+		moo.play()
 		for i in range(0,300):
-			apply_central_force(Vector2(sigmax,sigmay)*200)
+			apply_central_force(Vector2(sigmax,sigmay)*100)

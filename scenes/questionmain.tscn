@@ -159,7 +159,6 @@ rotation = 3.14159
 
 [node name="RigidBison9" parent="." instance=ExtResource("5_qiodq")]
 position = Vector2(-727, -598)
-rotation = 0.253073
 
 [node name="RigidBison4" parent="." instance=ExtResource("5_qiodq")]
 position = Vector2(-809, -917)
@@ -478,9 +477,9 @@ rotation = -1.5708
 position = Vector2(-198, -991)
 
 [node name="GOLDEN BULL" parent="." instance=ExtResource("10_bhow6")]
-position = Vector2(-512, -702)
+position = Vector2(-639, -700)
 rotation = 1.5708
 
 [node name="GOLDEN BULL2" parent="." instance=ExtResource("10_bhow6")]
-position = Vector2(-478, -173)
+position = Vector2(-665, -193)
 rotation = 1.5708
