@@ -12,6 +12,7 @@ var alpha = 0
 var can_rotate = 0
 var angle = -78
 var effect_transition = 0.0
+var start_timer = 4.0;
 var time = 100.0
 var time_txt = ""
 var win = false
@@ -20,7 +21,13 @@ func _ready():
 	$CanvasLayer/Sprite2D.visible=true
 
 func _physics_process(delta):
-	if win==false:
+	if start_timer>0:
+		start_timer-=delta
+	else:
+		start_timer=-0.009	
+	$CanvasLayer/START.frame = 3-floor(start_timer)
+	$CanvasLayer/START.modulate = Color(255,255,255,start_timer-floor(start_timer))
+	if win==false and start_timer<=1:
 		if time>0: time-=delta
 		else: time=0.0
 	time_txt = "%.02f" %time 	
@@ -37,14 +44,14 @@ func _physics_process(delta):
 	$CanvasLayer/Sprite2D.modulate = Color(255,255,255,alpha)
 	alpha-=0.5*delta
 	turn = Input.get_axis("left","right")*delta*3*reverse
-	if turn!=0 and can_turn:
+	if turn!=0 and can_turn and time>0 and time<100 and win==false:
 		rotate(turn)
 	if forced_turn!=0:
 		rotate(forced_turn*delta*3.5)
 	gas = Input.get_axis("forward","back")*delta
 	if gas>0:
 		gas*=0.5
-	if time>0 and win==false: apply_central_force(Vector2(0,gas).rotated(rotation+deg_to_rad(90))*speed*speed_multiplier*1000*delta)
+	if time>0 and time<100 and win==false: apply_central_force(Vector2(0,gas).rotated(rotation+deg_to_rad(90))*speed*speed_multiplier*1000*delta)
 	
 	if Input.is_action_just_pressed("skill1") and $CanvasLayer/Skill1.value!=0 and time>0 and win==false:
 		$CanvasLayer/melon/elonani.play("sigmaboy")
@@ -53,7 +60,7 @@ func _physics_process(delta):
 		use_skill($CanvasLayer/Skill1.value)
 		$CanvasLayer/Skill1.value=0	
 		await get_tree().create_timer(0.8).timeout
-		if time>0 and win==false:$CanvasLayer/melon/elonani.play("jerkin")
+		if time>0 and time<100 and win==false:$CanvasLayer/melon/elonani.play("jerkin")
 		await get_tree().create_timer(5.2).timeout
 		$CanvasLayer/Skill1/use.emitting = true
 		$CanvasLayer/Skill1.value=randi_range(1,9)
@@ -64,7 +71,7 @@ func _physics_process(delta):
 		$CanvasLayer/Skill2/use.emitting = true
 		$CanvasLayer/Skill2.value=0
 		await get_tree().create_timer(0.8).timeout
-		if time>0 and win==false:$CanvasLayer/melon/elonani.play("jerkin")
+		if time>0 and time <100 and win==false:$CanvasLayer/melon/elonani.play("jerkin")
 		await get_tree().create_timer(5.2).timeout
 		$CanvasLayer/Skill2/use.emitting = true
 		$CanvasLayer/Skill2.value=randi_range(1,9)
@@ -94,6 +101,64 @@ func knocked_back(kbvect):
 	sleeping = false
 	
 func use_skill(skill):
+	var rng = 0
+	match skill:
+		1:
+			rng = randi_range(0,1)
+			if rng==0:
+				$"Sounds/Slow 1".play()
+			else:
+				$"Sounds/Slow 2".play()
+		2:
+			rng = randi_range(0,1)
+			if rng==0:
+				$"Sounds/Banan 1".play()
+			else:
+				$"Sounds/Banan 2".play()
+		3:
+			$Sounds/Hop.play()
+		4:
+			rng = randi_range(0,2)
+			if rng==0:
+				$"Sounds/Block 1".play()
+			elif rng== 1:
+				$"Sounds/Block 2".play()
+			else:
+				$"Sounds/Block 3".play()
+		5:
+			rng = randi_range(0,1)
+			if rng==0:
+				$"Sounds/Wycieraczki 1".play()
+			else:
+				$"Sounds/Wycieraczki 2".play()
+		6:
+			rng = randi_range(0,2)
+			if rng==0:
+				$"Sounds/Flashbang 1".play()
+			elif rng== 1:
+				$"Sounds/Flashbang 2".play()
+			else:
+				$"Sounds/Flashbang 3".play()
+		7:
+			rng = randi_range(0,2)
+			if rng==0:
+				$"Sounds/Reverse 1".play()
+			elif rng== 1:
+				$"Sounds/Reverse 2".play()
+			else:
+				$"Sounds/Reverse 3".play()
+		8:
+			rng = randi_range(0,1)
+			if rng==0:
+				$"Sounds/Sket 1".play()
+			else:
+				$"Sounds/Sket 2".play()
+		9:
+			rng = randi_range(0,1)
+			if rng==0:
+				$"Sounds/Sket 3".play()
+			else:
+				$"Sounds/Sket 4".play()
 	await get_tree().create_timer(0.5).timeout
 	effect_transition = 1
 	$CanvasLayer/indicator.frame = skill
@@ -138,5 +203,11 @@ func use_skill(skill):
 func wins():
 	win = true
 	$CanvasLayer/melon/elonani.play("anger")
-	
+	await get_tree().create_timer(3).timeout
+	if get_parent().name=="Main":
+		get_tree().change_scene_to_file("res://scenes/wintermain.tscn")
+	elif get_parent().name=="wintermain":
+		get_tree().change_scene_to_file("res://scenes/questionmain.tscn")
+	elif get_parent().name=="questionmain":
+		pass
 	

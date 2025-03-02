@@ -45,7 +45,7 @@ scale = Vector2(12.75, 9.96875)
 texture = SubResource("GradientTexture2D_5it82")
 
 [node name="Finish_line" parent="." instance=ExtResource("3_avdxn")]
-position = Vector2(-318, -1954)
+position = Vector2(-320, -1954)
 
 [node name="falling object" parent="." instance=ExtResource("4_7qkmp")]
 position = Vector2(-305, -1186)

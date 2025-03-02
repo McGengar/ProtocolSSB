@@ -1,13 +1,34 @@
-[gd_scene load_steps=27 format=3 uid="uid://dcq4ivigrdvd2"]
+[gd_scene load_steps=54 format=3 uid="uid://dcq4ivigrdvd2"]
 
 [ext_resource type="Script" path="res://scripts/car_control.gd" id="1_vljah"]
 [ext_resource type="Texture2D" uid="uid://d2gqvtbfaf7a5" path="res://sprites/autko.png" id="2_sgwix"]
 [ext_resource type="PackedScene" uid="uid://cm4p7dkhsg2ji" path="res://scenes/skill.tscn" id="3_ecsdd"]
-[ext_resource type="Texture2D" uid="uid://dlai7iylnsog7" path="res://sprites/walona wycieeraczka.png" id="4_6sbb8"]
-[ext_resource type="Texture2D" uid="uid://cdrfqihnnd505" path="res://sprites/babel.png" id="5_l5enp"]
+[ext_resource type="Texture2D" uid="uid://mewrrhmsmq8q" path="res://sprites/walona wycieeraczka.png" id="4_6sbb8"]
+[ext_resource type="Texture2D" uid="uid://bxtn6j2o4hbsb" path="res://sprites/babel.png" id="5_l5enp"]
 [ext_resource type="PackedScene" uid="uid://cq2iywhlcsohq" path="res://scenes/melon.tscn" id="6_nkygn"]
-[ext_resource type="Texture2D" uid="uid://b355kqi3j76et" path="res://sprites/indyki.png" id="7_364d0"]
-[ext_resource type="FontFile" uid="uid://d20i0fb3bjvfc" path="res://ssb/8-BIT WONDER.TTF" id="8_eklrs"]
+[ext_resource type="Texture2D" uid="uid://dyc7gp3ynd4id" path="res://sprites/indyki.png" id="7_364d0"]
+[ext_resource type="FontFile" uid="uid://dvydu4xd0m7od" path="res://ssb/8-BIT WONDER.TTF" id="8_eklrs"]
+[ext_resource type="Texture2D" uid="uid://ff8ljo7y8yly" path="res://sprites/start_timer.png" id="9_pyug0"]
+[ext_resource type="AudioStream" uid="uid://c88xmedsnje8f" path="res://sounds/banan1.mp3" id="10_j1v8c"]
+[ext_resource type="AudioStream" uid="uid://c7cu5ftmxj46i" path="res://sounds/banan2.mp3" id="11_7x5ge"]
+[ext_resource type="AudioStream" uid="uid://ol62qirf1erb" path="res://sounds/blok1.mp3" id="12_q1uqk"]
+[ext_resource type="AudioStream" uid="uid://cckwdg1m600bd" path="res://sounds/blok2.mp3" id="13_kmdjw"]
+[ext_resource type="AudioStream" uid="uid://l6v8bl2aldv3" path="res://sounds/blok3.mp3" id="14_x58gk"]
+[ext_resource type="AudioStream" uid="uid://1fel4m2hw5j1" path="res://sounds/deszcz1.mp3" id="15_i1fmp"]
+[ext_resource type="AudioStream" uid="uid://cfi540wexhpk3" path="res://sounds/deszcz2.mp3" id="16_08vqi"]
+[ext_resource type="AudioStream" uid="uid://dunxiyxw4trea" path="res://sounds/fikumiku1.mp3" id="17_h6qdd"]
+[ext_resource type="AudioStream" uid="uid://c0ppklnclauj5" path="res://sounds/fikumiku2.mp3" id="18_nf6p6"]
+[ext_resource type="AudioStream" uid="uid://cuix5upfncy8a" path="res://sounds/fikumiku3.mp3" id="19_q6dby"]
+[ext_resource type="AudioStream" uid="uid://vil3e6fvjb7a" path="res://sounds/flash1.mp3" id="20_blhjs"]
+[ext_resource type="AudioStream" uid="uid://cgocq7bkuqywu" path="res://sounds/flash2.mp3" id="21_l2ro6"]
+[ext_resource type="AudioStream" uid="uid://bf7gy31fg5my" path="res://sounds/flash3.mp3" id="22_40sl6"]
+[ext_resource type="AudioStream" uid="uid://dg60aukp6ps8n" path="res://sounds/left1.mp3" id="23_86d67"]
+[ext_resource type="AudioStream" uid="uid://6lo4a80e2f50" path="res://sounds/left2.mp3" id="24_4yxor"]
+[ext_resource type="AudioStream" uid="uid://2v2q62xikgcr" path="res://sounds/left3.mp3" id="25_mtbj3"]
+[ext_resource type="AudioStream" uid="uid://dq3hgepfem6bg" path="res://sounds/left4.mp3" id="26_3xxrr"]
+[ext_resource type="AudioStream" uid="uid://b2l1k62ykxfl1" path="res://sounds/snail1.mp3" id="27_i6in7"]
+[ext_resource type="AudioStream" uid="uid://c4qdybk886m6q" path="res://sounds/snail3.mp3" id="28_4mck7"]
+[ext_resource type="AudioStream" uid="uid://bmvr7xn7c4umq" path="res://sounds/cosnapewno1.mp3" id="29_s3jbs"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4po4l"]
 radius = 12.0
@@ -112,6 +133,49 @@ colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1)
 
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_nselp"]
 gradient = SubResource("Gradient_le405")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aacmw"]
+atlas = ExtResource("9_pyug0")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d8yen"]
+atlas = ExtResource("9_pyug0")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qdp3b"]
+atlas = ExtResource("9_pyug0")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0edeb"]
+atlas = ExtResource("9_pyug0")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nlrob"]
+atlas = ExtResource("5_l5enp")
+region = Rect2(16, 16, 8, 8)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_beyig"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aacmw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d8yen")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qdp3b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0edeb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nlrob")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="Car" type="RigidBody2D"]
 gravity_scale = 0.0
@@ -231,3 +295,70 @@ theme_override_font_sizes/normal_font_size = 100
 bbcode_enabled = true
 text = "[center]100[/center]
 "
+
+[node name="START" type="AnimatedSprite2D" parent="CanvasLayer"]
+position = Vector2(953, 485)
+scale = Vector2(10, 10)
+sprite_frames = SubResource("SpriteFrames_beyig")
+
+[node name="Sounds" type="Node" parent="."]
+
+[node name="Banan 1" type="AudioStreamPlayer2D" parent="Sounds"]
+stream = ExtResource("10_j1v8c")
+
+[node name="Banan 2" type="AudioStreamPlayer2D" parent="Sounds"]
+stream = ExtResource("11_7x5ge")
+
+[node name="Block 1" type="AudioStreamPlayer2D" parent="Sounds"]
+stream = ExtResource("12_q1uqk")
+
+[node name="Block 2" type="AudioStreamPlayer2D" parent="Sounds"]
+stream = ExtResource("13_kmdjw")
+
+[node name="Block 3" type="AudioStreamPlayer2D" parent="Sounds"]
+stream = ExtResource("14_x58gk")
+
+[node name="Wycieraczki 1" type="AudioStreamPlayer2D" parent="Sounds"]
+stream = ExtResource("15_i1fmp")
+
+[node name="Wycieraczki 2" type="AudioStreamPlayer2D" parent="Sounds"]
+stream = ExtResource("16_08vqi")
+
+[node name="Reverse 1" type="AudioStreamPlayer2D" parent="Sounds"]
+stream = ExtResource("17_h6qdd")
+
+[node name="Reverse 2" type="AudioStreamPlayer2D" parent="Sounds"]
+stream = ExtResource("18_nf6p6")
+
+[node name="Reverse 3" type="AudioStreamPlayer2D" parent="Sounds"]
+stream = ExtResource("19_q6dby")
+
+[node name="Flashbang 1" type="AudioStreamPlayer2D" parent="Sounds"]
+stream = ExtResource("20_blhjs")
+
+[node name="Flashbang 2" type="AudioStreamPlayer2D" parent="Sounds"]
+stream = ExtResource("21_l2ro6")
+
+[node name="Flashbang 3" type="AudioStreamPlayer2D" parent="Sounds"]
+stream = ExtResource("22_40sl6")
+
+[node name="Sket 1" type="AudioStreamPlayer2D" parent="Sounds"]
+stream = ExtResource("23_86d67")
+
+[node name="Sket 2" type="AudioStreamPlayer2D" parent="Sounds"]
+stream = ExtResource("24_4yxor")
+
+[node name="Sket 3" type="AudioStreamPlayer2D" parent="Sounds"]
+stream = ExtResource("25_mtbj3")
+
+[node name="Sket 4" type="AudioStreamPlayer2D" parent="Sounds"]
+stream = ExtResource("26_3xxrr")
+
+[node name="Slow 1" type="AudioStreamPlayer2D" parent="Sounds"]
+stream = ExtResource("27_i6in7")
+
+[node name="Slow 2" type="AudioStreamPlayer2D" parent="Sounds"]
+stream = ExtResource("28_4mck7")
+
+[node name="Hop" type="AudioStreamPlayer2D" parent="Sounds"]
+stream = ExtResource("29_s3jbs")
