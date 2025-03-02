@@ -1,21 +1,68 @@
-[gd_scene load_steps=3 format=3 uid="uid://bu0l3hbit2eyp"]
+[gd_scene load_steps=8 format=3 uid="uid://bu0l3hbit2eyp"]
 
 [ext_resource type="Script" path="res://scripts/menu.gd" id="1_4ix4n"]
+[ext_resource type="Texture2D" uid="uid://bjno0s28on03x" path="res://sprites/tlo.png" id="2_71gdu"]
+[ext_resource type="Texture2D" uid="uid://bjfwtebw0jw2u" path="res://sprites/guziki.png" id="3_kktf5"]
 
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_mkw3t"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_xnsrj"]
+atlas = ExtResource("3_kktf5")
+region = Rect2(0, 0, 100, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qvblf"]
+atlas = ExtResource("3_kktf5")
+region = Rect2(100, 0, 100, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q71vf"]
+atlas = ExtResource("3_kktf5")
+region = Rect2(200, 0, 100, 40)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_f5voe"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xnsrj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qvblf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q71vf")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="Menu" type="Node2D"]
 script = ExtResource("1_4ix4n")
 
 [node name="LOGO" type="Sprite2D" parent="."]
-position = Vector2(946, 241.375)
-scale = Vector2(1043.5, 381.25)
-texture = SubResource("PlaceholderTexture2D_mkw3t")
+position = Vector2(960, 540)
+scale = Vector2(4, 4)
+texture = ExtResource("2_71gdu")
 
 [node name="PLAY" type="Button" parent="."]
-offset_left = 764.0
-offset_top = 664.0
-offset_right = 1122.0
-offset_bottom = 787.0
+offset_left = 782.0
+offset_top = 342.0
+offset_right = 1140.0
+offset_bottom = 465.0
+
+[node name="Play_sprite" type="AnimatedSprite2D" parent="PLAY"]
+position = Vector2(177, 68)
+scale = Vector2(4, 4)
+sprite_frames = SubResource("SpriteFrames_f5voe")
+frame = 2
+
+[node name="EXIT" type="Button" parent="."]
+offset_left = 782.0
+offset_top = 597.0
+offset_right = 1140.0
+offset_bottom = 720.0
+
+[node name="Exit_sprite" type="AnimatedSprite2D" parent="EXIT"]
+position = Vector2(177, 68)
+scale = Vector2(4, 4)
+sprite_frames = SubResource("SpriteFrames_f5voe")
 
 [connection signal="pressed" from="PLAY" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="EXIT" to="." method="_on_play_pressed"]

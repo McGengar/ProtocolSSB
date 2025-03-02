@@ -5,10 +5,10 @@
 [ext_resource type="PackedScene" uid="uid://dhc2kem12wiw4" path="res://scenes/ducks.tscn" id="4_3d5vc"]
 [ext_resource type="PackedScene" uid="uid://bjw44oc5gw6v5" path="res://scenes/falling_object.tscn" id="4_xdrte"]
 [ext_resource type="PackedScene" uid="uid://4xnw2bff6l2q" path="res://scenes/finish_line.tscn" id="5_e2nwy"]
-[ext_resource type="PackedScene" uid="uid://cmfwpqhuu300d" path="res://scenes/pachol.tscn" id="6_qrobp"]
-[ext_resource type="Texture2D" uid="uid://c7a2nc1seitv5" path="res://sprites/drzewa i inne.png" id="7_d1ska"]
+[ext_resource type="PackedScene" path="res://scenes/pachol.tscn" id="6_qrobp"]
+[ext_resource type="Texture2D" uid="uid://lrgota2h1846" path="res://sprites/drzewa i inne.png" id="7_d1ska"]
 [ext_resource type="PackedScene" path="res://scenes/hole.tscn" id="7_dc3qx"]
-[ext_resource type="PackedScene" path="res://scenes/GOLDENBULL.tscn" id="9_goy3i"]
+[ext_resource type="PackedScene" uid="uid://dhobakckgqejd" path="res://scenes/GOLDENBULL.tscn" id="9_goy3i"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_esq8t"]
 texture = ExtResource("7_d1ska")

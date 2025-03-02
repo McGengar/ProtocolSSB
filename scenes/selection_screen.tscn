@@ -1,17 +1,18 @@
-[gd_scene load_steps=20 format=3 uid="uid://1s8dlp184f1l"]
+[gd_scene load_steps=23 format=3 uid="uid://1s8dlp184f1l"]
 
 [ext_resource type="Script" path="res://scripts/selection_screen.gd" id="1_73n34"]
-[ext_resource type="Texture2D" uid="uid://demoilbl62v3q" path="res://sprites/grassmapicon.png" id="1_gw0kf"]
-[ext_resource type="Texture2D" uid="uid://v6v8m50fhccw" path="res://sprites/wintermapicon.png" id="2_5vyl6"]
-[ext_resource type="Texture2D" uid="uid://b3rpy560fdfew" path="res://sprites/bisonmapicon.png" id="3_xxsjn"]
-[ext_resource type="Texture2D" uid="uid://qmn5j5c3ccf2" path="res://sprites/kawal1.png" id="4_5s4ax"]
-[ext_resource type="Texture2D" uid="uid://blvxt51o2j4bw" path="res://sprites/kawal2.png" id="5_rgxmx"]
+[ext_resource type="Texture2D" uid="uid://da6usopj0a3xk" path="res://sprites/grassmapicon.png" id="1_gw0kf"]
+[ext_resource type="Texture2D" uid="uid://m0y85vopt2m" path="res://sprites/wintermapicon.png" id="2_5vyl6"]
+[ext_resource type="Texture2D" uid="uid://cfaitxy655vq8" path="res://sprites/bisonmapicon.png" id="3_xxsjn"]
+[ext_resource type="Texture2D" uid="uid://cukac2hy08tsy" path="res://sprites/kawal1.png" id="4_5s4ax"]
+[ext_resource type="Texture2D" uid="uid://ovnm1inqrvqr" path="res://sprites/kawal2.png" id="5_rgxmx"]
 [ext_resource type="Shader" path="res://shaders/outline.gdshader" id="7_n3f2b"]
-[ext_resource type="Texture2D" uid="uid://bwh246o2iw57o" path="res://sprites/goodenough.png" id="8_eoorl"]
-[ext_resource type="Texture2D" uid="uid://bokvljpmuahm2" path="res://sprites/txtg.png" id="9_1ojtu"]
-[ext_resource type="Texture2D" uid="uid://c2jhnsptyxnu5" path="res://sprites/txtw.png" id="10_5tdu7"]
-[ext_resource type="Texture2D" uid="uid://cqfmnjuol8vl5" path="res://sprites/txtb.png" id="11_03nk4"]
-[ext_resource type="Texture2D" uid="uid://ejymni66kq1l" path="res://sprites/txtr.png" id="12_3wj3q"]
+[ext_resource type="Texture2D" uid="uid://vl2luwqkc512" path="res://sprites/goodenough.png" id="8_eoorl"]
+[ext_resource type="Texture2D" uid="uid://bg87px5pwa7id" path="res://sprites/txtg.png" id="9_1ojtu"]
+[ext_resource type="Texture2D" uid="uid://ck2enw2vaicxe" path="res://sprites/txtw.png" id="10_5tdu7"]
+[ext_resource type="Texture2D" uid="uid://cnh4nflelrawc" path="res://sprites/txtb.png" id="11_03nk4"]
+[ext_resource type="Texture2D" uid="uid://d0swrxrsbp850" path="res://sprites/txtr.png" id="12_3wj3q"]
+[ext_resource type="Texture2D" uid="uid://bjfwtebw0jw2u" path="res://sprites/guziki.png" id="13_b4meh"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_lb175"]
 
@@ -46,6 +47,21 @@ shader_parameter/width = 1.0
 shader_parameter/pattern = 0
 shader_parameter/inside = false
 shader_parameter/add_margins = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_03evk"]
+atlas = ExtResource("13_b4meh")
+region = Rect2(100, 0, 100, 40)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nmxb3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_03evk")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="Selection Screen" type="Node2D"]
 script = ExtResource("1_73n34")
@@ -187,10 +203,15 @@ scale = Vector2(3, 3)
 texture = ExtResource("12_3wj3q")
 
 [node name="backbutt" type="Button" parent="."]
-offset_left = -962.0
-offset_top = 424.0
-offset_right = -856.0
-offset_bottom = 526.0
+offset_left = -966.0
+offset_top = 402.0
+offset_right = -579.0
+offset_bottom = 521.0
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="backbutt"]
+position = Vector2(195, 54)
+scale = Vector2(4, 4)
+sprite_frames = SubResource("SpriteFrames_nmxb3")
 
 [connection signal="mouse_entered" from="grassmapbutt" to="." method="_on_grassmapbutt_mouse_entered"]
 [connection signal="mouse_exited" from="grassmapbutt" to="." method="_on_grassmapbutt_mouse_exited"]
