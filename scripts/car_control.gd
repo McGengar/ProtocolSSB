@@ -17,6 +17,7 @@ var time = 100.0
 var time_txt = ""
 var win = false
 var loose = false
+var last_skill= 0
 
 func _ready():
 	$Sound_effects/Gameloop.play()
@@ -71,6 +72,7 @@ func _physics_process(delta):
 		$CanvasLayer/melon/elonani.play("sigmaboy")
 		$CanvasLayer/melon/right.play("right")
 		$CanvasLayer/Skill1/use.emitting = true
+		last_skill = $CanvasLayer/Skill1.value
 		use_skill($CanvasLayer/Skill1.value)
 		$CanvasLayer/Skill1.value=0	
 		await get_tree().create_timer(0.8).timeout
@@ -78,9 +80,12 @@ func _physics_process(delta):
 		await get_tree().create_timer(5.2).timeout
 		$CanvasLayer/Skill1/use.emitting = true
 		$CanvasLayer/Skill1.value=randi_range(1,9)
+		while last_skill == $CanvasLayer/Skill1.value:
+			$CanvasLayer/Skill1.value=randi_range(1,9)
 	if Input.is_action_just_pressed("skill2") and $CanvasLayer/Skill2.value!=0 and time>0 and time<100 and win==false:
 		$CanvasLayer/melon/elonani.play("sigmaboy")
 		$CanvasLayer/melon/left.play("left")
+		last_skill = $CanvasLayer/Skill2.value
 		use_skill($CanvasLayer/Skill2.value)
 		$CanvasLayer/Skill2/use.emitting = true
 		$CanvasLayer/Skill2.value=0
@@ -89,6 +94,8 @@ func _physics_process(delta):
 		await get_tree().create_timer(5.2).timeout
 		$CanvasLayer/Skill2/use.emitting = true
 		$CanvasLayer/Skill2.value=randi_range(1,9)
+		while last_skill == $CanvasLayer/Skill2.value:
+			$CanvasLayer/Skill2.value=randi_range(1,9)
 	
 	if gas<0:
 		$CPUParticles2D.emitting = true
