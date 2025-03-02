@@ -1,7 +1,8 @@
-[gd_scene load_steps=26 format=3 uid="uid://bgypginv7yc36"]
+[gd_scene load_steps=27 format=3 uid="uid://bgypginv7yc36"]
 
 [ext_resource type="Script" path="res://scripts/selection_screen.gd" id="1_73n34"]
 [ext_resource type="Texture2D" uid="uid://c376ode76glrb" path="res://sprites/grassmapicon.png" id="1_gw0kf"]
+[ext_resource type="Texture2D" uid="uid://uco6vw6s1mhr" path="res://sprites/tlo.png" id="2_1ry4v"]
 [ext_resource type="Texture2D" uid="uid://d34fnfgp6bn33" path="res://sprites/wintermapicon.png" id="2_5vyl6"]
 [ext_resource type="Texture2D" uid="uid://bq8xyubxfuvw7" path="res://sprites/bisonmapicon.png" id="3_xxsjn"]
 [ext_resource type="Texture2D" uid="uid://dfpcdmwdqi41k" path="res://sprites/kawal1.png" id="4_5s4ax"]
@@ -78,6 +79,12 @@ animations = [{
 
 [node name="Selection Screen" type="Node2D"]
 script = ExtResource("1_73n34")
+
+[node name="LOGO" type="Sprite2D" parent="."]
+modulate = Color(0.556953, 0.556953, 0.556953, 1)
+z_index = -10
+scale = Vector2(4.34, 4.34)
+texture = ExtResource("2_1ry4v")
 
 [node name="outline1" type="Sprite2D" parent="."]
 z_index = -4

@@ -1,8 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://bu0l3hbit2eyp"]
+[gd_scene load_steps=12 format=3 uid="uid://bu0l3hbit2eyp"]
 
 [ext_resource type="Script" path="res://scripts/menu.gd" id="1_4ix4n"]
 [ext_resource type="Texture2D" uid="uid://uco6vw6s1mhr" path="res://sprites/tlo.png" id="2_71gdu"]
 [ext_resource type="Texture2D" uid="uid://dalsnb0tapgwe" path="res://sprites/guziki.png" id="3_kktf5"]
+[ext_resource type="Texture2D" uid="uid://7v5hb7t74bd4" path="res://sprites/imiona i nazwiska.png" id="4_tiq37"]
+[ext_resource type="Shader" path="res://shaders/outline.gdshader" id="5_bdbh5"]
+[ext_resource type="Texture2D" uid="uid://do6q5fv4f7b25" path="res://sprites/logo.png" id="5_yyuto"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xnsrj"]
 atlas = ExtResource("3_kktf5")
@@ -33,6 +36,14 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_5ms8l"]
+shader = ExtResource("5_bdbh5")
+shader_parameter/color = Color(1, 1, 1, 1)
+shader_parameter/width = 2.0
+shader_parameter/pattern = 0
+shader_parameter/inside = false
+shader_parameter/add_margins = true
+
 [node name="Menu" type="Node2D"]
 script = ExtResource("1_4ix4n")
 
@@ -43,9 +54,9 @@ texture = ExtResource("2_71gdu")
 
 [node name="PLAY" type="Button" parent="."]
 offset_left = 782.0
-offset_top = 342.0
+offset_top = 488.0
 offset_right = 1140.0
-offset_bottom = 465.0
+offset_bottom = 611.0
 
 [node name="Play_sprite" type="AnimatedSprite2D" parent="PLAY"]
 position = Vector2(177, 68)
@@ -55,14 +66,25 @@ frame = 2
 
 [node name="EXIT" type="Button" parent="."]
 offset_left = 782.0
-offset_top = 597.0
+offset_top = 743.0
 offset_right = 1140.0
-offset_bottom = 720.0
+offset_bottom = 866.0
 
 [node name="Exit_sprite" type="AnimatedSprite2D" parent="EXIT"]
 position = Vector2(177, 68)
 scale = Vector2(4, 4)
 sprite_frames = SubResource("SpriteFrames_f5voe")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(960, 1054.57)
+scale = Vector2(2.225, 2.225)
+texture = ExtResource("4_tiq37")
+
+[node name="title" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_5ms8l")
+position = Vector2(960, 198)
+scale = Vector2(4, 4)
+texture = ExtResource("5_yyuto")
 
 [connection signal="pressed" from="PLAY" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="EXIT" to="." method="_on_exit_pressed"]
