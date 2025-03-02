@@ -5,6 +5,7 @@ var bison_speed = 0.01
 var sigmax = 1
 var sigmay = 1
 @onready var car: RigidBody2D = $"../Car"
+@onready var moo: AudioStreamPlayer = $Moo
 
 func _ready() -> void:
 	if rotation > deg_to_rad(100):
@@ -26,5 +27,6 @@ func _ready() -> void:
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body == car:
+		moo.play()
 		for i in range(0,300):
 			apply_central_force(Vector2(sigmax,sigmay)*100)

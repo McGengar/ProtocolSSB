@@ -1,0 +1,207 @@
+[gd_scene load_steps=20 format=3 uid="uid://1s8dlp184f1l"]
+
+[ext_resource type="Script" path="res://scripts/selection_screen.gd" id="1_73n34"]
+[ext_resource type="Texture2D" uid="uid://demoilbl62v3q" path="res://sprites/grassmapicon.png" id="1_gw0kf"]
+[ext_resource type="Texture2D" uid="uid://v6v8m50fhccw" path="res://sprites/wintermapicon.png" id="2_5vyl6"]
+[ext_resource type="Texture2D" uid="uid://b3rpy560fdfew" path="res://sprites/bisonmapicon.png" id="3_xxsjn"]
+[ext_resource type="Texture2D" uid="uid://qmn5j5c3ccf2" path="res://sprites/kawal1.png" id="4_5s4ax"]
+[ext_resource type="Texture2D" uid="uid://blvxt51o2j4bw" path="res://sprites/kawal2.png" id="5_rgxmx"]
+[ext_resource type="Shader" path="res://shaders/outline.gdshader" id="7_n3f2b"]
+[ext_resource type="Texture2D" uid="uid://bwh246o2iw57o" path="res://sprites/goodenough.png" id="8_eoorl"]
+[ext_resource type="Texture2D" uid="uid://bokvljpmuahm2" path="res://sprites/txtg.png" id="9_1ojtu"]
+[ext_resource type="Texture2D" uid="uid://c2jhnsptyxnu5" path="res://sprites/txtw.png" id="10_5tdu7"]
+[ext_resource type="Texture2D" uid="uid://cqfmnjuol8vl5" path="res://sprites/txtb.png" id="11_03nk4"]
+[ext_resource type="Texture2D" uid="uid://ejymni66kq1l" path="res://sprites/txtr.png" id="12_3wj3q"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_lb175"]
+
+[sub_resource type="Gradient" id="Gradient_8xr5t"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_g8lex"]
+gradient = SubResource("Gradient_8xr5t")
+width = 4096
+height = 4096
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_t4jvy"]
+shader = ExtResource("7_n3f2b")
+shader_parameter/color = Color(1, 1, 1, 1)
+shader_parameter/width = 1.0
+shader_parameter/pattern = 0
+shader_parameter/inside = false
+shader_parameter/add_margins = true
+
+[sub_resource type="Gradient" id="Gradient_3xmrh"]
+offsets = PackedFloat32Array(0, 0.0454545)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_tnmk3"]
+gradient = SubResource("Gradient_3xmrh")
+width = 48
+fill_to = Vector2(0.0688073, 0.0642202)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_oqgwf"]
+shader = ExtResource("7_n3f2b")
+shader_parameter/color = Color(1, 1, 1, 1)
+shader_parameter/width = 1.0
+shader_parameter/pattern = 0
+shader_parameter/inside = false
+shader_parameter/add_margins = true
+
+[node name="Selection Screen" type="Node2D"]
+script = ExtResource("1_73n34")
+
+[node name="aa" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(-660.5, -300.5)
+scale = Vector2(0.325183, 0.417364)
+texture = ExtResource("1_gw0kf")
+
+[node name="ab" type="Sprite2D" parent="."]
+z_index = -2
+material = SubResource("ShaderMaterial_lb175")
+position = Vector2(1.03712e-05, -300)
+scale = Vector2(0.378327, 0.429342)
+texture = ExtResource("2_5vyl6")
+
+[node name="ac" type="Sprite2D" parent="."]
+z_index = -3
+position = Vector2(660.5, -300.5)
+scale = Vector2(0.307276, 0.426882)
+texture = ExtResource("3_xxsjn")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+modulate = Color(0.144063, 0.144063, 0.144063, 1)
+z_index = -20
+position = Vector2(-79, 32)
+texture = SubResource("GradientTexture2D_g8lex")
+
+[node name="grassmapbutt" type="Button" parent="."]
+offset_left = -860.0
+offset_top = -500.0
+offset_right = -460.0
+offset_bottom = -100.0
+
+[node name="wintmapbutt" type="Button" parent="."]
+offset_left = -200.0
+offset_top = -500.0
+offset_right = 200.0
+offset_bottom = -100.0
+
+[node name="bizonmapbutt" type="Button" parent="."]
+offset_left = 460.0
+offset_top = -500.0
+offset_right = 860.0
+offset_bottom = -100.0
+
+[node name="randombutt" type="Button" parent="."]
+offset_left = -200.0
+offset_top = 80.0
+offset_right = 200.0
+offset_bottom = 480.0
+
+[node name="Sprite2D" type="Sprite2D" parent="randombutt"]
+
+[node name="Sprite2D3" type="Sprite2D" parent="randombutt"]
+z_index = -2
+position = Vector2(203.25, 199.5)
+scale = Vector2(0.386407, 0.428263)
+texture = ExtResource("2_5vyl6")
+
+[node name="Sprite2D2" type="Sprite2D" parent="randombutt"]
+visible = false
+z_index = -1
+position = Vector2(205.25, 194.5)
+scale = Vector2(0.336186, 0.40272)
+texture = ExtResource("1_gw0kf")
+
+[node name="Kawal2" type="Sprite2D" parent="randombutt"]
+position = Vector2(332, 199)
+scale = Vector2(1.0068, 1.02041)
+texture = ExtResource("5_rgxmx")
+
+[node name="Kawal1" type="Sprite2D" parent="randombutt"]
+position = Vector2(39, 199)
+scale = Vector2(1.00617, 0.921296)
+texture = ExtResource("4_5s4ax")
+
+[node name="Goodenough" type="Sprite2D" parent="randombutt"]
+material = SubResource("ShaderMaterial_t4jvy")
+position = Vector2(206, 176)
+scale = Vector2(7.69531, 6.95312)
+texture = ExtResource("8_eoorl")
+
+[node name="fuhu" type="Sprite2D" parent="."]
+visible = false
+modulate = Color(0.882353, 0.843137, 0.282353, 1)
+position = Vector2(-653, -309)
+scale = Vector2(8.57813, 6.04688)
+texture = SubResource("GradientTexture2D_tnmk3")
+
+[node name="fuhu2" type="Sprite2D" parent="."]
+visible = false
+modulate = Color(0.882353, 0.843137, 0.282353, 1)
+position = Vector2(-5, -258)
+scale = Vector2(8.57813, 6.04688)
+texture = SubResource("GradientTexture2D_tnmk3")
+
+[node name="fuhu3" type="Sprite2D" parent="."]
+visible = false
+modulate = Color(0.882353, 0.843137, 0.282353, 1)
+position = Vector2(603, -264)
+scale = Vector2(8.57813, 6.04688)
+texture = SubResource("GradientTexture2D_tnmk3")
+
+[node name="fuhu4" type="Sprite2D" parent="."]
+visible = false
+modulate = Color(0.882353, 0.843137, 0.282353, 0)
+material = SubResource("ShaderMaterial_oqgwf")
+position = Vector2(1, 278)
+scale = Vector2(8.57813, 6.04688)
+texture = SubResource("GradientTexture2D_tnmk3")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(0.93, 0.93)
+
+[node name="Txtg" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(-661, -60)
+scale = Vector2(1.99, 2.4)
+texture = ExtResource("9_1ojtu")
+
+[node name="Txtw" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(0, -60)
+scale = Vector2(2.4, 2.4)
+texture = ExtResource("10_5tdu7")
+
+[node name="Txtb" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(661, -60)
+scale = Vector2(2.4, 2.4)
+texture = ExtResource("11_03nk4")
+
+[node name="Txtr" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(0, 37)
+scale = Vector2(3, 3)
+texture = ExtResource("12_3wj3q")
+
+[node name="backbutt" type="Button" parent="."]
+offset_left = -962.0
+offset_top = 424.0
+offset_right = -856.0
+offset_bottom = 526.0
+
+[connection signal="mouse_entered" from="grassmapbutt" to="." method="_on_grassmapbutt_mouse_entered"]
+[connection signal="mouse_exited" from="grassmapbutt" to="." method="_on_grassmapbutt_mouse_exited"]
+[connection signal="pressed" from="grassmapbutt" to="." method="_on_grassmapbutt_pressed"]
+[connection signal="mouse_entered" from="wintmapbutt" to="." method="_on_wintmapbutt_mouse_entered"]
+[connection signal="mouse_exited" from="wintmapbutt" to="." method="_on_wintmapbutt_mouse_exited"]
+[connection signal="pressed" from="wintmapbutt" to="." method="_on_wintmapbutt_pressed"]
+[connection signal="mouse_entered" from="bizonmapbutt" to="." method="_on_bizonmapbutt_mouse_entered"]
+[connection signal="mouse_exited" from="bizonmapbutt" to="." method="_on_bizonmapbutt_mouse_exited"]
+[connection signal="pressed" from="bizonmapbutt" to="." method="_on_bizonmapbutt_pressed"]
+[connection signal="mouse_entered" from="randombutt" to="." method="_on_randombutt_mouse_entered"]
+[connection signal="mouse_exited" from="randombutt" to="." method="_on_randombutt_mouse_exited"]
+[connection signal="pressed" from="randombutt" to="." method="_on_randombutt_pressed"]
+[connection signal="pressed" from="backbutt" to="." method="_on_backbutt_pressed"]

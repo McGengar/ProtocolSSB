@@ -1,18 +1,23 @@
-[gd_scene load_steps=54 format=3 uid="uid://dcq4ivigrdvd2"]
+[gd_scene load_steps=72 format=3 uid="uid://dcq4ivigrdvd2"]
 
 [ext_resource type="Script" path="res://scripts/car_control.gd" id="1_vljah"]
 [ext_resource type="Texture2D" uid="uid://d2gqvtbfaf7a5" path="res://sprites/autko.png" id="2_sgwix"]
 [ext_resource type="PackedScene" uid="uid://cm4p7dkhsg2ji" path="res://scenes/skill.tscn" id="3_ecsdd"]
-[ext_resource type="Texture2D" uid="uid://dsb6cb7p5u1kt" path="res://sprites/walona wycieeraczka.png" id="4_6sbb8"]
-[ext_resource type="Texture2D" uid="uid://bvh542laixk4f" path="res://sprites/babel.png" id="5_l5enp"]
+[ext_resource type="Texture2D" uid="uid://mewrrhmsmq8q" path="res://sprites/walona wycieeraczka.png" id="4_6sbb8"]
+[ext_resource type="Shader" path="res://shaders/outline.gdshader" id="5_btjux"]
+[ext_resource type="Texture2D" uid="uid://bxtn6j2o4hbsb" path="res://sprites/babel.png" id="5_l5enp"]
+[ext_resource type="Texture2D" uid="uid://2tv57iainj2m" path="res://sprites/tablet1.png" id="6_4hkeq"]
 [ext_resource type="PackedScene" uid="uid://cq2iywhlcsohq" path="res://scenes/melon.tscn" id="6_nkygn"]
 [ext_resource type="Texture2D" uid="uid://dyc7gp3ynd4id" path="res://sprites/indyki.png" id="7_364d0"]
 [ext_resource type="FontFile" uid="uid://dvydu4xd0m7od" path="res://ssb/8-BIT WONDER.TTF" id="8_eklrs"]
 [ext_resource type="Texture2D" uid="uid://ff8ljo7y8yly" path="res://sprites/start_timer.png" id="9_pyug0"]
 [ext_resource type="AudioStream" uid="uid://c88xmedsnje8f" path="res://sounds/banan1.mp3" id="10_j1v8c"]
 [ext_resource type="AudioStream" uid="uid://c7cu5ftmxj46i" path="res://sounds/banan2.mp3" id="11_7x5ge"]
+[ext_resource type="Shader" path="res://shaders/wobbly_outline.gdshader" id="12_dgmlb"]
+[ext_resource type="Texture2D" uid="uid://8itiw8empmcb" path="res://sprites/sterowanie.png" id="12_iaalh"]
 [ext_resource type="AudioStream" uid="uid://ol62qirf1erb" path="res://sounds/blok1.mp3" id="12_q1uqk"]
 [ext_resource type="AudioStream" uid="uid://cckwdg1m600bd" path="res://sounds/blok2.mp3" id="13_kmdjw"]
+[ext_resource type="Texture2D" uid="uid://cgwj1uqcugmfm" path="res://sprites/arrow.png" id="13_tggev"]
 [ext_resource type="AudioStream" uid="uid://l6v8bl2aldv3" path="res://sounds/blok3.mp3" id="14_x58gk"]
 [ext_resource type="AudioStream" uid="uid://1fel4m2hw5j1" path="res://sounds/deszcz1.mp3" id="15_i1fmp"]
 [ext_resource type="AudioStream" uid="uid://cfi540wexhpk3" path="res://sounds/deszcz2.mp3" id="16_08vqi"]
@@ -29,6 +34,14 @@
 [ext_resource type="AudioStream" uid="uid://b2l1k62ykxfl1" path="res://sounds/snail1.mp3" id="27_i6in7"]
 [ext_resource type="AudioStream" uid="uid://c4qdybk886m6q" path="res://sounds/snail3.mp3" id="28_4mck7"]
 [ext_resource type="AudioStream" uid="uid://bmvr7xn7c4umq" path="res://sounds/cosnapewno1.mp3" id="29_s3jbs"]
+[ext_resource type="AudioStream" uid="uid://ctum4kdlrdlqq" path="res://sounds/driverwinsalenieuzywactego.mp3" id="30_kxlrf"]
+[ext_resource type="AudioStream" uid="uid://c3pwt8tnl235w" path="res://sounds/designerwins2.mp3" id="30_pkj4s"]
+[ext_resource type="AudioStream" uid="uid://ntqnmxh5opts" path="res://sounds/lose1.mp3" id="32_nm680"]
+[ext_resource type="AudioStream" uid="uid://sucyke83ysda" path="res://sounds/win1.mp3" id="33_0ymdb"]
+[ext_resource type="AudioStream" uid="uid://cfe5s8olynw4q" path="res://sounds/hit_sound.wav" id="39_2xpgl"]
+[ext_resource type="AudioStream" uid="uid://cysed5a33irvh" path="res://sounds/game music.wav" id="40_pqg4r"]
+[ext_resource type="AudioStream" uid="uid://b0ahoktkrg31o" path="res://sounds/victory.mp3" id="41_vy25o"]
+[ext_resource type="AudioStream" uid="uid://ddoh8s1kky6hy" path="res://sounds/loose.wav" id="42_gttjl"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4po4l"]
 radius = 12.0
@@ -41,6 +54,21 @@ point_count = 2
 [sub_resource type="Gradient" id="Gradient_bhjxn"]
 offsets = PackedFloat32Array(0, 0.762557, 1)
 colors = PackedColorArray(0.212305, 0.212305, 0.212305, 1, 0.0504102, 0.0504103, 0.0504103, 0.237443, 0, 0, 0, 0)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_84jjl"]
+shader = ExtResource("5_btjux")
+shader_parameter/color = Color(1, 1, 1, 1)
+shader_parameter/width = 2.0
+shader_parameter/pattern = 0
+shader_parameter/inside = false
+shader_parameter/add_margins = true
+
+[sub_resource type="Gradient" id="Gradient_yhgdq"]
+offsets = PackedFloat32Array(0.616099)
+colors = PackedColorArray(1, 1, 1, 0.27451)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_6aqtt"]
+gradient = SubResource("Gradient_yhgdq")
 
 [sub_resource type="Curve" id="Curve_q8e6p"]
 _data = [Vector2(0.00555556, 0.10989), 0.0, 0.0, 0, 0, Vector2(0.994444, 1), 0.0, 0.0, 0, 0]
@@ -127,6 +155,28 @@ animations = [{
 "name": &"default",
 "speed": 5.0
 }]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_gvko5"]
+shader = ExtResource("12_dgmlb")
+shader_parameter/normal_offset = 1.5
+shader_parameter/time_influence = 3.0
+shader_parameter/y_div = 2.87
+shader_parameter/color = Color(1, 1, 1, 1)
+shader_parameter/width = 2.0
+shader_parameter/pattern = 0
+shader_parameter/inside = false
+shader_parameter/add_margins = true
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_kds2j"]
+shader = ExtResource("12_dgmlb")
+shader_parameter/normal_offset = 1.5
+shader_parameter/time_influence = 1.555
+shader_parameter/y_div = 2.87
+shader_parameter/color = Color(1, 1, 1, 1)
+shader_parameter/width = 1.0
+shader_parameter/pattern = 0
+shader_parameter/inside = false
+shader_parameter/add_margins = true
 
 [sub_resource type="Gradient" id="Gradient_le405"]
 colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1)
@@ -222,14 +272,14 @@ color_ramp = SubResource("Gradient_bhjxn")
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="Skill2" parent="CanvasLayer" instance=ExtResource("3_ecsdd")]
-position = Vector2(1705.28, 891)
+position = Vector2(1759.28, 745)
 rotation = 0.10472
 scale = Vector2(6, 6)
 frame = 1
 frame_progress = 0.0
 
 [node name="Skill1" parent="CanvasLayer" instance=ExtResource("3_ecsdd")]
-position = Vector2(1497.28, 894)
+position = Vector2(1551.28, 748)
 rotation = -0.10472
 scale = Vector2(6, 6)
 frame = 3
@@ -239,7 +289,7 @@ frame_progress = 0.0
 position = Vector2(876, 1193)
 
 [node name="wycieraczka" type="Sprite2D" parent="CanvasLayer/piwot1"]
-position = Vector2(-429, -24)
+position = Vector2(-425, -8)
 rotation = -1.36136
 scale = Vector2(4, 4)
 texture = ExtResource("4_6sbb8")
@@ -248,14 +298,25 @@ texture = ExtResource("4_6sbb8")
 position = Vector2(1599, 1181)
 
 [node name="wycieraczka2" type="Sprite2D" parent="CanvasLayer/piwot2"]
-position = Vector2(-420, -12)
+position = Vector2(-416, 1)
 rotation = -1.36136
 scale = Vector2(4, 4)
 texture = ExtResource("4_6sbb8")
 
+[node name="Sprite2D2" type="Sprite2D" parent="CanvasLayer"]
+material = SubResource("ShaderMaterial_84jjl")
+position = Vector2(1654.75, 230)
+scale = Vector2(3.35577, 3.32051)
+texture = ExtResource("6_4hkeq")
+
 [node name="melon" parent="CanvasLayer" instance=ExtResource("6_nkygn")]
-position = Vector2(1576, 421)
-scale = Vector2(4, 4)
+position = Vector2(1640, 210)
+scale = Vector2(3, 3)
+
+[node name="Sprite2D3" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(1655, 216.5)
+scale = Vector2(7.34375, 5.79687)
+texture = SubResource("GradientTexture2D_6aqtt")
 
 [node name="CPUParticles2D" type="CPUParticles2D" parent="CanvasLayer"]
 z_index = -1
@@ -279,6 +340,28 @@ position = Vector2(960, 480)
 scale = Vector2(10, 10)
 sprite_frames = SubResource("SpriteFrames_7ir4s")
 frame = 1
+
+[node name="ArrowL" type="Sprite2D" parent="CanvasLayer"]
+material = SubResource("ShaderMaterial_gvko5")
+position = Vector2(1564, 951)
+rotation = -0.137881
+scale = Vector2(2, 2)
+texture = ExtResource("13_tggev")
+
+[node name="ArrowR" type="Sprite2D" parent="CanvasLayer"]
+material = SubResource("ShaderMaterial_gvko5")
+position = Vector2(1736, 946)
+rotation = 0.1309
+scale = Vector2(2, 2)
+texture = ExtResource("13_tggev")
+flip_h = true
+
+[node name="Sterowanie" type="Sprite2D" parent="CanvasLayer"]
+material = SubResource("ShaderMaterial_kds2j")
+position = Vector2(286, 940)
+rotation = -0.0680678
+scale = Vector2(4, 4)
+texture = ExtResource("12_iaalh")
 
 [node name="Sprite2D" type="Sprite2D" parent="CanvasLayer"]
 visible = false
@@ -305,60 +388,114 @@ sprite_frames = SubResource("SpriteFrames_beyig")
 
 [node name="Banan 1" type="AudioStreamPlayer2D" parent="Sounds"]
 stream = ExtResource("10_j1v8c")
+max_distance = 4000.0
 
 [node name="Banan 2" type="AudioStreamPlayer2D" parent="Sounds"]
 stream = ExtResource("11_7x5ge")
+max_distance = 4000.0
 
 [node name="Block 1" type="AudioStreamPlayer2D" parent="Sounds"]
 stream = ExtResource("12_q1uqk")
+max_distance = 4000.0
 
 [node name="Block 2" type="AudioStreamPlayer2D" parent="Sounds"]
 stream = ExtResource("13_kmdjw")
+max_distance = 4000.0
 
 [node name="Block 3" type="AudioStreamPlayer2D" parent="Sounds"]
 stream = ExtResource("14_x58gk")
+max_distance = 4000.0
 
 [node name="Wycieraczki 1" type="AudioStreamPlayer2D" parent="Sounds"]
 stream = ExtResource("15_i1fmp")
+max_distance = 4000.0
 
 [node name="Wycieraczki 2" type="AudioStreamPlayer2D" parent="Sounds"]
 stream = ExtResource("16_08vqi")
+max_distance = 4000.0
 
 [node name="Reverse 1" type="AudioStreamPlayer2D" parent="Sounds"]
 stream = ExtResource("17_h6qdd")
+max_distance = 4000.0
 
 [node name="Reverse 2" type="AudioStreamPlayer2D" parent="Sounds"]
 stream = ExtResource("18_nf6p6")
+max_distance = 4000.0
 
 [node name="Reverse 3" type="AudioStreamPlayer2D" parent="Sounds"]
 stream = ExtResource("19_q6dby")
+max_distance = 4000.0
 
 [node name="Flashbang 1" type="AudioStreamPlayer2D" parent="Sounds"]
 stream = ExtResource("20_blhjs")
+max_distance = 4000.0
 
 [node name="Flashbang 2" type="AudioStreamPlayer2D" parent="Sounds"]
 stream = ExtResource("21_l2ro6")
+max_distance = 4000.0
 
 [node name="Flashbang 3" type="AudioStreamPlayer2D" parent="Sounds"]
 stream = ExtResource("22_40sl6")
+max_distance = 4000.0
 
 [node name="Sket 1" type="AudioStreamPlayer2D" parent="Sounds"]
 stream = ExtResource("23_86d67")
+max_distance = 4000.0
 
 [node name="Sket 2" type="AudioStreamPlayer2D" parent="Sounds"]
 stream = ExtResource("24_4yxor")
+max_distance = 4000.0
 
 [node name="Sket 3" type="AudioStreamPlayer2D" parent="Sounds"]
 stream = ExtResource("25_mtbj3")
+max_distance = 4000.0
 
 [node name="Sket 4" type="AudioStreamPlayer2D" parent="Sounds"]
 stream = ExtResource("26_3xxrr")
+max_distance = 4000.0
 
 [node name="Slow 1" type="AudioStreamPlayer2D" parent="Sounds"]
 stream = ExtResource("27_i6in7")
+max_distance = 4000.0
 
 [node name="Slow 2" type="AudioStreamPlayer2D" parent="Sounds"]
 stream = ExtResource("28_4mck7")
+max_distance = 4000.0
 
 [node name="Hop" type="AudioStreamPlayer2D" parent="Sounds"]
 stream = ExtResource("29_s3jbs")
+max_distance = 4000.0
+
+[node name="Designerwins2" type="AudioStreamPlayer2D" parent="Sounds"]
+stream = ExtResource("30_pkj4s")
+max_distance = 4000.0
+
+[node name="Driverwinsalenieuzywactego" type="AudioStreamPlayer2D" parent="Sounds"]
+stream = ExtResource("30_kxlrf")
+max_distance = 4000.0
+
+[node name="Lose1" type="AudioStreamPlayer2D" parent="Sounds"]
+stream = ExtResource("32_nm680")
+max_distance = 4000.0
+
+[node name="Win1" type="AudioStreamPlayer2D" parent="Sounds"]
+stream = ExtResource("33_0ymdb")
+max_distance = 4000.0
+
+[node name="Sound_effects" type="Node" parent="."]
+
+[node name="Hit" type="AudioStreamPlayer2D" parent="Sound_effects"]
+stream = ExtResource("39_2xpgl")
+max_distance = 4000.0
+
+[node name="Gameloop" type="AudioStreamPlayer2D" parent="Sound_effects"]
+stream = ExtResource("40_pqg4r")
+max_distance = 4000.0
+
+[node name="Win" type="AudioStreamPlayer2D" parent="Sound_effects"]
+stream = ExtResource("41_vy25o")
+max_distance = 4000.0
+
+[node name="Lost" type="AudioStreamPlayer2D" parent="Sound_effects"]
+stream = ExtResource("42_gttjl")
+max_distance = 4000.0
