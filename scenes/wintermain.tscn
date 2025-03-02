@@ -122,7 +122,11 @@ position = Vector2(-509, -1251)
 
 [node name="pachol17" parent="Pacholy" instance=ExtResource("6_vcm87")]
 modulate = Color(0.435294, 0.580392, 1, 1)
-position = Vector2(-684, -1412)
+position = Vector2(-632, -1413)
+
+[node name="pachol21" parent="Pacholy" instance=ExtResource("6_vcm87")]
+modulate = Color(0.435294, 0.580392, 1, 1)
+position = Vector2(-512, -1529)
 
 [node name="pachol20" parent="Pacholy" instance=ExtResource("6_vcm87")]
 modulate = Color(0.435294, 0.580392, 1, 1)
