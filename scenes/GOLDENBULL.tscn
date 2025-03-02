@@ -1,0 +1,32 @@
+[gd_scene load_steps=6 format=3 uid="uid://dhobakckgqejd"]
+
+[ext_resource type="Script" path="res://scripts/blackbull.gd" id="1_cp0ws"]
+[ext_resource type="PackedScene" uid="uid://c6pli3kjmfvgy" path="res://scenes/goldenbullsprite.tscn" id="2_qase5"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_coeul"]
+bounce = 5.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7pp1x"]
+size = Vector2(32, 48)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k5fvn"]
+size = Vector2(167, 312)
+
+[node name="GOLDEN BULL" type="RigidBody2D"]
+visible = false
+physics_material_override = SubResource("PhysicsMaterial_coeul")
+gravity_scale = 0.0
+script = ExtResource("1_cp0ws")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_7pp1x")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(21.9988, 192)
+shape = SubResource("RectangleShape2D_k5fvn")
+
+[node name="Sprite2D2" parent="." instance=ExtResource("2_qase5")]
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
