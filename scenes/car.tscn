@@ -1,4 +1,4 @@
-[gd_scene load_steps=63 format=3 uid="uid://dcq4ivigrdvd2"]
+[gd_scene load_steps=68 format=3 uid="uid://dcq4ivigrdvd2"]
 
 [ext_resource type="Script" path="res://scripts/car_control.gd" id="1_vljah"]
 [ext_resource type="Texture2D" uid="uid://d2gqvtbfaf7a5" path="res://sprites/autko.png" id="2_sgwix"]
@@ -13,8 +13,11 @@
 [ext_resource type="Texture2D" uid="uid://ff8ljo7y8yly" path="res://sprites/start_timer.png" id="9_pyug0"]
 [ext_resource type="AudioStream" uid="uid://c88xmedsnje8f" path="res://sounds/banan1.mp3" id="10_j1v8c"]
 [ext_resource type="AudioStream" uid="uid://c7cu5ftmxj46i" path="res://sounds/banan2.mp3" id="11_7x5ge"]
+[ext_resource type="Shader" path="res://shaders/wobbly_outline.gdshader" id="12_dgmlb"]
+[ext_resource type="Texture2D" uid="uid://8itiw8empmcb" path="res://sprites/sterowanie.png" id="12_iaalh"]
 [ext_resource type="AudioStream" uid="uid://ol62qirf1erb" path="res://sounds/blok1.mp3" id="12_q1uqk"]
 [ext_resource type="AudioStream" uid="uid://cckwdg1m600bd" path="res://sounds/blok2.mp3" id="13_kmdjw"]
+[ext_resource type="Texture2D" uid="uid://cgwj1uqcugmfm" path="res://sprites/arrow.png" id="13_tggev"]
 [ext_resource type="AudioStream" uid="uid://l6v8bl2aldv3" path="res://sounds/blok3.mp3" id="14_x58gk"]
 [ext_resource type="AudioStream" uid="uid://1fel4m2hw5j1" path="res://sounds/deszcz1.mp3" id="15_i1fmp"]
 [ext_resource type="AudioStream" uid="uid://cfi540wexhpk3" path="res://sounds/deszcz2.mp3" id="16_08vqi"]
@@ -148,6 +151,28 @@ animations = [{
 "name": &"default",
 "speed": 5.0
 }]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_gvko5"]
+shader = ExtResource("12_dgmlb")
+shader_parameter/normal_offset = 1.5
+shader_parameter/time_influence = 3.0
+shader_parameter/y_div = 2.87
+shader_parameter/color = Color(1, 1, 1, 1)
+shader_parameter/width = 2.0
+shader_parameter/pattern = 0
+shader_parameter/inside = false
+shader_parameter/add_margins = true
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_kds2j"]
+shader = ExtResource("12_dgmlb")
+shader_parameter/normal_offset = 1.5
+shader_parameter/time_influence = 1.555
+shader_parameter/y_div = 2.87
+shader_parameter/color = Color(1, 1, 1, 1)
+shader_parameter/width = 1.0
+shader_parameter/pattern = 0
+shader_parameter/inside = false
+shader_parameter/add_margins = true
 
 [sub_resource type="Gradient" id="Gradient_le405"]
 colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1)
@@ -311,6 +336,28 @@ position = Vector2(960, 480)
 scale = Vector2(10, 10)
 sprite_frames = SubResource("SpriteFrames_7ir4s")
 frame = 1
+
+[node name="ArrowL" type="Sprite2D" parent="CanvasLayer"]
+material = SubResource("ShaderMaterial_gvko5")
+position = Vector2(1564, 951)
+rotation = -0.137881
+scale = Vector2(2, 2)
+texture = ExtResource("13_tggev")
+
+[node name="ArrowR" type="Sprite2D" parent="CanvasLayer"]
+material = SubResource("ShaderMaterial_gvko5")
+position = Vector2(1736, 946)
+rotation = 0.1309
+scale = Vector2(2, 2)
+texture = ExtResource("13_tggev")
+flip_h = true
+
+[node name="Sterowanie" type="Sprite2D" parent="CanvasLayer"]
+material = SubResource("ShaderMaterial_kds2j")
+position = Vector2(286, 940)
+rotation = -0.0680678
+scale = Vector2(4, 4)
+texture = ExtResource("12_iaalh")
 
 [node name="Sprite2D" type="Sprite2D" parent="CanvasLayer"]
 visible = false
