@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://dnm710o0d2n0b"]
+[gd_scene load_steps=15 format=3 uid="uid://dnm710o0d2n0b"]
 
 [ext_resource type="PackedScene" uid="uid://bwfxtvsh4xcbq" path="res://scenes/road.tscn" id="1_ukvxr"]
 [ext_resource type="PackedScene" uid="uid://dcq4ivigrdvd2" path="res://scenes/car.tscn" id="2_ycmxb"]
@@ -9,16 +9,17 @@
 [ext_resource type="PackedScene" uid="uid://cr1x62c2dhktu" path="res://scenes/tumbleweed.tscn" id="6_koehw"]
 [ext_resource type="PackedScene" uid="uid://c6ktes7iufhm2" path="res://scenes/bisonpositions.tscn" id="8_kxrdy"]
 [ext_resource type="PackedScene" uid="uid://bu250rpw2j1gj" path="res://scenes/BLACKBULL.tscn" id="9_ye3ca"]
+[ext_resource type="PackedScene" uid="uid://dhobakckgqejd" path="res://scenes/GOLDENBULL.tscn" id="10_bhow6"]
 
-[sub_resource type="Gradient" id="Gradient_8xr5t"]
+[sub_resource type="Gradient" id="Gradient_dmp7a"]
 colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_iukqg"]
-gradient = SubResource("Gradient_8xr5t")
+gradient = SubResource("Gradient_dmp7a")
 width = 1024
 height = 1024
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_b8uu2"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0i1mw"]
 texture = ExtResource("4_p73v4")
 0:0/size_in_atlas = Vector2i(3, 4)
 0:0/0 = 0
@@ -28,7 +29,7 @@ texture = ExtResource("4_p73v4")
 6:0/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_v0eh8"]
-sources/0 = SubResource("TileSetAtlasSource_b8uu2")
+sources/0 = SubResource("TileSetAtlasSource_0i1mw")
 
 [node name="questionmain" type="Node"]
 
@@ -465,5 +466,21 @@ rotation = 3.14159
 position = Vector2(-904, -961)
 rotation = -1.5708
 
+[node name="BLACK BULL8" parent="." instance=ExtResource("9_ye3ca")]
+position = Vector2(-1233, -224)
+rotation = -1.5708
+
+[node name="BLACK BULL9" parent="." instance=ExtResource("9_ye3ca")]
+position = Vector2(-1237, -161)
+rotation = -1.5708
+
 [node name="BLACK BULL7" parent="." instance=ExtResource("9_ye3ca")]
 position = Vector2(-198, -991)
+
+[node name="GOLDEN BULL" parent="." instance=ExtResource("10_bhow6")]
+position = Vector2(-512, -702)
+rotation = 1.5708
+
+[node name="GOLDEN BULL2" parent="." instance=ExtResource("10_bhow6")]
+position = Vector2(-478, -173)
+rotation = 1.5708

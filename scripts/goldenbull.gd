@@ -7,23 +7,14 @@ var sigmay = 1
 @onready var car: RigidBody2D = $"../Car"
 var rng = RandomNumberGenerator.new()
 func _ready() -> void:
-	var my_random_number = rng.randi_range(0, 2)
+	var my_random_number = rng.randi_range(0, 11)
 	if my_random_number == 0:
 		pass
 	else:
 		queue_free()
-	if rotation > deg_to_rad(100):
-		sigmax = 0
-		sigmay = -1
-	elif rotation > 0:
-		sigmax = -1
-		sigmay = 0
-	elif rotation == 0:
-		sigmax= 0
-		sigmay = 1
-	elif rotation < 0:
-		sigmax = 1
-		sigmay = 0
+	visible = true
+	sigmax = rng.randi_range(-1,1)
+	sigmay = rng.randi_range(-1,1)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -32,4 +23,4 @@ func _ready() -> void:
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body == car:
 		for i in range(0,300):
-			apply_central_force(Vector2(sigmax,sigmay)*120)
+			apply_central_force(Vector2(sigmax,sigmay)*200)

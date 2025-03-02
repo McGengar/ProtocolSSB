@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://dhobakckgqejd"]
 
-[ext_resource type="Script" path="res://scripts/blackbull.gd" id="1_cp0ws"]
+[ext_resource type="Script" path="res://scripts/goldenbull.gd" id="1_cp0ws"]
 [ext_resource type="PackedScene" uid="uid://c6pli3kjmfvgy" path="res://scenes/goldenbullsprite.tscn" id="2_qase5"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_coeul"]
