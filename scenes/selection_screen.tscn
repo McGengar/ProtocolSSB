@@ -186,6 +186,12 @@ position = Vector2(0, 37)
 scale = Vector2(3, 3)
 texture = ExtResource("12_3wj3q")
 
+[node name="backbutt" type="Button" parent="."]
+offset_left = -962.0
+offset_top = 424.0
+offset_right = -856.0
+offset_bottom = 526.0
+
 [connection signal="mouse_entered" from="grassmapbutt" to="." method="_on_grassmapbutt_mouse_entered"]
 [connection signal="mouse_exited" from="grassmapbutt" to="." method="_on_grassmapbutt_mouse_exited"]
 [connection signal="pressed" from="grassmapbutt" to="." method="_on_grassmapbutt_pressed"]
@@ -198,3 +204,4 @@ texture = ExtResource("12_3wj3q")
 [connection signal="mouse_entered" from="randombutt" to="." method="_on_randombutt_mouse_entered"]
 [connection signal="mouse_exited" from="randombutt" to="." method="_on_randombutt_mouse_exited"]
 [connection signal="pressed" from="randombutt" to="." method="_on_randombutt_pressed"]
+[connection signal="pressed" from="backbutt" to="." method="_on_backbutt_pressed"]

@@ -69,3 +69,7 @@ func _on_randombutt_mouse_entered() -> void:
 
 func _on_randombutt_mouse_exited() -> void:
 	txtr.visible = false
+
+
+func _on_backbutt_pressed() -> void:
+	get_tree().change_scene_to_file("res://scenes/menu.tscn")
