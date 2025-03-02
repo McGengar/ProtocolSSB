@@ -1,8 +1,8 @@
 [gd_scene load_steps=8 format=3 uid="uid://bu0l3hbit2eyp"]
 
 [ext_resource type="Script" path="res://scripts/menu.gd" id="1_4ix4n"]
-[ext_resource type="Texture2D" uid="uid://bjno0s28on03x" path="res://sprites/tlo.png" id="2_71gdu"]
-[ext_resource type="Texture2D" uid="uid://bjfwtebw0jw2u" path="res://sprites/guziki.png" id="3_kktf5"]
+[ext_resource type="Texture2D" uid="uid://uco6vw6s1mhr" path="res://sprites/tlo.png" id="2_71gdu"]
+[ext_resource type="Texture2D" uid="uid://dalsnb0tapgwe" path="res://sprites/guziki.png" id="3_kktf5"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xnsrj"]
 atlas = ExtResource("3_kktf5")
@@ -65,4 +65,4 @@ scale = Vector2(4, 4)
 sprite_frames = SubResource("SpriteFrames_f5voe")
 
 [connection signal="pressed" from="PLAY" to="." method="_on_play_pressed"]
-[connection signal="pressed" from="EXIT" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="EXIT" to="." method="_on_exit_pressed"]
