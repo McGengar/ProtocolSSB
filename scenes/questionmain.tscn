@@ -4,11 +4,11 @@
 [ext_resource type="PackedScene" uid="uid://dcq4ivigrdvd2" path="res://scenes/car.tscn" id="2_ycmxb"]
 [ext_resource type="PackedScene" uid="uid://4xnw2bff6l2q" path="res://scenes/finish_line.tscn" id="3_gybqh"]
 [ext_resource type="PackedScene" uid="uid://cmfwpqhuu300d" path="res://scenes/pachol.tscn" id="4_b4ops"]
-[ext_resource type="Texture2D" uid="uid://csac3ghbicp13" path="res://sprites/piaski.png" id="4_p73v4"]
+[ext_resource type="Texture2D" uid="uid://bire0lpgdmn8x" path="res://sprites/piaski.png" id="4_p73v4"]
 [ext_resource type="PackedScene" uid="uid://c0kqv1f12ksnw" path="res://scenes/rigid_bison.tscn" id="5_qiodq"]
 [ext_resource type="PackedScene" uid="uid://cr1x62c2dhktu" path="res://scenes/tumbleweed.tscn" id="6_koehw"]
-[ext_resource type="PackedScene" uid="uid://c6ktes7iufhm2" path="res://scenes/bisonpositions.tscn" id="8_kxrdy"]
-[ext_resource type="PackedScene" uid="uid://bu250rpw2j1gj" path="res://scenes/BLACKBULL.tscn" id="9_ye3ca"]
+[ext_resource type="PackedScene" path="res://scenes/bisonpositions.tscn" id="8_kxrdy"]
+[ext_resource type="PackedScene" path="res://scenes/BLACKBULL.tscn" id="9_ye3ca"]
 
 [sub_resource type="Gradient" id="Gradient_8xr5t"]
 colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1)
