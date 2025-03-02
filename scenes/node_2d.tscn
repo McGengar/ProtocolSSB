@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://cvsc0hcxxmeig"]
+
+[ext_resource type="Script" path="res://node_2d.gd" id="1_2e67y"]
+[ext_resource type="PackedScene" uid="uid://c0kqv1f12ksnw" path="res://scenes/rigid_bison.tscn" id="2_6tocw"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_2e67y")
+
+[node name="RigidBison" parent="." instance=ExtResource("2_6tocw")]

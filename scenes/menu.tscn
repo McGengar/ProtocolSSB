@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://bu0l3hbit2eyp"]
+
+[ext_resource type="Script" path="res://scripts/menu.gd" id="1_4ix4n"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_mkw3t"]
+
+[node name="Menu" type="Node2D"]
+script = ExtResource("1_4ix4n")
+
+[node name="LOGO" type="Sprite2D" parent="."]
+position = Vector2(946, 241.375)
+scale = Vector2(1043.5, 381.25)
+texture = SubResource("PlaceholderTexture2D_mkw3t")
+
+[node name="PLAY" type="Button" parent="."]
+offset_left = 764.0
+offset_top = 664.0
+offset_right = 1122.0
+offset_bottom = 787.0
+
+[connection signal="pressed" from="PLAY" to="." method="_on_play_pressed"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://dloet2ghheyeh"]
+[gd_scene load_steps=15 format=3 uid="uid://dloet2ghheyeh"]
 
 [ext_resource type="PackedScene" uid="uid://bwfxtvsh4xcbq" path="res://scenes/road.tscn" id="1_45ga1"]
 [ext_resource type="PackedScene" uid="uid://dcq4ivigrdvd2" path="res://scenes/car.tscn" id="2_b62ra"]
@@ -6,9 +6,10 @@
 [ext_resource type="PackedScene" uid="uid://bjw44oc5gw6v5" path="res://scenes/falling_object.tscn" id="4_7qkmp"]
 [ext_resource type="PackedScene" uid="uid://cvi1wjf4kfnjv" path="res://scenes/pingwiny.tscn" id="5_35txs"]
 [ext_resource type="PackedScene" uid="uid://cmfwpqhuu300d" path="res://scenes/pachol.tscn" id="6_vcm87"]
-[ext_resource type="PackedScene" path="res://scenes/hole.tscn" id="7_m1qgt"]
+[ext_resource type="PackedScene" uid="uid://cauxuvxew16gw" path="res://scenes/hole.tscn" id="7_m1qgt"]
 [ext_resource type="PackedScene" uid="uid://3u3r8u72e1dp" path="res://scenes/drzewo.tscn" id="8_hc2kk"]
-[ext_resource type="Texture2D" uid="uid://6jdlimj6vukm" path="res://sprites/balwan.png" id="9_cs4rc"]
+[ext_resource type="Texture2D" uid="uid://skw6pjumsbh8" path="res://sprites/balwan.png" id="9_cs4rc"]
+[ext_resource type="PackedScene" uid="uid://dhobakckgqejd" path="res://scenes/GOLDENBULL.tscn" id="10_de470"]
 
 [sub_resource type="Gradient" id="Gradient_vb1ff"]
 colors = PackedColorArray(0.832341, 0.888803, 1, 1, 1, 1, 1, 1)
@@ -45,7 +46,7 @@ scale = Vector2(12.75, 9.96875)
 texture = SubResource("GradientTexture2D_5it82")
 
 [node name="Finish_line" parent="." instance=ExtResource("3_avdxn")]
-position = Vector2(-318, -1954)
+position = Vector2(-320, -1954)
 
 [node name="falling object" parent="." instance=ExtResource("4_7qkmp")]
 position = Vector2(-305, -1186)
@@ -319,3 +320,6 @@ frame = 7
 tile_set = SubResource("TileSet_en04w")
 format = 2
 layer_0/tile_data = PackedInt32Array(-393215, 196609, 0, -655377, 196609, 0, -1048606, 196609, 0, -458806, 196609, 0, -1048650, 196609, 0, -2031694, 196609, 0, -2555994, 196609, 0, -3211346, 196609, 0, -3342400, 196609, 0, -4259905, 196609, 0, -3604503, 196609, 0, -4259866, 196609, 0, -5832735, 1, 0, -3735628, 1, 0, -983074, 1, 0, 1, 1, 0, -7929871, 1, 0)
+
+[node name="GOLDEN BULL" parent="." instance=ExtResource("10_de470")]
+position = Vector2(-330, -1847)
