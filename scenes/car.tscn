@@ -1,10 +1,12 @@
-[gd_scene load_steps=58 format=3 uid="uid://dcq4ivigrdvd2"]
+[gd_scene load_steps=63 format=3 uid="uid://dcq4ivigrdvd2"]
 
 [ext_resource type="Script" path="res://scripts/car_control.gd" id="1_vljah"]
 [ext_resource type="Texture2D" uid="uid://d2gqvtbfaf7a5" path="res://sprites/autko.png" id="2_sgwix"]
 [ext_resource type="PackedScene" uid="uid://cm4p7dkhsg2ji" path="res://scenes/skill.tscn" id="3_ecsdd"]
 [ext_resource type="Texture2D" uid="uid://mewrrhmsmq8q" path="res://sprites/walona wycieeraczka.png" id="4_6sbb8"]
+[ext_resource type="Shader" path="res://shaders/outline.gdshader" id="5_btjux"]
 [ext_resource type="Texture2D" uid="uid://bxtn6j2o4hbsb" path="res://sprites/babel.png" id="5_l5enp"]
+[ext_resource type="Texture2D" uid="uid://2tv57iainj2m" path="res://sprites/tablet1.png" id="6_4hkeq"]
 [ext_resource type="PackedScene" uid="uid://cq2iywhlcsohq" path="res://scenes/melon.tscn" id="6_nkygn"]
 [ext_resource type="Texture2D" uid="uid://dyc7gp3ynd4id" path="res://sprites/indyki.png" id="7_364d0"]
 [ext_resource type="FontFile" uid="uid://dvydu4xd0m7od" path="res://ssb/8-BIT WONDER.TTF" id="8_eklrs"]
@@ -45,6 +47,21 @@ point_count = 2
 [sub_resource type="Gradient" id="Gradient_bhjxn"]
 offsets = PackedFloat32Array(0, 0.762557, 1)
 colors = PackedColorArray(0.212305, 0.212305, 0.212305, 1, 0.0504102, 0.0504103, 0.0504103, 0.237443, 0, 0, 0, 0)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_84jjl"]
+shader = ExtResource("5_btjux")
+shader_parameter/color = Color(1, 1, 1, 1)
+shader_parameter/width = 2.0
+shader_parameter/pattern = 0
+shader_parameter/inside = false
+shader_parameter/add_margins = true
+
+[sub_resource type="Gradient" id="Gradient_yhgdq"]
+offsets = PackedFloat32Array(0.616099)
+colors = PackedColorArray(1, 1, 1, 0.27451)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_6aqtt"]
+gradient = SubResource("Gradient_yhgdq")
 
 [sub_resource type="Curve" id="Curve_q8e6p"]
 _data = [Vector2(0.00555556, 0.10989), 0.0, 0.0, 0, 0, Vector2(0.994444, 1), 0.0, 0.0, 0, 0]
@@ -226,14 +243,14 @@ color_ramp = SubResource("Gradient_bhjxn")
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="Skill2" parent="CanvasLayer" instance=ExtResource("3_ecsdd")]
-position = Vector2(1705.28, 891)
+position = Vector2(1759.28, 745)
 rotation = 0.10472
 scale = Vector2(6, 6)
 frame = 1
 frame_progress = 0.0
 
 [node name="Skill1" parent="CanvasLayer" instance=ExtResource("3_ecsdd")]
-position = Vector2(1497.28, 894)
+position = Vector2(1551.28, 748)
 rotation = -0.10472
 scale = Vector2(6, 6)
 frame = 3
@@ -257,9 +274,20 @@ rotation = -1.36136
 scale = Vector2(4, 4)
 texture = ExtResource("4_6sbb8")
 
+[node name="Sprite2D2" type="Sprite2D" parent="CanvasLayer"]
+material = SubResource("ShaderMaterial_84jjl")
+position = Vector2(1654.75, 230)
+scale = Vector2(3.35577, 3.32051)
+texture = ExtResource("6_4hkeq")
+
 [node name="melon" parent="CanvasLayer" instance=ExtResource("6_nkygn")]
-position = Vector2(1576, 421)
-scale = Vector2(4, 4)
+position = Vector2(1640, 210)
+scale = Vector2(3, 3)
+
+[node name="Sprite2D3" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(1655, 216.5)
+scale = Vector2(7.34375, 5.79687)
+texture = SubResource("GradientTexture2D_6aqtt")
 
 [node name="CPUParticles2D" type="CPUParticles2D" parent="CanvasLayer"]
 z_index = -1
