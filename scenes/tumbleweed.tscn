@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://cr1x62c2dhktu"]
 
 [ext_resource type="Script" path="res://scripts/tumble.gd" id="1_bjw5l"]
-[ext_resource type="Texture2D" uid="uid://c5yucu4lxm0q2" path="res://sprites/tumbleweed.png" id="2_214ns"]
+[ext_resource type="Texture2D" uid="uid://bd8txnfn0pxta" path="res://sprites/tumbleweed.png" id="2_214ns"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_wdu8w"]
 radius = 16.0

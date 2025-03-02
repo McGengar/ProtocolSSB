@@ -6,10 +6,10 @@
 [ext_resource type="PackedScene" uid="uid://bjw44oc5gw6v5" path="res://scenes/falling_object.tscn" id="4_7qkmp"]
 [ext_resource type="PackedScene" uid="uid://cvi1wjf4kfnjv" path="res://scenes/pingwiny.tscn" id="5_35txs"]
 [ext_resource type="PackedScene" uid="uid://cmfwpqhuu300d" path="res://scenes/pachol.tscn" id="6_vcm87"]
-[ext_resource type="PackedScene" uid="uid://cauxuvxew16gw" path="res://scenes/hole.tscn" id="7_m1qgt"]
+[ext_resource type="PackedScene" path="res://scenes/hole.tscn" id="7_m1qgt"]
 [ext_resource type="PackedScene" uid="uid://3u3r8u72e1dp" path="res://scenes/drzewo.tscn" id="8_hc2kk"]
-[ext_resource type="Texture2D" uid="uid://skw6pjumsbh8" path="res://sprites/balwan.png" id="9_cs4rc"]
-[ext_resource type="PackedScene" uid="uid://dhobakckgqejd" path="res://scenes/GOLDENBULL.tscn" id="10_de470"]
+[ext_resource type="Texture2D" uid="uid://6jdlimj6vukm" path="res://sprites/balwan.png" id="9_cs4rc"]
+[ext_resource type="PackedScene" path="res://scenes/GOLDENBULL.tscn" id="10_de470"]
 
 [sub_resource type="Gradient" id="Gradient_qtvqr"]
 colors = PackedColorArray(0.832341, 0.888803, 1, 1, 1, 1, 1, 1)

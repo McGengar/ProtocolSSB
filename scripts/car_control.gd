@@ -19,6 +19,7 @@ var win = false
 var loose = false
 
 func _ready():
+	$Sound_effects/Gameloop.play()
 	$CanvasLayer/Sprite2D.visible=true
 
 func _physics_process(delta):
@@ -35,16 +36,18 @@ func _physics_process(delta):
 	$CanvasLayer/RichTextLabel.text = "[center]"+time_txt+"[/center]"
 	
 	if time==0 and loose==false:
+		loose=true
 		var sounds = $Sounds.get_children()
 		for sound in sounds:
 			sound.stop()
-		loose=true
+		$Sound_effects/Lost.play()
 		await get_tree().create_timer(1).timeout
 		$CanvasLayer/melon/elonani.play("heart going out")
 		$Sounds/Win1.play()
 		await get_tree().create_timer(2).timeout
 		$Sounds/Designerwins2.play()
 		await get_tree().create_timer(1.5).timeout
+		get_tree().change_scene_to_file("res://scenes/selection_screen.tscn")
 		
 	
 
@@ -222,6 +225,7 @@ func wins():
 	win = true
 	$CanvasLayer/melon/elonani.play("anger")
 	$Sounds/Lose1.play()
+	$Sound_effects/Win.play()
 	await get_tree().create_timer(2).timeout
 	$Sounds/Driverwinsalenieuzywactego.play()
 	await get_tree().create_timer(3).timeout
