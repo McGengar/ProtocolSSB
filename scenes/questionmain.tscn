@@ -1,12 +1,13 @@
-[gd_scene load_steps=12 format=3 uid="uid://dnm710o0d2n0b"]
+[gd_scene load_steps=13 format=3 uid="uid://dnm710o0d2n0b"]
 
 [ext_resource type="PackedScene" uid="uid://bwfxtvsh4xcbq" path="res://scenes/road.tscn" id="1_ukvxr"]
 [ext_resource type="PackedScene" uid="uid://dcq4ivigrdvd2" path="res://scenes/car.tscn" id="2_ycmxb"]
 [ext_resource type="PackedScene" uid="uid://4xnw2bff6l2q" path="res://scenes/finish_line.tscn" id="3_gybqh"]
 [ext_resource type="PackedScene" uid="uid://cmfwpqhuu300d" path="res://scenes/pachol.tscn" id="4_b4ops"]
-[ext_resource type="Texture2D" uid="uid://bire0lpgdmn8x" path="res://sprites/piaski.png" id="4_p73v4"]
+[ext_resource type="Texture2D" uid="uid://csac3ghbicp13" path="res://sprites/piaski.png" id="4_p73v4"]
 [ext_resource type="PackedScene" uid="uid://c0kqv1f12ksnw" path="res://scenes/rigid_bison.tscn" id="5_qiodq"]
 [ext_resource type="PackedScene" uid="uid://cr1x62c2dhktu" path="res://scenes/tumbleweed.tscn" id="6_koehw"]
+[ext_resource type="PackedScene" uid="uid://c6ktes7iufhm2" path="res://scenes/bisonpositions.tscn" id="8_kxrdy"]
 
 [sub_resource type="Gradient" id="Gradient_8xr5t"]
 colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1)
@@ -146,36 +147,67 @@ position = Vector2(-922, -130)
 [node name="pachol49" parent="pacholy" instance=ExtResource("4_b4ops")]
 position = Vector2(-947, -127)
 
-[node name="RigidBison1" parent="." instance=ExtResource("5_qiodq")]
-position = Vector2(-701, -949)
-rotation = -1.5708
-lock_rotation = true
-
-[node name="RigidBison" parent="." instance=ExtResource("5_qiodq")]
-position = Vector2(-726, -607)
-
-[node name="RigidBison4" parent="." instance=ExtResource("5_qiodq")]
-position = Vector2(-301, 105)
-rotation = 1.5708
-
-[node name="RigidBison5" parent="." instance=ExtResource("5_qiodq")]
-position = Vector2(-301, 59)
-rotation = 1.5708
-
 [node name="RigidBison2" parent="." instance=ExtResource("5_qiodq")]
-position = Vector2(-1123, -576)
+position = Vector2(-1125, -596)
 rotation = 3.14159
 
 [node name="RigidBison3" parent="." instance=ExtResource("5_qiodq")]
-position = Vector2(-1171, -166)
+position = Vector2(-1051, -596)
+rotation = 3.14159
+
+[node name="RigidBison10" parent="." instance=ExtResource("5_qiodq")]
+position = Vector2(-485, -245)
+rotation = 3.14159
+
+[node name="RigidBison17" parent="." instance=ExtResource("5_qiodq")]
+position = Vector2(-1317, 60)
+rotation = 3.14159
+
+[node name="RigidBison11" parent="." instance=ExtResource("5_qiodq")]
+position = Vector2(-411, -245)
+rotation = 3.14159
+
+[node name="RigidBison12" parent="." instance=ExtResource("5_qiodq")]
+position = Vector2(-180, -972)
+
+[node name="RigidBison9" parent="." instance=ExtResource("5_qiodq")]
+position = Vector2(-727, -598)
+rotation = 0.253073
+
+[node name="RigidBison4" parent="." instance=ExtResource("5_qiodq")]
+position = Vector2(-809, -917)
+rotation = -1.5708
+
+[node name="RigidBison5" parent="." instance=ExtResource("5_qiodq")]
+position = Vector2(-809, -992)
 rotation = -1.5708
 
 [node name="RigidBison6" parent="." instance=ExtResource("5_qiodq")]
-position = Vector2(-483, -227)
-rotation = 3.14159
+position = Vector2(-946, -968)
+rotation = -1.5708
 
 [node name="RigidBison7" parent="." instance=ExtResource("5_qiodq")]
-position = Vector2(-1067, 175)
+position = Vector2(-1120, -162)
+rotation = -1.5708
+
+[node name="RigidBison8" parent="." instance=ExtResource("5_qiodq")]
+position = Vector2(-1119, -219)
+rotation = -1.5708
+
+[node name="RigidBison13" parent="." instance=ExtResource("5_qiodq")]
+position = Vector2(-272, 19)
+rotation = 1.5708
+
+[node name="RigidBison14" parent="." instance=ExtResource("5_qiodq")]
+position = Vector2(-273, 57)
+rotation = 1.5708
+
+[node name="RigidBison15" parent="." instance=ExtResource("5_qiodq")]
+position = Vector2(-273, 95)
+rotation = 1.5708
+
+[node name="RigidBison16" parent="." instance=ExtResource("5_qiodq")]
+position = Vector2(-1060, 156)
 rotation = 1.5708
 
 [node name="Tumbleweed" parent="." instance=ExtResource("6_koehw")]
@@ -441,3 +473,8 @@ position = Vector2(2066, -892)
 
 [node name="Tumbleweed7" parent="." instance=ExtResource("6_koehw")]
 position = Vector2(2124, -76)
+
+[node name="Node" type="Node" parent="."]
+
+[node name="pozycje" parent="Node" instance=ExtResource("8_kxrdy")]
+script = null

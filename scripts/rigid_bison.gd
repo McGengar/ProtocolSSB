@@ -5,8 +5,11 @@ var bison_speed = 0.01
 var sigmax = 1
 var sigmay = 1
 @onready var car: RigidBody2D = $"../Car"
-
+var rng = RandomNumberGenerator.new()
 func _ready() -> void:
+	var my_random_number = rng.randi_range(0, 1)
+	if my_random_number == 0:
+		queue_free()
 	if rotation > deg_to_rad(100):
 		sigmax = 0
 		sigmay = -1
