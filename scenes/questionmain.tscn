@@ -1,9 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://dnm710o0d2n0b"]
+[gd_scene load_steps=12 format=3 uid="uid://dnm710o0d2n0b"]
 
 [ext_resource type="PackedScene" uid="uid://bwfxtvsh4xcbq" path="res://scenes/road.tscn" id="1_ukvxr"]
 [ext_resource type="PackedScene" uid="uid://dcq4ivigrdvd2" path="res://scenes/car.tscn" id="2_ycmxb"]
 [ext_resource type="PackedScene" uid="uid://4xnw2bff6l2q" path="res://scenes/finish_line.tscn" id="3_gybqh"]
 [ext_resource type="PackedScene" uid="uid://cmfwpqhuu300d" path="res://scenes/pachol.tscn" id="4_b4ops"]
+[ext_resource type="Texture2D" uid="uid://bire0lpgdmn8x" path="res://sprites/piaski.png" id="4_p73v4"]
 [ext_resource type="PackedScene" uid="uid://c0kqv1f12ksnw" path="res://scenes/rigid_bison.tscn" id="5_qiodq"]
 [ext_resource type="PackedScene" uid="uid://cr1x62c2dhktu" path="res://scenes/tumbleweed.tscn" id="6_koehw"]
 
@@ -14,6 +15,18 @@ colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1)
 gradient = SubResource("Gradient_8xr5t")
 width = 1024
 height = 1024
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_b8uu2"]
+texture = ExtResource("4_p73v4")
+0:0/size_in_atlas = Vector2i(3, 4)
+0:0/0 = 0
+3:0/size_in_atlas = Vector2i(3, 4)
+3:0/0 = 0
+6:0/size_in_atlas = Vector2i(3, 4)
+6:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_v0eh8"]
+sources/0 = SubResource("TileSetAtlasSource_b8uu2")
 
 [node name="questionmain" type="Node"]
 
@@ -35,6 +48,11 @@ texture = SubResource("GradientTexture2D_iukqg")
 [node name="Finish_line" parent="." instance=ExtResource("3_gybqh")]
 position = Vector2(-38, 64)
 rotation = 1.5708
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_v0eh8")
+format = 2
+layer_0/tile_data = PackedInt32Array(-327682, 393216, 0, -851973, 393216, 0, -1179637, 393216, 0, -1966077, 393216, 0, -2293772, 393216, 0, -2883583, 393216, 0, -3407878, 393216, 0, -3538963, 393216, 0, -4325400, 393216, 0, -3538993, 393216, 0, -4390966, 393216, 0, -4194379, 393216, 0, -3145791, 393216, 0, -2490444, 393216, 0, -2162748, 393216, 0, -1441854, 393216, 0, -1835045, 393216, 0, -2490406, 393216, 0, -3211296, 393216, 0, -2555926, 393216, 0, -1376278, 393216, 0, -524315, 393216, 0, -524335, 393216, 0, -1179725, 393216, 0, -196686, 393216, 0, -458843, 393216, 0, 589742, 393216, 0, 720837, 393216, 0, -65584, 393216, 0, 655334, 393216, 0, 458756, 393216, 0, -720898, 196608, 0, -2359295, 196608, 0, -3407890, 196608, 0, -4325410, 196608, 0, -3670074, 196608, 0, -3145802, 196608, 0, -1507384, 196608, 0, -3276844, 196608, 0, -1638423, 196608, 0, -458818, 196608, 0, 589770, 196608, 0, 524281, 0, 0, -1703932, 0, 0, -1966090, 0, 0, -4128776, 0, 0, -3670057, 0, 0, -4718662, 0, 0, -1769544, 0, 0, -1245218, 0, 0, -2621474, 0, 0, 130999, 0, 0, 458666, 0, 0, -131101, 0, 0, -393208, 0, 0)
 
 [node name="pacholy" type="Node" parent="."]
 
@@ -355,14 +373,8 @@ position = Vector2(8656, 47)
 [node name="Tumbleweed70" parent="." instance=ExtResource("6_koehw")]
 position = Vector2(8730, 168)
 
-[node name="Tumbleweed71" parent="." instance=ExtResource("6_koehw")]
-position = Vector2(9032, 162)
-
 [node name="Tumbleweed72" parent="." instance=ExtResource("6_koehw")]
 position = Vector2(9056, 47)
-
-[node name="Tumbleweed73" parent="." instance=ExtResource("6_koehw")]
-position = Vector2(9130, 168)
 
 [node name="Tumbleweed74" parent="." instance=ExtResource("6_koehw")]
 position = Vector2(9436, 54)
@@ -382,29 +394,11 @@ position = Vector2(9580, -164)
 [node name="Tumbleweed79" parent="." instance=ExtResource("6_koehw")]
 position = Vector2(9720, 7)
 
-[node name="Tumbleweed80" parent="." instance=ExtResource("6_koehw")]
-position = Vector2(9794, 128)
-
-[node name="Tumbleweed81" parent="." instance=ExtResource("6_koehw")]
-position = Vector2(10100, 14)
-
-[node name="Tumbleweed82" parent="." instance=ExtResource("6_koehw")]
-position = Vector2(9944, -49)
-
 [node name="Tumbleweed83" parent="." instance=ExtResource("6_koehw")]
 position = Vector2(10018, 72)
 
-[node name="Tumbleweed84" parent="." instance=ExtResource("6_koehw")]
-position = Vector2(10320, 66)
-
-[node name="Tumbleweed85" parent="." instance=ExtResource("6_koehw")]
-position = Vector2(10344, -49)
-
 [node name="Tumbleweed86" parent="." instance=ExtResource("6_koehw")]
 position = Vector2(10411, 154)
-
-[node name="Tumbleweed87" parent="." instance=ExtResource("6_koehw")]
-position = Vector2(10717, 40)
 
 [node name="Tumbleweed88" parent="." instance=ExtResource("6_koehw")]
 position = Vector2(10561, -23)
@@ -412,32 +406,14 @@ position = Vector2(10561, -23)
 [node name="Tumbleweed89" parent="." instance=ExtResource("6_koehw")]
 position = Vector2(10635, 98)
 
-[node name="Tumbleweed90" parent="." instance=ExtResource("6_koehw")]
-position = Vector2(10937, 92)
-
-[node name="Tumbleweed91" parent="." instance=ExtResource("6_koehw")]
-position = Vector2(11267, 21)
-
 [node name="Tumbleweed92" parent="." instance=ExtResource("6_koehw")]
 position = Vector2(11111, -42)
 
 [node name="Tumbleweed93" parent="." instance=ExtResource("6_koehw")]
 position = Vector2(11185, 79)
 
-[node name="Tumbleweed94" parent="." instance=ExtResource("6_koehw")]
-position = Vector2(11487, 73)
-
-[node name="Tumbleweed95" parent="." instance=ExtResource("6_koehw")]
-position = Vector2(11511, -42)
-
 [node name="Tumbleweed96" parent="." instance=ExtResource("6_koehw")]
 position = Vector2(11578, 161)
-
-[node name="Tumbleweed97" parent="." instance=ExtResource("6_koehw")]
-position = Vector2(11884, 47)
-
-[node name="Tumbleweed98" parent="." instance=ExtResource("6_koehw")]
-position = Vector2(11728, -16)
 
 [node name="Tumbleweed99" parent="." instance=ExtResource("6_koehw")]
 position = Vector2(11802, 105)
@@ -445,35 +421,11 @@ position = Vector2(11802, 105)
 [node name="Tumbleweed100" parent="." instance=ExtResource("6_koehw")]
 position = Vector2(12104, 99)
 
-[node name="Tumbleweed101" parent="." instance=ExtResource("6_koehw")]
-position = Vector2(12394, 4)
-
-[node name="Tumbleweed102" parent="." instance=ExtResource("6_koehw")]
-position = Vector2(12238, -59)
-
-[node name="Tumbleweed103" parent="." instance=ExtResource("6_koehw")]
-position = Vector2(12312, 62)
-
-[node name="Tumbleweed104" parent="." instance=ExtResource("6_koehw")]
-position = Vector2(12614, 56)
-
-[node name="Tumbleweed105" parent="." instance=ExtResource("6_koehw")]
-position = Vector2(12638, -59)
-
 [node name="Tumbleweed106" parent="." instance=ExtResource("6_koehw")]
 position = Vector2(12705, 144)
 
-[node name="Tumbleweed107" parent="." instance=ExtResource("6_koehw")]
-position = Vector2(13011, 30)
-
-[node name="Tumbleweed108" parent="." instance=ExtResource("6_koehw")]
-position = Vector2(12855, -33)
-
 [node name="Tumbleweed109" parent="." instance=ExtResource("6_koehw")]
 position = Vector2(12929, 88)
-
-[node name="Tumbleweed110" parent="." instance=ExtResource("6_koehw")]
-position = Vector2(13231, 82)
 
 [node name="Tumbleweed54" parent="." instance=ExtResource("6_koehw")]
 position = Vector2(6981, -1005)
