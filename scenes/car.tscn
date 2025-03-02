@@ -1,4 +1,4 @@
-[gd_scene load_steps=68 format=3 uid="uid://dcq4ivigrdvd2"]
+[gd_scene load_steps=69 format=3 uid="uid://dcq4ivigrdvd2"]
 
 [ext_resource type="Script" path="res://scripts/car_control.gd" id="1_vljah"]
 [ext_resource type="Texture2D" uid="uid://d2gqvtbfaf7a5" path="res://sprites/autko.png" id="2_sgwix"]
@@ -38,6 +38,7 @@
 [ext_resource type="AudioStream" uid="uid://c3pwt8tnl235w" path="res://sounds/designerwins2.mp3" id="30_pkj4s"]
 [ext_resource type="AudioStream" uid="uid://ntqnmxh5opts" path="res://sounds/lose1.mp3" id="32_nm680"]
 [ext_resource type="AudioStream" uid="uid://sucyke83ysda" path="res://sounds/win1.mp3" id="33_0ymdb"]
+[ext_resource type="AudioStream" uid="uid://cfe5s8olynw4q" path="res://sounds/hit_sound.wav" id="39_2xpgl"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4po4l"]
 radius = 12.0
@@ -453,3 +454,8 @@ stream = ExtResource("32_nm680")
 
 [node name="Win1" type="AudioStreamPlayer2D" parent="Sounds"]
 stream = ExtResource("33_0ymdb")
+
+[node name="Sound_effects" type="Node" parent="."]
+
+[node name="Hit" type="AudioStreamPlayer2D" parent="Sound_effects"]
+stream = ExtResource("39_2xpgl")

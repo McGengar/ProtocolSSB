@@ -108,6 +108,7 @@ func _physics_process(delta):
 func knocked_back(kbvect):
 	sleeping = true
 	apply_central_force(kbvect)
+	$Sound_effects/Hit.play()
 	await get_tree().create_timer(0.25).timeout
 	sleeping = false
 	
@@ -224,10 +225,5 @@ func wins():
 	await get_tree().create_timer(2).timeout
 	$Sounds/Driverwinsalenieuzywactego.play()
 	await get_tree().create_timer(3).timeout
-	if get_parent().name=="Main":
-		get_tree().change_scene_to_file("res://scenes/wintermain.tscn")
-	elif get_parent().name=="wintermain":
-		get_tree().change_scene_to_file("res://scenes/questionmain.tscn")
-	elif get_parent().name=="questionmain":
-		pass
+	get_tree().change_scene_to_file("res://scenes/selection_screen.tscn")
 	
